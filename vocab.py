@@ -36,8 +36,8 @@ SOURCES = {
     "croissant-rai": os.path.join(DIR, "docs/croissant_rai.ttl"),
 }
 
-# Output directory detection (VDF relative to CWD, otherwise current directory)
-OUT_DIR = "VDF" if os.path.exists("VDF") and os.path.isdir("VDF") else "."
+# Output directory detection (VDF relative to CWD, otherwise a new build directory)
+OUT_DIR = "VDF" if os.path.exists("VDF") and os.path.isdir("VDF") else "build"
 
 def load_graph(path, use_https):
     """Loads a Turtle file, rebinding schema.org to http or https flavor.
