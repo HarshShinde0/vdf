@@ -1,100 +1,100 @@
-<http://mlcommons.org/croissant/RAI/dataUseCases> <http://www.w3.org/2000/01/rdf-schema#label> "dataUseCases" .
-<http://mlcommons.org/croissant/RAI/dataBiases> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/dataCollectionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Sensitive Human Attribute(s)- Gender, Socio-economic status, Geography, Language, Age, Culture, Experience or Seniority, Others (please specify), if applicable." .
-<http://mlcommons.org/croissant/RAI/dataCollectionType> <http://www.w3.org/2000/01/rdf-schema#comment> "Define the data collection type. Recommended values: Surveys, Secondary Data analysis, Physical data collection, Direct measurement, Document analysis, Manual Human Curator, Software Collection, Experiments, Web Scraping, Web API, Focus groups, Self-reporting, Customer feedback data, User-generated content data, Passive Data Collection, Others." .
-<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/annotatorDemographics> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <http://www.w3.org/2000/01/rdf-schema#comment> "Timeframe in terms of start and end date of the collection process, that it described as a DateTime indicating a time period in <a href=\"https://en.wikipedia.org/wiki/ISO_8601#Time_intervals\">ISO 8601 time interval format</a>. For example, a collection time frame ranging from 2020 - 2022 can be indicated in ISO 8601 interval format via \"2020/2022\"." .
-<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "dataManipulationProtocol" .
-<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the steps that were required to bring collected data to a state that can be processed by an ML model/algorithm, e.g. filtering out incomplete entries etc, if applicable." .
-<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "dataAnnotationAnalysis" .
-<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of missing data in structured/unstructured form." .
-<http://mlcommons.org/croissant/RAI/dataCollectionRawData> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollectionMissingData" .
-<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "dataAnnotationProtocol" .
-<http://mlcommons.org/croissant/RAI/dataSocialImpact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of data imputation process, if applicable." .
-<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/RAI/machineAnnotationTools> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/RAI/dataCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the data collection process." .
-<http://mlcommons.org/croissant/RAI/dataLimitations> <http://www.w3.org/2000/01/rdf-schema#comment> "Known limitations - Data generalization limits (e.g related to data distribution, data quality issues, or data sources) and on-recommended uses, if applicable." .
-<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <http://www.w3.org/2000/01/rdf-schema#label> "personalSensitiveInformation" .
-<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <http://www.w3.org/2000/01/rdf-schema#comment> "Platform, tool, or library used to collect annotations by human annotators, if applicable." .
-<http://mlcommons.org/croissant/RAI/annotatorDemographics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/dataCollectionType> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/RAI/dataCollectionRawData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of data manipulation process, if applicable." .
-<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <http://www.w3.org/2000/01/rdf-schema#label> "dataReleaseMaintenancePlan" .
-<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollectionTimeframe" .
-<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/RAI/machineAnnotationTools> <http://www.w3.org/2000/01/rdf-schema#comment> "List of software used for data annotation (e.g., concept extraction, NER, and additional characteristics of the tools used for annotation to allow for replication or extension)." .
-<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/dataUseCases> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/RAI/dataUseCases> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/dataCollectionType> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/dataUseCases> <http://www.w3.org/2000/01/rdf-schema#comment> "Dataset Use(s) - Training, Testing, Validation, Development or Production Use, Fine Tuning, Others (please specify), Usage Guidelines. Recommended uses." .
-<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Considerations related to the process of converting the \"raw\" annotations into the labels that are ultimately packaged in a dataset - Uncertainty or disagreement between annotations on each instance as a signal in the dataset, analysis of systematic disagreements between annotators of different socio demographic group,  how the final dataset annotations will relate to individual annotator responses." .
-<http://mlcommons.org/croissant/RAI/dataCollectionRawData> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the raw data i.e. source of the data." .
-<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <https://schema.org/rangeIncludes> <https://schema.org/DateTime> .
-<http://mlcommons.org/croissant/RAI/dataCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/dataCollectionType> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollectionType" .
-<http://mlcommons.org/croissant/RAI/dataSocialImpact> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/RAI/dataCollectionRawData> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "dataImputationProtocol" .
-<http://mlcommons.org/croissant/RAI/annotationsPerItem> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/RAI/dataSocialImpact> <http://www.w3.org/2000/01/rdf-schema#comment> "Discussion of social impact, if applicable." .
-<http://mlcommons.org/croissant/RAI/dataSocialImpact> <http://www.w3.org/2000/01/rdf-schema#label> "dataSocialImpact" .
-<http://mlcommons.org/croissant/RAI/annotationsPerItem> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of human labels per dataset item, if applicable." .
-<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <http://www.w3.org/2000/01/rdf-schema#label> "dataAnnotationPlatform" .
-<http://mlcommons.org/croissant/RAI/dataLimitations> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
 <http://mlcommons.org/croissant/RAI/annotationsPerItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/dataUseCases> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/annotationsPerItem> <http://www.w3.org/2000/01/rdf-schema#label> "annotationsPerItem" .
-<http://mlcommons.org/croissant/RAI/dataSocialImpact> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/dataBiases> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of annotations (labels, ratings) produced, including how these were created or authored - Annotation Workforce Type, Annotation Characteristic(s), Annotation Description(s), Annotation Task(s), Annotation Distribution(s)." .
-<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/dataLimitations> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/annotationsPerItem> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/RAI/dataCollection> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollection" .
+<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of data imputation process, if applicable." .
+<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/RAI/dataCollectionType> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
 <http://mlcommons.org/croissant/RAI/dataLimitations> <http://www.w3.org/2000/01/rdf-schema#label> "dataLimitations" .
-<http://mlcommons.org/croissant/RAI/annotatorDemographics> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "dataPreprocessingProtocol" .
-<http://mlcommons.org/croissant/RAI/dataBiases> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of biases in dataset, if applicable." .
-<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/machineAnnotationTools> <http://www.w3.org/2000/01/rdf-schema#label> "machineAnnotationTools" .
-<http://mlcommons.org/croissant/RAI/dataCollection> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/machineAnnotationTools> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/RAI/dataLimitations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <http://www.w3.org/2000/01/rdf-schema#comment> "Versioning information in terms of the updating timeframe, the maintainers, and the deprecation policies." .
-<http://mlcommons.org/croissant/RAI/dataBiases> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
 <http://mlcommons.org/croissant/RAI/annotatorDemographics> <http://www.w3.org/2000/01/rdf-schema#comment> "List of demographics specifications about the annotators, if applicable." .
-<http://mlcommons.org/croissant/RAI/dataBiases> <http://www.w3.org/2000/01/rdf-schema#label> "dataBiases" .
+<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
 <http://mlcommons.org/croissant/RAI/annotatorDemographics> <http://www.w3.org/2000/01/rdf-schema#label> "annotatorDemographics" .
+<http://mlcommons.org/croissant/RAI/dataCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the data collection process." .
+<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/RAI/dataBiases> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <http://www.w3.org/2000/01/rdf-schema#label> "dataReleaseMaintenancePlan" .
+<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Considerations related to the process of converting the \"raw\" annotations into the labels that are ultimately packaged in a dataset - Uncertainty or disagreement between annotations on each instance as a signal in the dataset, analysis of systematic disagreements between annotators of different socio demographic group,  how the final dataset annotations will relate to individual annotator responses." .
+<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataBiases> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/RAI/annotatorDemographics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Sensitive Human Attribute(s)- Gender, Socio-economic status, Geography, Language, Age, Culture, Experience or Seniority, Others (please specify), if applicable." .
+<http://mlcommons.org/croissant/RAI/machineAnnotationTools> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataUseCases> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollectionMissingData" .
+<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <http://www.w3.org/2000/01/rdf-schema#comment> "Platform, tool, or library used to collect annotations by human annotators, if applicable." .
+<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/RAI/dataCollectionRawData> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the raw data i.e. source of the data." .
+<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/RAI/dataBiases> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of biases in dataset, if applicable." .
+<http://mlcommons.org/croissant/RAI/dataCollection> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/RAI/dataCollectionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "dataAnnotationProtocol" .
+<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/RAI/dataBiases> <http://www.w3.org/2000/01/rdf-schema#label> "dataBiases" .
+<http://mlcommons.org/croissant/RAI/annotatorDemographics> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataCollectionRawData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/RAI/dataLimitations> <http://www.w3.org/2000/01/rdf-schema#comment> "Known limitations - Data generalization limits (e.g related to data distribution, data quality issues, or data sources) and on-recommended uses, if applicable." .
+<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of data manipulation process, if applicable." .
+<http://mlcommons.org/croissant/RAI/annotatorDemographics> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/RAI/dataSocialImpact> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/RAI/dataBiases> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
 <http://mlcommons.org/croissant/RAI/machineAnnotationTools> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/RAI/dataLimitations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/RAI/dataUseCases> <http://www.w3.org/2000/01/rdf-schema#comment> "Dataset Use(s) - Training, Testing, Validation, Development or Production Use, Fine Tuning, Others (please specify), Usage Guidelines. Recommended uses." .
+<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataCollectionRawData> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "dataAnnotationAnalysis" .
+<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "dataImputationProtocol" .
+<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "dataPreprocessingProtocol" .
+<http://mlcommons.org/croissant/RAI/dataCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/RAI/dataCollection> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollection" .
+<http://mlcommons.org/croissant/RAI/annotationsPerItem> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <http://www.w3.org/2000/01/rdf-schema#label> "personalSensitiveInformation" .
+<http://mlcommons.org/croissant/RAI/dataCollectionRawData> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/RAI/dataCollectionType> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "dataManipulationProtocol" .
+<http://mlcommons.org/croissant/RAI/dataLimitations> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <http://www.w3.org/2000/01/rdf-schema#label> "dataAnnotationPlatform" .
+<http://mlcommons.org/croissant/RAI/dataSocialImpact> <http://www.w3.org/2000/01/rdf-schema#comment> "Discussion of social impact, if applicable." .
+<http://mlcommons.org/croissant/RAI/dataSocialImpact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/RAI/machineAnnotationTools> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/RAI/dataLimitations> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/RAI/dataUseCases> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
 <http://mlcommons.org/croissant/RAI/dataCollectionRawData> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollectionRawData" .
 <http://mlcommons.org/croissant/RAI/dataCollection> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the steps that were required to bring collected data to a state that can be processed by an ML model/algorithm, e.g. filtering out incomplete entries etc, if applicable." .
+<http://mlcommons.org/croissant/RAI/dataUseCases> <http://www.w3.org/2000/01/rdf-schema#label> "dataUseCases" .
+<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <http://www.w3.org/2000/01/rdf-schema#comment> "Versioning information in terms of the updating timeframe, the maintainers, and the deprecation policies." .
+<http://mlcommons.org/croissant/RAI/annotationsPerItem> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollectionTimeframe" .
+<http://mlcommons.org/croissant/RAI/annotationsPerItem> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of human labels per dataset item, if applicable." .
+<http://mlcommons.org/croissant/RAI/dataSocialImpact> <http://www.w3.org/2000/01/rdf-schema#label> "dataSocialImpact" .
+<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of missing data in structured/unstructured form." .
+<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of annotations (labels, ratings) produced, including how these were created or authored - Annotation Workforce Type, Annotation Characteristic(s), Annotation Description(s), Annotation Task(s), Annotation Distribution(s)." .
+<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/RAI/dataCollectionType> <http://www.w3.org/2000/01/rdf-schema#comment> "Define the data collection type. Recommended values: Surveys, Secondary Data analysis, Physical data collection, Direct measurement, Document analysis, Manual Human Curator, Software Collection, Experiments, Web Scraping, Web API, Focus groups, Self-reporting, Customer feedback data, User-generated content data, Passive Data Collection, Others." .
+<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <https://schema.org/rangeIncludes> <https://schema.org/DateTime> .
+<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <http://www.w3.org/2000/01/rdf-schema#comment> "Timeframe in terms of start and end date of the collection process, that it described as a DateTime indicating a time period in <a href=\"https://en.wikipedia.org/wiki/ISO_8601#Time_intervals\">ISO 8601 time interval format</a>. For example, a collection time frame ranging from 2020 - 2022 can be indicated in ISO 8601 interval format via \"2020/2022\"." .
+<http://mlcommons.org/croissant/RAI/machineAnnotationTools> <http://www.w3.org/2000/01/rdf-schema#label> "machineAnnotationTools" .
+<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/RAI/machineAnnotationTools> <http://www.w3.org/2000/01/rdf-schema#comment> "List of software used for data annotation (e.g., concept extraction, NER, and additional characteristics of the tools used for annotation to allow for replication or extension)." .
+<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/RAI/dataCollectionType> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollectionType" .
+<http://mlcommons.org/croissant/RAI/dataSocialImpact> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/RAI/dataUseCases> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/RAI/annotationsPerItem> <http://www.w3.org/2000/01/rdf-schema#label> "annotationsPerItem" .

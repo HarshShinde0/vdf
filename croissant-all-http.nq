@@ -1,485 +1,485 @@
-<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/geo/SpectralBand> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/md5> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/FileObject> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spatialBias> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/arrayShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/TrainSplit> <http://www.w3.org/2000/01/rdf-schema#label> "TrainSplit" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/annotationsPerItem> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/transform> <http://www.w3.org/2000/01/rdf-schema#comment> "A transformation to apply on source data on top of the extracted method as specified through extract, e.g., a regular expression or JSON query." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spatialResolution> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/unArchive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/bandConfiguration> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/arrayShape> <http://www.w3.org/2000/01/rdf-schema#label> "arrayShape" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/dataType> <http://www.w3.org/2000/01/rdf-schema#comment> "The data type of the field, identified by the URI of the corresponding class. It could be either an atomic type (e.g, sc:Integer) or a semantic type (e.g., sc:GeoLocation)." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Coordinate reference system (CRS) identifier (e.g., EPSG code) used to interpret spatial data in the dataset." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/parentField> <http://www.w3.org/2000/01/rdf-schema#label> "parentField" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/fileProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <http://www.w3.org/2000/01/rdf-schema#comment> "Timeframe in terms of start and end date of the collection process, that it described as a DateTime indicating a time period in <a href=\"https://en.wikipedia.org/wiki/ISO_8601#Time_intervals\">ISO 8601 time interval format</a>. For example, a collection time frame ranging from 2020 - 2022 can be indicated in ISO 8601 interval format via \"2020/2022\"." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataSocialImpact> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/excludes> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/FileSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/fileSet> <http://www.w3.org/2000/01/rdf-schema#comment> "The id of a FileSet that is the source of the data." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/fileObject> <http://www.w3.org/2000/01/rdf-schema#label> "fileObject" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/recordSet> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/DataSource> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/repeated> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/annotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of missing data in structured/unstructured form." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/recordEndpoint> <http://www.w3.org/2000/01/rdf-schema#label> "recordEndpoint" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/ValidationSplit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://mlcommons.org/croissant/Split> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/references> <http://www.w3.org/2000/01/rdf-schema#comment> "Another Field of another RecordSet that this field references. This is the equivalent of a foreign key reference in a relational database." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/timeSeriesIndex> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/annotatorDemographics> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "dataAnnotationProtocol" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "spectralBandMetadata" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/totalBands> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/BandConfiguration> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the data collection process." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/SpectralBand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#label> "SolarInstrumentCharacteristics" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <http://www.w3.org/2000/01/rdf-schema#label> "personalSensitiveInformation" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/timeSeriesIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies the record-level field used to order/index observations in a time series (e.g., a timestamp field in a RecordSet)." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/includes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/jsonPath> <http://www.w3.org/2000/01/rdf-schema#comment> "In case the data source is JSON data, a path expression to extract a subset of the data." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionRawData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/citeAs> <http://www.w3.org/2000/01/rdf-schema#label> "citeAs" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Transform> <http://www.w3.org/2000/01/rdf-schema#label> "Transform" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/excludes> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/DataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollection> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/key> <http://www.w3.org/2000/01/rdf-schema#label> "key" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/md5> <http://www.w3.org/2000/01/rdf-schema#label> "md5" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/StructuredValue> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/value> <http://www.w3.org/2000/01/rdf-schema#label> "value" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/totalBands> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/bandConfiguration> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/column> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/centerWavelength> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/SpectralBand> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://www.w3.org/2000/01/rdf-schema#comment> "Per-band spectral metadata for EO imagery (e.g., center wavelength, bandwidth), represented as one or more geocr:SpectralBand entries." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Composite property to group multi-wavelength configuration information for Space Weather / heliophysics datasets; intended to map to SPASE constructs." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/recordEndpoint> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/equivalentProperty> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/field> <http://www.w3.org/2000/01/rdf-schema#label> "field" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Field> <http://www.w3.org/2000/01/rdf-schema#comment> "A component of the structure of a RecordSet, such as a column of a table." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/FilePropertyEnumeration> <http://www.w3.org/2000/01/rdf-schema#label> "FilePropertyEnumeration" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataSocialImpact> <http://www.w3.org/2000/01/rdf-schema#label> "dataSocialImpact" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/format> <http://www.w3.org/2000/01/rdf-schema#comment> "A format to parse the values of the data from text, e.g., a date format or number format." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/format> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Format> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/recordEndpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A service endpoint that provides programmatic access to the dataset's metadata records (e.g., listing, paging, and filtering records)." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionRawData> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/citeAs> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <http://www.w3.org/2000/01/rdf-schema#label> "dataAnnotationPlatform" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/parentField> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/timeSeriesIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/content> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Extract> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/recordEndpoint> <http://schema.org/rangeIncludes> <http://schema.org/URL> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/includes> <http://www.w3.org/2000/01/rdf-schema#label> "includes" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/annotationsPerItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataUseCases> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/separator> <http://www.w3.org/2000/01/rdf-schema#comment> "A separator to use parse the data into an array." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/unArchive> <http://schema.org/rangeIncludes> <http://schema.org/Boolean> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/regex> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/equivalentProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A property that is equivalent to this Field. Used in the case a dataType is specified on the RecordSet to map specific fields to specific properties associated with that dataType." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/SegmentationMask> <http://www.w3.org/2000/01/rdf-schema#label> "SegmentationMask" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/TestSplit> <http://www.w3.org/2000/01/rdf-schema#label> "TestSplit" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/ContentExtractionEnumeration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/fileObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/containedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Another FileObject, FileSet or DataSource that this one is contained in, e.g., in the case of a file extracted from an archive. When this property is present, the contentUrl is evaluated as a relative path within the container object." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/SpectralBand> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured per-band spectral metadata entry (e.g., center wavelength and bandwidth). Intended to be used as items within geocr:spectralBandMetadata." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/bandConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "bandConfiguration" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/bandwidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Spectral bandwidth for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/temporalResolution> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/subField> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/centerWavelength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/source> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/FileSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/containedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/annotatorDemographics> <http://www.w3.org/2000/01/rdf-schema#comment> "List of demographics specifications about the annotators, if applicable." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/arrayShape> <http://www.w3.org/2000/01/rdf-schema#comment> "Shape of the data tensor/array associated with a field (e.g., [height, width, bands] for imagery)." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/instrument> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/arrayShape> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataUseCases> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/regex> <http://www.w3.org/2000/01/rdf-schema#label> "regex" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/BoundingBox> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/readLines> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Transform> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/ContentExtractionEnumeration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Enumeration> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/extract> <http://www.w3.org/2000/01/rdf-schema#label> "extract" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/channelList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/samplingStrategy> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/SegmentationMask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/StructuredValue> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/fileObject> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/DataSource> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spatialIndex> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Field> <http://www.w3.org/2000/01/rdf-schema#label> "Field" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/annotation> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/parentField> <http://www.w3.org/2000/01/rdf-schema#comment> "A special case of SubField that should be hidden because it references a Field that already appears in the RecordSet." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/format> <http://www.w3.org/2000/01/rdf-schema#label> "format" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/separator> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Transform> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/TrainSplit> <http://www.w3.org/2000/01/rdf-schema#comment> "Training split." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/instrument> <http://www.w3.org/2000/01/rdf-schema#comment> "Instrument identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE)." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/totalBands> <http://www.w3.org/2000/01/rdf-schema#label> "totalBands" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/observatory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/content> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/ContentExtractionEnumeration> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spatialBias> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of spatial representativeness limitations (e.g., geographic concentration, under-sampled regions/biomes) that may affect model generalization and evaluation." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/StructuredValue> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "dataManipulationProtocol" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the steps that were required to bring collected data to a state that can be processed by an ML model/algorithm, e.g. filtering out incomplete entries etc, if applicable." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/references> <http://www.w3.org/2000/01/rdf-schema#label> "references" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spatialIndex> <http://www.w3.org/2000/01/rdf-schema#label> "spatialIndex" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/repeated> <http://www.w3.org/2000/01/rdf-schema#comment> "If true, then the Field is a list of values of type dataType." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Extract> <http://www.w3.org/2000/01/rdf-schema#label> "Extract" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/parentField> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/examples> <http://www.w3.org/2000/01/rdf-schema#comment> "One more inlined records provided as example content of the RecordSet." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataLimitations> <http://www.w3.org/2000/01/rdf-schema#comment> "Known limitations - Data generalization limits (e.g related to data distribution, data quality issues, or data sources) and on-recommended uses, if applicable." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/temporalResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/FileObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/ContentExtractionEnumeration> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies which content to extract from a file. One of \"all\", \"lines\", or \"lineNumbers\"." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionRawData> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/jsonPath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured description of solar/heliophysics instrument and observatory characteristics for Space Weather datasets (e.g., observatory/platform and instrument identifiers). Intended to be used as the value of geocr:solarInstrumentCharacteristics." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <http://www.w3.org/2000/01/rdf-schema#comment> "Platform, tool, or library used to collect annotations by human annotators, if applicable." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spatialResolution> <http://www.w3.org/2000/01/rdf-schema#label> "spatialResolution" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/machineAnnotationTools> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/fileProperty> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/FilePropertyEnumeration> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/SegmentationMask> <http://www.w3.org/2000/01/rdf-schema#comment> "A data type representing a segmentation mask." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollectionTimeframe" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/readLines> <http://schema.org/rangeIncludes> <http://schema.org/Boolean> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/TestSplit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://mlcommons.org/croissant/Split> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/DataType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/URL> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/column> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Extract> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/DataSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Intangible> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/channelList> <http://www.w3.org/2000/01/rdf-schema#label> "channelList" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://schema.org/distribution> <http://www.w3.org/2000/01/rdf-schema#label> "distribution" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/column> <http://www.w3.org/2000/01/rdf-schema#comment> "In case the data source is tabular, the id of a column to extract." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/machineAnnotationTools> <http://www.w3.org/2000/01/rdf-schema#comment> "List of software used for data annotation (e.g., concept extraction, NER, and additional characteristics of the tools used for annotation to allow for replication or extension)." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/BoundingBox> <http://www.w3.org/2000/01/rdf-schema#label> "Label" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/BandConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "BandConfiguration" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionRawData> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the raw data i.e. source of the data." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RecordSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Intangible> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spatialResolution> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RecordSet> <http://www.w3.org/2000/01/rdf-schema#label> "RecordSet" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/SegmentationMask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/excludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/extract> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Extract> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/fileSet> <http://www.w3.org/2000/01/rdf-schema#label> "fileSet" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/timeSeriesIndex> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/BandConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured description of raster band organization and semantics (e.g., band count and ordered band names). Intended to be used as the value of geocr:bandConfiguration." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/source> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/value> <http://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/annotationsPerItem> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of human labels per dataset item, if applicable." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/annotationsPerItem> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/FilePropertyEnumeration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Enumeration> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Label> <http://www.w3.org/2000/01/rdf-schema#comment> "A machine learning label." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RecordSet> <http://www.w3.org/2000/01/rdf-schema#comment> "A description of a set of structured records from one or more data sources and their structure, expressed as a set of fields." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/references> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RecordSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/centerWavelength> <http://schema.org/rangeIncludes> <http://schema.org/QuantitativeValue> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/fileProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "The file property to extract from the data source metadata, e.g., the filename." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/FileObject> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual file that is part of a dataset." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataBiases> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/containedIn> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/DataSource> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/sdVersion> <http://www.w3.org/2000/01/rdf-schema#label> "sdVersion" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spatialResolution> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spatialBias> <http://www.w3.org/2000/01/rdf-schema#label> "spatialBias" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/md5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Split> <http://www.w3.org/2000/01/rdf-schema#comment> "Splits for training a machine learning, typically test, train and validation." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/containedIn> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/FileObject> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/unArchive> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Transform> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataBiases> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of biases in dataset, if applicable." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/machineAnnotationTools> <http://www.w3.org/2000/01/rdf-schema#label> "machineAnnotationTools" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#comment> "Composite property to group solar/heliophysics instrument characteristics for Space Weather datasets; intended to map to SPASE constructs." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/bandwidth> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/SpectralBand> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/instrument> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/dataType> <http://www.w3.org/2000/01/rdf-schema#label> "dataType" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionType> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/citeAs> <http://www.w3.org/2000/01/rdf-schema#comment> "How to cite this dataset. Ideally, citations should be expressed using the bibtex format. Note that this is different from schema.org/citation, which is used to make a citation to another publication from this dataset." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/source> <http://www.w3.org/2000/01/rdf-schema#label> "source" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataLimitations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/ValidationSplit> <http://www.w3.org/2000/01/rdf-schema#label> "ValidationSplit" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/separator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/readLines> <http://www.w3.org/2000/01/rdf-schema#comment> "Read the content of the file line by line." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/separator> <http://www.w3.org/2000/01/rdf-schema#label> "separator" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/subField> <http://www.w3.org/2000/01/rdf-schema#label> "subField" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/subField> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/recordSet> <http://www.w3.org/2000/01/rdf-schema#label> "recordSet" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Split> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/annotatorDemographics> <http://www.w3.org/2000/01/rdf-schema#label> "annotatorDemographics" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/channelList> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/channelList> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/machineAnnotationTools> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/extract> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/DataSource> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataBiases> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://schema.org/distribution> <http://www.w3.org/2000/01/rdf-schema#comment> "By contrast with schema.org/Dataset, Croissant requires the distribution property to have values of type FileObject or FileSet." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/source> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/FileObject> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataUseCases> <http://www.w3.org/2000/01/rdf-schema#label> "dataUseCases" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/recordSet> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/RecordSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/dataType> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/DataType> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/TestSplit> <http://www.w3.org/2000/01/rdf-schema#comment> "Test split." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/includes> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/FileSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/FileObject> <http://www.w3.org/2000/01/rdf-schema#label> "FileObject" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/data> <http://www.w3.org/2000/01/rdf-schema#label> "data" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/instrument> <http://www.w3.org/2000/01/rdf-schema#label> "instrument" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Sensitive Human Attribute(s)- Gender, Socio-economic status, Geography, Language, Age, Culture, Experience or Seniority, Others (please specify), if applicable." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/bandNamesList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/instrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/temporalResolution> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/examples> <http://www.w3.org/2000/01/rdf-schema#label> "examples" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/fileObject> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/FileObject> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/FileSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/excludes> <http://www.w3.org/2000/01/rdf-schema#label> "excludes" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://schema.org/distribution> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/FileSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/FileSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/DataDownload> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/BandConfiguration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/StructuredValue> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/bandwidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/equivalentProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/samplingStrategy> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of how samples were selected or constructed (e.g., chip/windowing strategy, filtering criteria) to support reproducibility and interpretation." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/key> <http://www.w3.org/2000/01/rdf-schema#comment> "One or more fields whose values uniquely identify each record in the RecordSet. (See example below.)" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/extract> <http://www.w3.org/2000/01/rdf-schema#comment> "The extraction method from the provided source." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataSocialImpact> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/transform> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Transform> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/FileSet> <http://www.w3.org/2000/01/rdf-schema#label> "FileSet" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/dataType> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "dataAnnotationAnalysis" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/data> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/references> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of data imputation process, if applicable." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/includes> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/sdVersion> <http://schema.org/rangeIncludes> <http://schema.org/Number> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/extract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/bandwidth> <http://www.w3.org/2000/01/rdf-schema#label> "bandwidth" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/observatory> <http://www.w3.org/2000/01/rdf-schema#label> "observatory" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/centerWavelength> <http://www.w3.org/2000/01/rdf-schema#label> "centerWavelength" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/timeSeriesIndex> <http://www.w3.org/2000/01/rdf-schema#label> "timeSeriesIndex" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/totalBands> <http://www.w3.org/2000/01/rdf-schema#comment> "Total number of bands for an asset or dataset described by geocr:bandConfiguration." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/samplingStrategy> <http://www.w3.org/2000/01/rdf-schema#label> "samplingStrategy" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/fileObject> <http://www.w3.org/2000/01/rdf-schema#comment> "The id of a FileObject that is the source of the data." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://schema.org/distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/observatory> <http://www.w3.org/2000/01/rdf-schema#comment> "Observatory/platform identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE)." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of data manipulation process, if applicable." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/content> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/FilePropertyEnumeration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/temporalResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Temporal cadence of the dataset or collection (e.g., 1 month), typically expressed as a QuantitativeValue (value + unit), or as text. May be provided at dataset level or at record/collection level when cadence varies." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/fileProperty> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Extract> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/transform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/unArchive> <http://www.w3.org/2000/01/rdf-schema#comment> "Extract the content of the archive." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/isLiveDataset> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Format> <http://www.w3.org/2000/01/rdf-schema#label> "Format" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured description of multi-wavelength channel configuration for Space Weather / heliophysics datasets (e.g., a list of wavelength channels). Intended to be used as the value of geocr:multiWavelengthConfiguration." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollection> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/observatory> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/DataType> <http://www.w3.org/2000/01/rdf-schema#comment> "The data type of values expected for a Field in a RecordSet. This class is inspired by the Datatype class in CSVW. In addition to simple atomic types, types can be semantic types, such as schema.org classes, as well types defined in other vocabularies." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#label> "solarInstrumentCharacteristics" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/totalBands> <http://schema.org/rangeIncludes> <http://schema.org/Integer> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/isLiveDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the dataset is continuously updated instead of being versioned." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionType> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/ValidationSplit> <http://www.w3.org/2000/01/rdf-schema#comment> "Validation split." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "dataImputationProtocol" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spatialIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "Precomputed spatial index token(s) (e.g., DGGS cell ID or geohash-like key) to accelerate coarse spatial filtering and discovery at scale." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/annotation> <http://www.w3.org/2000/01/rdf-schema#comment> "One or more data-level annotations that apply to the entire record or field." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/isLiveDataset> <http://www.w3.org/2000/01/rdf-schema#label> "isLiveDataset" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/format> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/DataSource> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataSocialImpact> <http://www.w3.org/2000/01/rdf-schema#comment> "Discussion of social impact, if applicable." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/recordSet> <http://www.w3.org/2000/01/rdf-schema#comment> "The id of a RecordSet that is the source of the data." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/includes> <http://www.w3.org/2000/01/rdf-schema#comment> "A glob pattern that specifies the files to include, e.g., \".jpg\", \"/foo/pic*.jpg\". The pattern is evaluated from the root of the containedIn contents." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/examples> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/column> <http://www.w3.org/2000/01/rdf-schema#label> "column" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/containedIn> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/FileSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/field> <http://www.w3.org/2000/01/rdf-schema#comment> "A data element that appears in the records of the RecordSet (e.g., one column of a table)." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/field> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/DataSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/TrainSplit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://mlcommons.org/croissant/Split> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/temporalResolution> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spatialBias> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Transform> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Intangible> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/samplingStrategy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/jsonPath> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Label> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Intangible> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/transform> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/DataSource> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/FileSet> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of homogeneous files extracted from a container, optionally filtered by inclusion and/or exclusion filters." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/bandConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Configuration describing raster band organization and semantics for a dataset or asset (e.g., band ordering and names)." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/unArchive> <http://www.w3.org/2000/01/rdf-schema#label> "unArchive" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spatialIndex> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spatialResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#label> "coordinateReferenceSystem" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/channelList> <http://www.w3.org/2000/01/rdf-schema#comment> "List of wavelength channels (e.g., 171Å, 193Å) used within geocr:MultiWavelengthConfiguration." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataLimitations> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of annotations (labels, ratings) produced, including how these were created or authored - Annotation Workforce Type, Annotation Characteristic(s), Annotation Description(s), Annotation Task(s), Annotation Distribution(s)." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/source> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/RecordSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/BandConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/md5> <http://www.w3.org/2000/01/rdf-schema#comment> "The MD5 hash of the file." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/SpectralBand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/StructuredValue> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataLimitations> <http://www.w3.org/2000/01/rdf-schema#label> "dataLimitations" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/bandNamesList> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/BandConfiguration> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/sdVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "The version of the dataset metadata, which may be distinct from the version of the dataset content." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/containedIn> <http://www.w3.org/2000/01/rdf-schema#label> "containedIn" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/DataSource> <http://www.w3.org/2000/01/rdf-schema#comment> "A source of data, optionally transformed before being used." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/source> <http://www.w3.org/2000/01/rdf-schema#comment> "The data source of the field. This will generally reference a FileObject or FileSet's contents (e.g., a specific column of a table)." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/observatory> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/sdVersion> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/value> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/key> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/repeated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/centerWavelength> <http://www.w3.org/2000/01/rdf-schema#comment> "Center wavelength for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/field> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/BoundingBox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/bandConfiguration> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/geo/BandConfiguration> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/source> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <http://www.w3.org/2000/01/rdf-schema#comment> "Versioning information in terms of the updating timeframe, the maintainers, and the deprecation policies." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/SpectralBand> <http://www.w3.org/2000/01/rdf-schema#label> "SpectralBand" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/key> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataBiases> <http://www.w3.org/2000/01/rdf-schema#label> "dataBiases" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/DataSource> <http://www.w3.org/2000/01/rdf-schema#label> "DataSource" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/fileSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Transform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/BoundingBox> <http://www.w3.org/2000/01/rdf-schema#comment> "A data type representing a bounding box." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataUseCases> <http://www.w3.org/2000/01/rdf-schema#comment> "Dataset Use(s) - Training, Testing, Validation, Development or Production Use, Fine Tuning, Others (please specify), Usage Guidelines. Recommended uses." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/bandConfiguration> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/bandwidth> <http://schema.org/rangeIncludes> <http://schema.org/QuantitativeValue> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/jsonPath> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Extract> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/regex> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Transform> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/subField> <http://www.w3.org/2000/01/rdf-schema#comment> "Another Field that is nested inside this one." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/examples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/bandNamesList> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/dataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/ContentExtractionEnumeration> <http://www.w3.org/2000/01/rdf-schema#label> "ContentExtractionEnumeration" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/repeated> <http://schema.org/rangeIncludes> <http://schema.org/Boolean> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionType> <http://www.w3.org/2000/01/rdf-schema#comment> "Define the data collection type. Recommended values: Surveys, Secondary Data analysis, Physical data collection, Direct measurement, Document analysis, Manual Human Curator, Software Collection, Experiments, Web Scraping, Web API, Focus groups, Self-reporting, Customer feedback data, User-generated content data, Passive Data Collection, Others." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/isLiveDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataBiases> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Field> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Intangible> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/readLines> <http://www.w3.org/2000/01/rdf-schema#label> "readLines" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/md5> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/examples> <http://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/annotation> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/bandConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/fileSet> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/FileSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/jsonPath> <http://www.w3.org/2000/01/rdf-schema#label> "jsonPath" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/recordEndpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/bandNamesList> <http://www.w3.org/2000/01/rdf-schema#comment> "Ordered list of band names corresponding to the band stack described by geocr:bandConfiguration." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Extract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Intangible> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/fileSet> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/DataSource> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/containedIn> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/FileSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/fileProperty> <http://www.w3.org/2000/01/rdf-schema#label> "fileProperty" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/data> <http://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/equivalentProperty> <http://www.w3.org/2000/01/rdf-schema#label> "equivalentProperty" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://schema.org/distribution> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollectionMissingData" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataSocialImpact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/DataType> <http://www.w3.org/2000/01/rdf-schema#label> "DataType" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/citeAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/FileObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/DataDownload> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://schema.org/distribution> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/FileObject> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/readLines> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/data> <http://www.w3.org/2000/01/rdf-schema#comment> "One or more inlined records that constitute the data of the RecordSet, typically used for small enumeration values." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/references> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/annotatorDemographics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/machineAnnotationTools> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/sdVersion> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/source> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/DataSource> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <http://www.w3.org/2000/01/rdf-schema#label> "dataReleaseMaintenancePlan" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/bandNamesList> <http://www.w3.org/2000/01/rdf-schema#label> "bandNamesList" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "multiWavelengthConfiguration" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/separator> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/recordEndpoint> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Split> <http://www.w3.org/2000/01/rdf-schema#label> "Split" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spatialBias> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Considerations related to the process of converting the \"raw\" annotations into the labels that are ultimately packaged in a dataset - Uncertainty or disagreement between annotations on each instance as a signal in the dataset, analysis of systematic disagreements between annotators of different socio demographic group,  how the final dataset annotations will relate to individual annotator responses." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Extract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/dataType> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/citeAs> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spatialResolution> <http://schema.org/rangeIncludes> <http://schema.org/QuantitativeValue> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataUseCases> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionType> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollectionType" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/excludes> <http://www.w3.org/2000/01/rdf-schema#comment> "A glob pattern that specifies the files to exclude. The pattern is evaluated from the root of the containedIn contents, after the includes patterns have been evaluated." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/temporalResolution> <http://schema.org/rangeIncludes> <http://schema.org/QuantitativeValue> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "MultiWavelengthConfiguration" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/column> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/samplingStrategy> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/content> <http://www.w3.org/2000/01/rdf-schema#comment> "What to extract from the data source content, e.g., lines." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/timeSeriesIndex> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/parentField> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Format> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/equivalentProperty> <http://schema.org/rangeIncludes> <http://schema.org/URL> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spatialIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/annotationsPerItem> <http://www.w3.org/2000/01/rdf-schema#label> "annotationsPerItem" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Label> <http://www.w3.org/2000/01/rdf-schema#label> "Label" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/isLiveDataset> <http://schema.org/rangeIncludes> <http://schema.org/Boolean> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/annotatorDemographics> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/containedIn> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/FileObject> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/value> <http://www.w3.org/2000/01/rdf-schema#comment> "An optional constant value for the field." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollection> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollection" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Format> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies how to parse the format of the data from a string representation. For example, format may hold a date format string, a number format, or a bounding box format." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <http://schema.org/rangeIncludes> <http://schema.org/DateTime> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/regex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/annotation> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "dataPreprocessingProtocol" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/regex> <http://www.w3.org/2000/01/rdf-schema#comment> "A regular expression to apply to the data." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Extract> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies how to extract data from a DataSource. The extraction mechanism depends on the type of content, e.g., a column name for tabular data, or a jsonPath for JSON data." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataLimitations> <http://schema.org/rangeIncludes> <http://schema.org/Text> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/FilePropertyEnumeration> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies a property of a FileObject. One of \"fullPath\" or \"fileName\"." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/subField> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/annotation> <http://www.w3.org/2000/01/rdf-schema#label> "annotation" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Transform> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies how to transform data extracted from a DataSource. The type of transformation depends on the type of content, e.g., a regular expression to appy on text, or a jsonQuery to transform JSON content." _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/repeated> <http://www.w3.org/2000/01/rdf-schema#label> "repeated" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/arrayShape> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/sdVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/key> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/Split> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Enumeration> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/transform> <http://www.w3.org/2000/01/rdf-schema#label> "transform" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/content> <http://www.w3.org/2000/01/rdf-schema#label> "content" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/temporalResolution> <http://www.w3.org/2000/01/rdf-schema#label> "temporalResolution" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spatialIndex> <http://schema.org/domainIncludes> <http://schema.org/Dataset> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/recordSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/RAI/dataCollectionRawData> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollectionRawData" _:N93ad6eefbdec4f289d0191df99c20c73 .
-<http://mlcommons.org/croissant/geo/spatialResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Nominal spatial resolution for the dataset or collection (e.g., '30m' or a QuantitativeValue with units). May be provided at dataset level or at record/collection level when resolution varies." _:N93ad6eefbdec4f289d0191df99c20c73 .
+<http://mlcommons.org/croissant/source> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/FileSet>  .
+<http://mlcommons.org/croissant/geo/spatialResolution> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/regex> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://schema.org/distribution> <http://www.w3.org/2000/01/rdf-schema#label> "distribution"  .
+<http://mlcommons.org/croissant/isLiveDataset> <http://www.w3.org/2000/01/rdf-schema#label> "isLiveDataset"  .
+<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of data imputation process, if applicable."  .
+<http://mlcommons.org/croissant/dataType> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://mlcommons.org/croissant/source> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/DataSource>  .
+<http://mlcommons.org/croissant/geo/spatialIndex> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/key> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet>  .
+<http://mlcommons.org/croissant/fileObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/RAI/annotatorDemographics> <http://www.w3.org/2000/01/rdf-schema#label> "annotatorDemographics"  .
+<http://mlcommons.org/croissant/geo/channelList> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/equivalentProperty> <http://schema.org/rangeIncludes> <http://schema.org/URL>  .
+<http://mlcommons.org/croissant/geo/spatialResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/bandConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Configuration describing raster band organization and semantics for a dataset or asset (e.g., band ordering and names)."  .
+<http://mlcommons.org/croissant/source> <http://www.w3.org/2000/01/rdf-schema#comment> "The data source of the field. This will generally reference a FileObject or FileSet's contents (e.g., a specific column of a table)."  .
+<http://mlcommons.org/croissant/geo/bandNamesList> <http://www.w3.org/2000/01/rdf-schema#label> "bandNamesList"  .
+<http://mlcommons.org/croissant/ContentExtractionEnumeration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class>  .
+<http://mlcommons.org/croissant/extract> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/DataSource>  .
+<http://mlcommons.org/croissant/key> <http://www.w3.org/2000/01/rdf-schema#label> "key"  .
+<http://mlcommons.org/croissant/TestSplit> <http://www.w3.org/2000/01/rdf-schema#comment> "Test split."  .
+<http://mlcommons.org/croissant/geo/bandConfiguration> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/geo/BandConfiguration>  .
+<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Sensitive Human Attribute(s)- Gender, Socio-economic status, Geography, Language, Age, Culture, Experience or Seniority, Others (please specify), if applicable."  .
+<http://mlcommons.org/croissant/subField> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://mlcommons.org/croissant/md5> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/FileObject>  .
+<http://mlcommons.org/croissant/RAI/dataCollectionRawData> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/SegmentationMask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/StructuredValue>  .
+<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/equivalentProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A property that is equivalent to this Field. Used in the case a dataType is specified on the RecordSet to map specific fields to specific properties associated with that dataType."  .
+<http://mlcommons.org/croissant/annotation> <http://www.w3.org/2000/01/rdf-schema#label> "annotation"  .
+<http://mlcommons.org/croissant/RecordSet> <http://www.w3.org/2000/01/rdf-schema#comment> "A description of a set of structured records from one or more data sources and their structure, expressed as a set of fields."  .
+<http://mlcommons.org/croissant/transform> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/DataSource>  .
+<http://mlcommons.org/croissant/geo/channelList> <http://www.w3.org/2000/01/rdf-schema#comment> "List of wavelength channels (e.g., 171Å, 193Å) used within geocr:MultiWavelengthConfiguration."  .
+<http://mlcommons.org/croissant/parentField> <http://www.w3.org/2000/01/rdf-schema#comment> "A special case of SubField that should be hidden because it references a Field that already appears in the RecordSet."  .
+<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://www.w3.org/2000/01/rdf-schema#comment> "Per-band spectral metadata for EO imagery (e.g., center wavelength, bandwidth), represented as one or more geocr:SpectralBand entries."  .
+<http://mlcommons.org/croissant/containedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/timeSeriesIndex> <http://www.w3.org/2000/01/rdf-schema#label> "timeSeriesIndex"  .
+<http://mlcommons.org/croissant/sdVersion> <http://www.w3.org/2000/01/rdf-schema#label> "sdVersion"  .
+<http://mlcommons.org/croissant/geo/timeSeriesIndex> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet>  .
+<http://mlcommons.org/croissant/jsonPath> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Extract>  .
+<http://mlcommons.org/croissant/FilePropertyEnumeration> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies a property of a FileObject. One of \"fullPath\" or \"fileName\"."  .
+<http://mlcommons.org/croissant/isLiveDataset> <http://schema.org/rangeIncludes> <http://schema.org/Boolean>  .
+<http://mlcommons.org/croissant/RAI/dataUseCases> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/value> <http://www.w3.org/2000/01/rdf-schema#comment> "An optional constant value for the field."  .
+<http://mlcommons.org/croissant/geo/SpectralBand> <http://www.w3.org/2000/01/rdf-schema#label> "SpectralBand"  .
+<http://mlcommons.org/croissant/RAI/dataBiases> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/containedIn> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/FileSet>  .
+<http://mlcommons.org/croissant/format> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/DataSource>  .
+<http://mlcommons.org/croissant/BoundingBox> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/dataType> <http://www.w3.org/2000/01/rdf-schema#comment> "The data type of the field, identified by the URI of the corresponding class. It could be either an atomic type (e.g, sc:Integer) or a semantic type (e.g., sc:GeoLocation)."  .
+<http://mlcommons.org/croissant/TrainSplit> <http://www.w3.org/2000/01/rdf-schema#label> "TrainSplit"  .
+<http://mlcommons.org/croissant/geo/SpectralBand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>  .
+<http://mlcommons.org/croissant/readLines> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/temporalResolution> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/Split> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#class>  .
+<http://mlcommons.org/croissant/geo/observatory> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics>  .
+<http://mlcommons.org/croissant/jsonPath> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/containedIn> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/FileObject>  .
+<http://mlcommons.org/croissant/fileSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/samplingStrategy> <http://www.w3.org/2000/01/rdf-schema#label> "samplingStrategy"  .
+<http://mlcommons.org/croissant/FileObject> <http://www.w3.org/2000/01/rdf-schema#label> "FileObject"  .
+<http://mlcommons.org/croissant/annotation> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/key> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://mlcommons.org/croissant/geo/samplingStrategy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <http://www.w3.org/2000/01/rdf-schema#label> "personalSensitiveInformation"  .
+<http://mlcommons.org/croissant/RAI/annotatorDemographics> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/geo/timeSeriesIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies the record-level field used to order/index observations in a time series (e.g., a timestamp field in a RecordSet)."  .
+<http://mlcommons.org/croissant/geo/recordEndpoint> <http://schema.org/rangeIncludes> <http://schema.org/URL>  .
+<http://mlcommons.org/croissant/RAI/dataSocialImpact> <http://www.w3.org/2000/01/rdf-schema#comment> "Discussion of social impact, if applicable."  .
+<http://mlcommons.org/croissant/FilePropertyEnumeration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Enumeration>  .
+<http://mlcommons.org/croissant/geo/spatialBias> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/ValidationSplit> <http://www.w3.org/2000/01/rdf-schema#label> "ValidationSplit"  .
+<http://mlcommons.org/croissant/repeated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://schema.org/distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/Transform> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Intangible>  .
+<http://mlcommons.org/croissant/geo/centerWavelength> <http://schema.org/rangeIncludes> <http://schema.org/QuantitativeValue>  .
+<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/Label> <http://www.w3.org/2000/01/rdf-schema#comment> "A machine learning label."  .
+<http://mlcommons.org/croissant/readLines> <http://www.w3.org/2000/01/rdf-schema#label> "readLines"  .
+<http://mlcommons.org/croissant/geo/recordEndpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A service endpoint that provides programmatic access to the dataset's metadata records (e.g., listing, paging, and filtering records)."  .
+<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/format> <http://www.w3.org/2000/01/rdf-schema#comment> "A format to parse the values of the data from text, e.g., a date format or number format."  .
+<http://mlcommons.org/croissant/fileSet> <http://www.w3.org/2000/01/rdf-schema#comment> "The id of a FileSet that is the source of the data."  .
+<http://mlcommons.org/croissant/geo/spatialResolution> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet>  .
+<http://mlcommons.org/croissant/RecordSet> <http://www.w3.org/2000/01/rdf-schema#label> "RecordSet"  .
+<http://mlcommons.org/croissant/dataType> <http://www.w3.org/2000/01/rdf-schema#label> "dataType"  .
+<http://mlcommons.org/croissant/Format> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/md5> <http://www.w3.org/2000/01/rdf-schema#comment> "The MD5 hash of the file."  .
+<http://mlcommons.org/croissant/RAI/dataSocialImpact> <http://www.w3.org/2000/01/rdf-schema#label> "dataSocialImpact"  .
+<http://mlcommons.org/croissant/subField> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/ContentExtractionEnumeration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Enumeration>  .
+<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of annotations (labels, ratings) produced, including how these were created or authored - Annotation Workforce Type, Annotation Characteristic(s), Annotation Description(s), Annotation Task(s), Annotation Distribution(s)."  .
+<http://mlcommons.org/croissant/geo/bandwidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Spectral bandwidth for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue."  .
+<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "multiWavelengthConfiguration"  .
+<http://mlcommons.org/croissant/geo/centerWavelength> <http://www.w3.org/2000/01/rdf-schema#comment> "Center wavelength for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue."  .
+<http://mlcommons.org/croissant/geo/BandConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>  .
+<http://mlcommons.org/croissant/recordSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/timeSeriesIndex> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://mlcommons.org/croissant/Field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class>  .
+<http://mlcommons.org/croissant/RAI/machineAnnotationTools> <http://www.w3.org/2000/01/rdf-schema#label> "machineAnnotationTools"  .
+<http://mlcommons.org/croissant/FileSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class>  .
+<http://mlcommons.org/croissant/RAI/dataLimitations> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/instrument> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/RAI/machineAnnotationTools> <http://www.w3.org/2000/01/rdf-schema#comment> "List of software used for data annotation (e.g., concept extraction, NER, and additional characteristics of the tools used for annotation to allow for replication or extension)."  .
+<http://mlcommons.org/croissant/parentField> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://mlcommons.org/croissant/Format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class>  .
+<http://mlcommons.org/croissant/field> <http://www.w3.org/2000/01/rdf-schema#comment> "A data element that appears in the records of the RecordSet (e.g., one column of a table)."  .
+<http://mlcommons.org/croissant/source> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#label> "SolarInstrumentCharacteristics"  .
+<http://mlcommons.org/croissant/FileObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/DataDownload>  .
+<http://mlcommons.org/croissant/Format> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies how to parse the format of the data from a string representation. For example, format may hold a date format string, a number format, or a bounding box format."  .
+<http://mlcommons.org/croissant/isLiveDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/Transform> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies how to transform data extracted from a DataSource. The type of transformation depends on the type of content, e.g., a regular expression to appy on text, or a jsonQuery to transform JSON content."  .
+<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/extract> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Extract>  .
+<http://mlcommons.org/croissant/content> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/BoundingBox> <http://www.w3.org/2000/01/rdf-schema#label> "Label"  .
+<http://mlcommons.org/croissant/geo/bandConfiguration> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/citeAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/observatory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/RAI/annotationsPerItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/recordSet> <http://www.w3.org/2000/01/rdf-schema#label> "recordSet"  .
+<http://mlcommons.org/croissant/DataType> <http://www.w3.org/2000/01/rdf-schema#comment> "The data type of values expected for a Field in a RecordSet. This class is inspired by the Datatype class in CSVW. In addition to simple atomic types, types can be semantic types, such as schema.org classes, as well types defined in other vocabularies."  .
+<http://mlcommons.org/croissant/excludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/totalBands> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/BandConfiguration>  .
+<http://mlcommons.org/croissant/geo/spatialResolution> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/ContentExtractionEnumeration> <http://www.w3.org/2000/01/rdf-schema#label> "ContentExtractionEnumeration"  .
+<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/geo/SpectralBand>  .
+<http://mlcommons.org/croissant/BoundingBox> <http://www.w3.org/2000/01/rdf-schema#comment> "A data type representing a bounding box."  .
+<http://mlcommons.org/croissant/geo/totalBands> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/subField> <http://www.w3.org/2000/01/rdf-schema#label> "subField"  .
+<http://mlcommons.org/croissant/geo/temporalResolution> <http://schema.org/rangeIncludes> <http://schema.org/QuantitativeValue>  .
+<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/TestSplit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://mlcommons.org/croissant/Split>  .
+<http://mlcommons.org/croissant/geo/bandwidth> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/SpectralBand>  .
+<http://mlcommons.org/croissant/annotation> <http://www.w3.org/2000/01/rdf-schema#comment> "One or more data-level annotations that apply to the entire record or field."  .
+<http://mlcommons.org/croissant/data> <http://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON>  .
+<http://mlcommons.org/croissant/fileProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/spatialIndex> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/source> <http://www.w3.org/2000/01/rdf-schema#label> "source"  .
+<http://mlcommons.org/croissant/RAI/personalSensitiveInformation> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Composite property to group multi-wavelength configuration information for Space Weather / heliophysics datasets; intended to map to SPASE constructs."  .
+<http://mlcommons.org/croissant/Extract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Intangible>  .
+<http://mlcommons.org/croissant/sdVersion> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/FileSet> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of homogeneous files extracted from a container, optionally filtered by inclusion and/or exclusion filters."  .
+<http://mlcommons.org/croissant/data> <http://www.w3.org/2000/01/rdf-schema#label> "data"  .
+<http://mlcommons.org/croissant/repeated> <http://www.w3.org/2000/01/rdf-schema#label> "repeated"  .
+<http://mlcommons.org/croissant/column> <http://www.w3.org/2000/01/rdf-schema#label> "column"  .
+<http://mlcommons.org/croissant/DataSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class>  .
+<http://mlcommons.org/croissant/ContentExtractionEnumeration> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies which content to extract from a file. One of \"all\", \"lines\", or \"lineNumbers\"."  .
+<http://mlcommons.org/croissant/RAI/dataCollectionType> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/extract> <http://www.w3.org/2000/01/rdf-schema#label> "extract"  .
+<http://mlcommons.org/croissant/RAI/dataCollectionRawData> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the raw data i.e. source of the data."  .
+<http://mlcommons.org/croissant/transform> <http://www.w3.org/2000/01/rdf-schema#comment> "A transformation to apply on source data on top of the extracted method as specified through extract, e.g., a regular expression or JSON query."  .
+<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration>  .
+<http://mlcommons.org/croissant/field> <http://www.w3.org/2000/01/rdf-schema#label> "field"  .
+<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/fileObject> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/FileObject>  .
+<http://mlcommons.org/croissant/TrainSplit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://mlcommons.org/croissant/Split>  .
+<http://mlcommons.org/croissant/transform> <http://www.w3.org/2000/01/rdf-schema#label> "transform"  .
+<http://mlcommons.org/croissant/containedIn> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/FileSet>  .
+<http://mlcommons.org/croissant/jsonPath> <http://www.w3.org/2000/01/rdf-schema#label> "jsonPath"  .
+<http://mlcommons.org/croissant/references> <http://www.w3.org/2000/01/rdf-schema#comment> "Another Field of another RecordSet that this field references. This is the equivalent of a foreign key reference in a relational database."  .
+<http://mlcommons.org/croissant/geo/totalBands> <http://www.w3.org/2000/01/rdf-schema#comment> "Total number of bands for an asset or dataset described by geocr:bandConfiguration."  .
+<http://mlcommons.org/croissant/repeated> <http://www.w3.org/2000/01/rdf-schema#comment> "If true, then the Field is a list of values of type dataType."  .
+<http://mlcommons.org/croissant/field> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet>  .
+<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/geo/bandwidth> <http://schema.org/rangeIncludes> <http://schema.org/QuantitativeValue>  .
+<http://mlcommons.org/croissant/recordSet> <http://www.w3.org/2000/01/rdf-schema#comment> "The id of a RecordSet that is the source of the data."  .
+<http://mlcommons.org/croissant/geo/samplingStrategy> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/RAI/machineAnnotationTools> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/separator> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/arrayShape> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://mlcommons.org/croissant/geo/observatory> <http://www.w3.org/2000/01/rdf-schema#comment> "Observatory/platform identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE)."  .
+<http://mlcommons.org/croissant/separator> <http://www.w3.org/2000/01/rdf-schema#comment> "A separator to use parse the data into an array."  .
+<http://mlcommons.org/croissant/RAI/dataSocialImpact> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/includes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>  .
+<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#comment> "Composite property to group solar/heliophysics instrument characteristics for Space Weather datasets; intended to map to SPASE constructs."  .
+<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "dataAnnotationAnalysis"  .
+<http://mlcommons.org/croissant/containedIn> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/FileObject>  .
+<http://mlcommons.org/croissant/RAI/dataCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/regex> <http://www.w3.org/2000/01/rdf-schema#comment> "A regular expression to apply to the data."  .
+<http://mlcommons.org/croissant/regex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/fileSet> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/FileSet>  .
+<http://mlcommons.org/croissant/repeated> <http://schema.org/rangeIncludes> <http://schema.org/Boolean>  .
+<http://mlcommons.org/croissant/content> <http://www.w3.org/2000/01/rdf-schema#label> "content"  .
+<http://mlcommons.org/croissant/value> <http://www.w3.org/2000/01/rdf-schema#label> "value"  .
+<http://mlcommons.org/croissant/geo/bandConfiguration> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://mlcommons.org/croissant/geo/spatialBias> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of spatial representativeness limitations (e.g., geographic concentration, under-sampled regions/biomes) that may affect model generalization and evaluation."  .
+<http://mlcommons.org/croissant/references> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://mlcommons.org/croissant/geo/temporalResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Temporal cadence of the dataset or collection (e.g., 1 month), typically expressed as a QuantitativeValue (value + unit), or as text. May be provided at dataset level or at record/collection level when cadence varies."  .
+<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <http://www.w3.org/2000/01/rdf-schema#label> "dataAnnotationPlatform"  .
+<http://mlcommons.org/croissant/RAI/dataSocialImpact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/StructuredValue>  .
+<http://mlcommons.org/croissant/geo/totalBands> <http://www.w3.org/2000/01/rdf-schema#label> "totalBands"  .
+<http://mlcommons.org/croissant/equivalentProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the steps that were required to bring collected data to a state that can be processed by an ML model/algorithm, e.g. filtering out incomplete entries etc, if applicable."  .
+<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <http://www.w3.org/2000/01/rdf-schema#comment> "Versioning information in terms of the updating timeframe, the maintainers, and the deprecation policies."  .
+<http://mlcommons.org/croissant/geo/spatialResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Nominal spatial resolution for the dataset or collection (e.g., '30m' or a QuantitativeValue with units). May be provided at dataset level or at record/collection level when resolution varies."  .
+<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "spectralBandMetadata"  .
+<http://mlcommons.org/croissant/geo/channelList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/format> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Format>  .
+<http://mlcommons.org/croissant/examples> <http://www.w3.org/2000/01/rdf-schema#comment> "One more inlined records provided as example content of the RecordSet."  .
+<http://mlcommons.org/croissant/RecordSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Intangible>  .
+<http://mlcommons.org/croissant/RAI/dataCollectionRawData> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/subField> <http://www.w3.org/2000/01/rdf-schema#comment> "Another Field that is nested inside this one."  .
+<http://mlcommons.org/croissant/DataType> <http://www.w3.org/2000/01/rdf-schema#label> "DataType"  .
+<http://mlcommons.org/croissant/FileObject> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual file that is part of a dataset."  .
+<http://mlcommons.org/croissant/unArchive> <http://www.w3.org/2000/01/rdf-schema#label> "unArchive"  .
+<http://mlcommons.org/croissant/data> <http://www.w3.org/2000/01/rdf-schema#comment> "One or more inlined records that constitute the data of the RecordSet, typically used for small enumeration values."  .
+<http://mlcommons.org/croissant/readLines> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Transform>  .
+<http://mlcommons.org/croissant/geo/bandwidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/parentField> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/geo/SpectralBand> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured per-band spectral metadata entry (e.g., center wavelength and bandwidth). Intended to be used as items within geocr:spectralBandMetadata."  .
+<http://mlcommons.org/croissant/recordSet> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/RecordSet>  .
+<http://mlcommons.org/croissant/RAI/dataUseCases> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/instrument> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics>  .
+<http://mlcommons.org/croissant/geo/spatialBias> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/geo/temporalResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://schema.org/distribution> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/includes> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/FileSet>  .
+<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#label> "solarInstrumentCharacteristics"  .
+<http://mlcommons.org/croissant/value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/bandConfiguration> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/geo/recordEndpoint> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Coordinate reference system (CRS) identifier (e.g., EPSG code) used to interpret spatial data in the dataset."  .
+<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/dataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/md5> <http://www.w3.org/2000/01/rdf-schema#label> "md5"  .
+<http://mlcommons.org/croissant/jsonPath> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/fileObject> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/DataSource>  .
+<http://mlcommons.org/croissant/geo/timeSeriesIndex> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/citeAs> <http://www.w3.org/2000/01/rdf-schema#comment> "How to cite this dataset. Ideally, citations should be expressed using the bibtex format. Note that this is different from schema.org/citation, which is used to make a citation to another publication from this dataset."  .
+<http://schema.org/distribution> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/FileSet>  .
+<http://mlcommons.org/croissant/Extract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class>  .
+<http://mlcommons.org/croissant/containedIn> <http://www.w3.org/2000/01/rdf-schema#label> "containedIn"  .
+<http://mlcommons.org/croissant/jsonPath> <http://www.w3.org/2000/01/rdf-schema#comment> "In case the data source is JSON data, a path expression to extract a subset of the data."  .
+<http://mlcommons.org/croissant/RAI/annotatorDemographics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/column> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Extract>  .
+<http://mlcommons.org/croissant/dataType> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/DataType>  .
+<http://mlcommons.org/croissant/geo/recordEndpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/SegmentationMask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#class>  .
+<http://mlcommons.org/croissant/geo/observatory> <http://www.w3.org/2000/01/rdf-schema#label> "observatory"  .
+<http://mlcommons.org/croissant/Transform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class>  .
+<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollectionMissingData"  .
+<http://mlcommons.org/croissant/sdVersion> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/isLiveDataset> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/transform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/Format> <http://www.w3.org/2000/01/rdf-schema#label> "Format"  .
+<http://mlcommons.org/croissant/fileProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "The file property to extract from the data source metadata, e.g., the filename."  .
+<http://mlcommons.org/croissant/geo/BandConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "BandConfiguration"  .
+<http://mlcommons.org/croissant/citeAs> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/geo/totalBands> <http://schema.org/rangeIncludes> <http://schema.org/Integer>  .
+<http://mlcommons.org/croissant/geo/bandwidth> <http://www.w3.org/2000/01/rdf-schema#label> "bandwidth"  .
+<http://mlcommons.org/croissant/RAI/annotationsPerItem> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/geo/instrument> <http://www.w3.org/2000/01/rdf-schema#comment> "Instrument identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE)."  .
+<http://mlcommons.org/croissant/unArchive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/RAI/dataCollectionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/Transform> <http://www.w3.org/2000/01/rdf-schema#label> "Transform"  .
+<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "dataAnnotationProtocol"  .
+<http://mlcommons.org/croissant/unArchive> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Transform>  .
+<http://schema.org/distribution> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/FileObject>  .
+<http://mlcommons.org/croissant/format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/samplingStrategy> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of how samples were selected or constructed (e.g., chip/windowing strategy, filtering criteria) to support reproducibility and interpretation."  .
+<http://mlcommons.org/croissant/equivalentProperty> <http://www.w3.org/2000/01/rdf-schema#label> "equivalentProperty"  .
+<http://mlcommons.org/croissant/arrayShape> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/BoundingBox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#class>  .
+<http://mlcommons.org/croissant/column> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/regex> <http://www.w3.org/2000/01/rdf-schema#label> "regex"  .
+<http://mlcommons.org/croissant/RAI/dataLimitations> <http://www.w3.org/2000/01/rdf-schema#comment> "Known limitations - Data generalization limits (e.g related to data distribution, data quality issues, or data sources) and on-recommended uses, if applicable."  .
+<http://mlcommons.org/croissant/sdVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of data manipulation process, if applicable."  .
+<http://mlcommons.org/croissant/fileProperty> <http://www.w3.org/2000/01/rdf-schema#label> "fileProperty"  .
+<http://mlcommons.org/croissant/value> <http://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON>  .
+<http://mlcommons.org/croissant/DataSource> <http://www.w3.org/2000/01/rdf-schema#comment> "A source of data, optionally transformed before being used."  .
+<http://mlcommons.org/croissant/examples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/sdVersion> <http://schema.org/rangeIncludes> <http://schema.org/Number>  .
+<http://mlcommons.org/croissant/excludes> <http://www.w3.org/2000/01/rdf-schema#comment> "A glob pattern that specifies the files to exclude. The pattern is evaluated from the root of the containedIn contents, after the includes patterns have been evaluated."  .
+<http://mlcommons.org/croissant/Extract> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies how to extract data from a DataSource. The extraction mechanism depends on the type of content, e.g., a column name for tabular data, or a jsonPath for JSON data."  .
+<http://mlcommons.org/croissant/content> <http://www.w3.org/2000/01/rdf-schema#comment> "What to extract from the data source content, e.g., lines."  .
+<http://mlcommons.org/croissant/FileSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/DataDownload>  .
+<http://mlcommons.org/croissant/RAI/dataLimitations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/instrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/Label> <http://www.w3.org/2000/01/rdf-schema#label> "Label"  .
+<http://mlcommons.org/croissant/Field> <http://www.w3.org/2000/01/rdf-schema#comment> "A component of the structure of a RecordSet, such as a column of a table."  .
+<http://mlcommons.org/croissant/Extract> <http://www.w3.org/2000/01/rdf-schema#label> "Extract"  .
+<http://mlcommons.org/croissant/arrayShape> <http://www.w3.org/2000/01/rdf-schema#label> "arrayShape"  .
+<http://mlcommons.org/croissant/geo/temporalResolution> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet>  .
+<http://mlcommons.org/croissant/citeAs> <http://www.w3.org/2000/01/rdf-schema#label> "citeAs"  .
+<http://mlcommons.org/croissant/ValidationSplit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://mlcommons.org/croissant/Split>  .
+<http://mlcommons.org/croissant/key> <http://www.w3.org/2000/01/rdf-schema#comment> "One or more fields whose values uniquely identify each record in the RecordSet. (See example below.)"  .
+<http://mlcommons.org/croissant/fileSet> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/DataSource>  .
+<http://mlcommons.org/croissant/RAI/dataCollection> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/annotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/RAI/dataSocialImpact> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/source> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/RecordSet>  .
+<http://mlcommons.org/croissant/containedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Another FileObject, FileSet or DataSource that this one is contained in, e.g., in the case of a file extracted from an archive. When this property is present, the contentUrl is evaluated as a relative path within the container object."  .
+<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/dataType> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet>  .
+<http://mlcommons.org/croissant/repeated> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://mlcommons.org/croissant/regex> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Transform>  .
+<http://mlcommons.org/croissant/DataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class>  .
+<http://mlcommons.org/croissant/references> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://mlcommons.org/croissant/separator> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Transform>  .
+<http://mlcommons.org/croissant/source> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/FileObject>  .
+<http://mlcommons.org/croissant/examples> <http://www.w3.org/2000/01/rdf-schema#label> "examples"  .
+<http://mlcommons.org/croissant/excludes> <http://www.w3.org/2000/01/rdf-schema#label> "excludes"  .
+<http://mlcommons.org/croissant/geo/channelList> <http://www.w3.org/2000/01/rdf-schema#label> "channelList"  .
+<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <http://schema.org/rangeIncludes> <http://schema.org/DateTime>  .
+<http://mlcommons.org/croissant/FileSet> <http://www.w3.org/2000/01/rdf-schema#label> "FileSet"  .
+<http://mlcommons.org/croissant/geo/bandNamesList> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/RAI/dataCollectionRawData> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollectionRawData"  .
+<http://mlcommons.org/croissant/RAI/dataUseCases> <http://www.w3.org/2000/01/rdf-schema#label> "dataUseCases"  .
+<http://mlcommons.org/croissant/FilePropertyEnumeration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class>  .
+<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollectionTimeframe"  .
+<http://mlcommons.org/croissant/RAI/annotationsPerItem> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of human labels per dataset item, if applicable."  .
+<http://mlcommons.org/croissant/fileProperty> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/FilePropertyEnumeration>  .
+<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of missing data in structured/unstructured form."  .
+<http://mlcommons.org/croissant/geo/spatialResolution> <http://www.w3.org/2000/01/rdf-schema#label> "spatialResolution"  .
+<http://mlcommons.org/croissant/geo/spatialIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/centerWavelength> <http://www.w3.org/2000/01/rdf-schema#label> "centerWavelength"  .
+<http://mlcommons.org/croissant/RAI/machineAnnotationTools> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/readLines> <http://schema.org/rangeIncludes> <http://schema.org/Boolean>  .
+<http://mlcommons.org/croissant/includes> <http://www.w3.org/2000/01/rdf-schema#label> "includes"  .
+<http://mlcommons.org/croissant/geo/channelList> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration>  .
+<http://mlcommons.org/croissant/geo/bandConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "bandConfiguration"  .
+<http://mlcommons.org/croissant/examples> <http://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON>  .
+<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://mlcommons.org/croissant/recordSet> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/DataSource>  .
+<http://mlcommons.org/croissant/transform> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Transform>  .
+<http://mlcommons.org/croissant/data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/RAI/dataCollectionType> <http://www.w3.org/2000/01/rdf-schema#comment> "Define the data collection type. Recommended values: Surveys, Secondary Data analysis, Physical data collection, Direct measurement, Document analysis, Manual Human Curator, Software Collection, Experiments, Web Scraping, Web API, Focus groups, Self-reporting, Customer feedback data, User-generated content data, Passive Data Collection, Others."  .
+<http://mlcommons.org/croissant/RAI/dataCollection> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <http://www.w3.org/2000/01/rdf-schema#comment> "Timeframe in terms of start and end date of the collection process, that it described as a DateTime indicating a time period in <a href=\"https://en.wikipedia.org/wiki/ISO_8601#Time_intervals\">ISO 8601 time interval format</a>. For example, a collection time frame ranging from 2020 - 2022 can be indicated in ISO 8601 interval format via \"2020/2022\"."  .
+<http://mlcommons.org/croissant/DataSource> <http://www.w3.org/2000/01/rdf-schema#label> "DataSource"  .
+<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/parentField> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/containedIn> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/DataSource>  .
+<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics>  .
+<http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured description of solar/heliophysics instrument and observatory characteristics for Space Weather datasets (e.g., observatory/platform and instrument identifiers). Intended to be used as the value of geocr:solarInstrumentCharacteristics."  .
+<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#label> "coordinateReferenceSystem"  .
+<http://mlcommons.org/croissant/geo/spatialIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "Precomputed spatial index token(s) (e.g., DGGS cell ID or geohash-like key) to accelerate coarse spatial filtering and discovery at scale."  .
+<http://mlcommons.org/croissant/md5> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/excludes> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/FileSet>  .
+<http://mlcommons.org/croissant/geo/samplingStrategy> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/examples> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet>  .
+<http://mlcommons.org/croissant/TestSplit> <http://www.w3.org/2000/01/rdf-schema#label> "TestSplit"  .
+<http://mlcommons.org/croissant/geo/instrument> <http://www.w3.org/2000/01/rdf-schema#label> "instrument"  .
+<http://mlcommons.org/croissant/geo/centerWavelength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/references> <http://www.w3.org/2000/01/rdf-schema#label> "references"  .
+<http://mlcommons.org/croissant/TrainSplit> <http://www.w3.org/2000/01/rdf-schema#comment> "Training split."  .
+<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/separator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/isLiveDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the dataset is continuously updated instead of being versioned."  .
+<http://mlcommons.org/croissant/RAI/dataLimitations> <http://www.w3.org/2000/01/rdf-schema#label> "dataLimitations"  .
+<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/RAI/annotatorDemographics> <http://www.w3.org/2000/01/rdf-schema#comment> "List of demographics specifications about the annotators, if applicable."  .
+<http://mlcommons.org/croissant/RAI/dataCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the data collection process."  .
+<http://mlcommons.org/croissant/geo/temporalResolution> <http://www.w3.org/2000/01/rdf-schema#label> "temporalResolution"  .
+<http://mlcommons.org/croissant/geo/recordEndpoint> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/SegmentationMask> <http://www.w3.org/2000/01/rdf-schema#label> "SegmentationMask"  .
+<http://mlcommons.org/croissant/geo/bandNamesList> <http://www.w3.org/2000/01/rdf-schema#comment> "Ordered list of band names corresponding to the band stack described by geocr:bandConfiguration."  .
+<http://mlcommons.org/croissant/parentField> <http://www.w3.org/2000/01/rdf-schema#label> "parentField"  .
+<http://mlcommons.org/croissant/fileObject> <http://www.w3.org/2000/01/rdf-schema#label> "fileObject"  .
+<http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan> <http://www.w3.org/2000/01/rdf-schema#label> "dataReleaseMaintenancePlan"  .
+<http://mlcommons.org/croissant/column> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Considerations related to the process of converting the \"raw\" annotations into the labels that are ultimately packaged in a dataset - Uncertainty or disagreement between annotations on each instance as a signal in the dataset, analysis of systematic disagreements between annotators of different socio demographic group,  how the final dataset annotations will relate to individual annotator responses."  .
+<http://mlcommons.org/croissant/annotation> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet>  .
+<http://mlcommons.org/croissant/content> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Extract>  .
+<http://mlcommons.org/croissant/format> <http://www.w3.org/2000/01/rdf-schema#label> "format"  .
+<http://mlcommons.org/croissant/ValidationSplit> <http://www.w3.org/2000/01/rdf-schema#comment> "Validation split."  .
+<http://mlcommons.org/croissant/RAI/dataAnnotationPlatform> <http://www.w3.org/2000/01/rdf-schema#comment> "Platform, tool, or library used to collect annotations by human annotators, if applicable."  .
+<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/unArchive> <http://schema.org/rangeIncludes> <http://schema.org/Boolean>  .
+<http://mlcommons.org/croissant/geo/SpectralBand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/StructuredValue>  .
+<http://mlcommons.org/croissant/RAI/dataUseCases> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/DataSource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Intangible>  .
+<http://mlcommons.org/croissant/RAI/dataBiases> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/geo/temporalResolution> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/geo/spatialResolution> <http://schema.org/rangeIncludes> <http://schema.org/QuantitativeValue>  .
+<http://mlcommons.org/croissant/RecordSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class>  .
+<http://mlcommons.org/croissant/RAI/dataBiases> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of biases in dataset, if applicable."  .
+<http://mlcommons.org/croissant/FileObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class>  .
+<http://mlcommons.org/croissant/extract> <http://www.w3.org/2000/01/rdf-schema#comment> "The extraction method from the provided source."  .
+<http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured description of multi-wavelength channel configuration for Space Weather / heliophysics datasets (e.g., a list of wavelength channels). Intended to be used as the value of geocr:multiWavelengthConfiguration."  .
+<http://mlcommons.org/croissant/subField> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://schema.org/distribution> <http://www.w3.org/2000/01/rdf-schema#comment> "By contrast with schema.org/Dataset, Croissant requires the distribution property to have values of type FileObject or FileSet."  .
+<http://mlcommons.org/croissant/content> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/ContentExtractionEnumeration>  .
+<http://mlcommons.org/croissant/RAI/dataBiases> <http://www.w3.org/2000/01/rdf-schema#label> "dataBiases"  .
+<http://mlcommons.org/croissant/geo/spatialIndex> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet>  .
+<http://mlcommons.org/croissant/RAI/dataLimitations> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/RAI/dataCollectionRawData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/citeAs> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/geo/observatory> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/RAI/annotationsPerItem> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>  .
+<http://mlcommons.org/croissant/fileProperty> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Extract>  .
+<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/RAI/dataCollectionMissingData> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/fileSet> <http://www.w3.org/2000/01/rdf-schema#label> "fileSet"  .
+<http://mlcommons.org/croissant/data> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet>  .
+<http://mlcommons.org/croissant/excludes> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/unArchive> <http://www.w3.org/2000/01/rdf-schema#comment> "Extract the content of the archive."  .
+<http://mlcommons.org/croissant/separator> <http://www.w3.org/2000/01/rdf-schema#label> "separator"  .
+<http://mlcommons.org/croissant/RAI/dataBiases> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/Field> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Intangible>  .
+<http://mlcommons.org/croissant/Split> <http://www.w3.org/2000/01/rdf-schema#label> "Split"  .
+<http://mlcommons.org/croissant/RAI/dataUseCases> <http://www.w3.org/2000/01/rdf-schema#comment> "Dataset Use(s) - Training, Testing, Validation, Development or Production Use, Fine Tuning, Others (please specify), Usage Guidelines. Recommended uses."  .
+<http://mlcommons.org/croissant/geo/spatialBias> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/RAI/annotatorDemographics> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/source> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet>  .
+<http://mlcommons.org/croissant/key> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/Split> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Enumeration>  .
+<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/Field> <http://www.w3.org/2000/01/rdf-schema#label> "Field"  .
+<http://mlcommons.org/croissant/DataType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/URL>  .
+<http://mlcommons.org/croissant/readLines> <http://www.w3.org/2000/01/rdf-schema#comment> "Read the content of the file line by line."  .
+<http://mlcommons.org/croissant/RAI/dataImputationProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "dataImputationProtocol"  .
+<http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "dataPreprocessingProtocol"  .
+<http://mlcommons.org/croissant/RAI/dataCollection> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollection"  .
+<http://mlcommons.org/croissant/md5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/value> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://mlcommons.org/croissant/geo/BandConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured description of raster band organization and semantics (e.g., band count and ordered band names). Intended to be used as the value of geocr:bandConfiguration."  .
+<http://mlcommons.org/croissant/Split> <http://www.w3.org/2000/01/rdf-schema#comment> "Splits for training a machine learning, typically test, train and validation."  .
+<http://mlcommons.org/croissant/FilePropertyEnumeration> <http://www.w3.org/2000/01/rdf-schema#label> "FilePropertyEnumeration"  .
+<http://mlcommons.org/croissant/extract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/RAI/dataCollectionType> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/includes> <http://www.w3.org/2000/01/rdf-schema#comment> "A glob pattern that specifies the files to include, e.g., \".jpg\", \"/foo/pic*.jpg\". The pattern is evaluated from the root of the containedIn contents."  .
+<http://mlcommons.org/croissant/geo/spatialIndex> <http://www.w3.org/2000/01/rdf-schema#label> "spatialIndex"  .
+<http://mlcommons.org/croissant/RAI/dataManipulationProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "dataManipulationProtocol"  .
+<http://mlcommons.org/croissant/arrayShape> <http://www.w3.org/2000/01/rdf-schema#comment> "Shape of the data tensor/array associated with a field (e.g., [height, width, bands] for imagery)."  .
+<http://mlcommons.org/croissant/geo/bandConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/BandConfiguration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/StructuredValue>  .
+<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/references> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/spatialBias> <http://www.w3.org/2000/01/rdf-schema#label> "spatialBias"  .
+<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/annotation> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://mlcommons.org/croissant/Label> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Intangible>  .
+<http://mlcommons.org/croissant/sdVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "The version of the dataset metadata, which may be distinct from the version of the dataset content."  .
+<http://mlcommons.org/croissant/equivalentProperty> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "MultiWavelengthConfiguration"  .
+<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <http://schema.org/domainIncludes> <http://schema.org/Dataset>  .
+<http://mlcommons.org/croissant/geo/timeSeriesIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/centerWavelength> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/SpectralBand>  .
+<http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/StructuredValue>  .
+<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/geo/bandNamesList> <http://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/BandConfiguration>  .
+<http://mlcommons.org/croissant/RAI/dataAnnotationProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/field> <http://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Field>  .
+<http://mlcommons.org/croissant/RAI/machineAnnotationTools> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/column> <http://www.w3.org/2000/01/rdf-schema#comment> "In case the data source is tabular, the id of a column to extract."  .
+<http://mlcommons.org/croissant/geo/bandNamesList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/fileObject> <http://www.w3.org/2000/01/rdf-schema#comment> "The id of a FileObject that is the source of the data."  .
+<http://mlcommons.org/croissant/SegmentationMask> <http://www.w3.org/2000/01/rdf-schema#comment> "A data type representing a segmentation mask."  .
+<http://mlcommons.org/croissant/RAI/dataCollectionTimeframe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/RAI/dataCollectionType> <http://www.w3.org/2000/01/rdf-schema#label> "dataCollectionType"  .
+<http://mlcommons.org/croissant/Label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#class>  .
+<http://mlcommons.org/croissant/includes> <http://schema.org/rangeIncludes> <http://schema.org/Text>  .
+<http://mlcommons.org/croissant/arrayShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>  .
+<http://mlcommons.org/croissant/geo/recordEndpoint> <http://www.w3.org/2000/01/rdf-schema#label> "recordEndpoint"  .
+<http://mlcommons.org/croissant/RAI/annotationsPerItem> <http://www.w3.org/2000/01/rdf-schema#label> "annotationsPerItem"  .
 

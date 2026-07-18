@@ -12,13 +12,112 @@
   },
   "@graph": [
     {
-      "@id": "cr:Split",
+      "@id": "cr:readLines",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Transform"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Boolean"
+      },
+      "rdfs:comment": "Read the content of the file line by line.",
+      "rdfs:label": "readLines"
+    },
+    {
+      "@id": "cr:sdVersion",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": [
+        {
+          "@id": "schema:Number"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:comment": "The version of the dataset metadata, which may be distinct from the version of the dataset content.",
+      "rdfs:label": "sdVersion"
+    },
+    {
+      "@id": "cr:fileObject",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:DataSource"
+      },
+      "rangeIncludes": {
+        "@id": "cr:FileObject"
+      },
+      "rdfs:comment": "The id of a FileObject that is the source of the data.",
+      "rdfs:label": "fileObject"
+    },
+    {
+      "@id": "cr:field",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:RecordSet"
+      },
+      "rangeIncludes": {
+        "@id": "cr:Field"
+      },
+      "rdfs:comment": "A data element that appears in the records of the RecordSet (e.g., one column of a table).",
+      "rdfs:label": "field"
+    },
+    {
+      "@id": "cr:annotation",
+      "@type": "rdf:Property",
+      "domainIncludes": [
+        {
+          "@id": "cr:RecordSet"
+        },
+        {
+          "@id": "cr:Field"
+        }
+      ],
+      "rangeIncludes": {
+        "@id": "cr:Field"
+      },
+      "rdfs:comment": "One or more data-level annotations that apply to the entire record or field.",
+      "rdfs:label": "annotation"
+    },
+    {
+      "@id": "schema:distribution",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": [
+        {
+          "@id": "cr:FileObject"
+        },
+        {
+          "@id": "cr:FileSet"
+        }
+      ],
+      "rdfs:comment": "By contrast with schema.org/Dataset, Croissant requires the distribution property to have values of type FileObject or FileSet.",
+      "rdfs:label": "distribution"
+    },
+    {
+      "@id": "cr:Label",
       "@type": "rdf:class",
-      "rdfs:comment": "Splits for training a machine learning, typically test, train and validation.",
-      "rdfs:label": "Split",
+      "rdfs:comment": "A machine learning label.",
+      "rdfs:label": "Label",
       "rdfs:subClassOf": {
-        "@id": "schema:Enumeration"
+        "@id": "schema:Intangible"
       }
+    },
+    {
+      "@id": "cr:TestSplit",
+      "@type": "cr:Split",
+      "rdfs:comment": "Test split.",
+      "rdfs:label": "TestSplit"
+    },
+    {
+      "@id": "cr:ValidationSplit",
+      "@type": "cr:Split",
+      "rdfs:comment": "Validation split.",
+      "rdfs:label": "ValidationSplit"
     },
     {
       "@id": "cr:data",
@@ -33,10 +132,118 @@
       "rdfs:label": "data"
     },
     {
-      "@id": "cr:TrainSplit",
-      "@type": "cr:Split",
-      "rdfs:comment": "Training split.",
-      "rdfs:label": "TrainSplit"
+      "@id": "cr:column",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Extract"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "In case the data source is tabular, the id of a column to extract.",
+      "rdfs:label": "column"
+    },
+    {
+      "@id": "cr:DataType",
+      "@type": "rdf:Class",
+      "rdfs:comment": "The data type of values expected for a Field in a RecordSet. This class is inspired by the Datatype class in CSVW. In addition to simple atomic types, types can be semantic types, such as schema.org classes, as well types defined in other vocabularies.",
+      "rdfs:label": "DataType",
+      "rdfs:subClassOf": {
+        "@id": "schema:URL"
+      }
+    },
+    {
+      "@id": "cr:excludes",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:FileSet"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "A glob pattern that specifies the files to exclude. The pattern is evaluated from the root of the containedIn contents, after the includes patterns have been evaluated.",
+      "rdfs:label": "excludes"
+    },
+    {
+      "@id": "cr:Extract",
+      "@type": "rdf:Class",
+      "rdfs:comment": "Specifies how to extract data from a DataSource. The extraction mechanism depends on the type of content, e.g., a column name for tabular data, or a jsonPath for JSON data.",
+      "rdfs:label": "Extract",
+      "rdfs:subClassOf": {
+        "@id": "schema:Intangible"
+      }
+    },
+    {
+      "@id": "cr:extract",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:DataSource"
+      },
+      "rangeIncludes": {
+        "@id": "cr:Extract"
+      },
+      "rdfs:comment": "The extraction method from the provided source.",
+      "rdfs:label": "extract"
+    },
+    {
+      "@id": "cr:parentField",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Field"
+      },
+      "rangeIncludes": {
+        "@id": "cr:Field"
+      },
+      "rdfs:comment": "A special case of SubField that should be hidden because it references a Field that already appears in the RecordSet.",
+      "rdfs:label": "parentField"
+    },
+    {
+      "@id": "cr:separator",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Transform"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "A separator to use parse the data into an array.",
+      "rdfs:label": "separator"
+    },
+    {
+      "@id": "cr:format",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:DataSource"
+      },
+      "rangeIncludes": {
+        "@id": "cr:Format"
+      },
+      "rdfs:comment": "A format to parse the values of the data from text, e.g., a date format or number format.",
+      "rdfs:label": "format"
+    },
+    {
+      "@id": "cr:fileSet",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:DataSource"
+      },
+      "rangeIncludes": {
+        "@id": "cr:FileSet"
+      },
+      "rdfs:comment": "The id of a FileSet that is the source of the data.",
+      "rdfs:label": "fileSet"
+    },
+    {
+      "@id": "cr:content",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Extract"
+      },
+      "rangeIncludes": {
+        "@id": "cr:ContentExtractionEnumeration"
+      },
+      "rdfs:comment": "What to extract from the data source content, e.g., lines.",
+      "rdfs:label": "content"
     },
     {
       "@id": "cr:references",
@@ -49,6 +256,261 @@
       },
       "rdfs:comment": "Another Field of another RecordSet that this field references. This is the equivalent of a foreign key reference in a relational database.",
       "rdfs:label": "references"
+    },
+    {
+      "@id": "cr:arrayShape",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Field"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Shape of the data tensor/array associated with a field (e.g., [height, width, bands] for imagery).",
+      "rdfs:label": "arrayShape"
+    },
+    {
+      "@id": "cr:examples",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:RecordSet"
+      },
+      "rangeIncludes": {
+        "@id": "rdf:JSON"
+      },
+      "rdfs:comment": "One more inlined records provided as example content of the RecordSet.",
+      "rdfs:label": "examples"
+    },
+    {
+      "@id": "cr:RecordSet",
+      "@type": "rdf:Class",
+      "rdfs:comment": "A description of a set of structured records from one or more data sources and their structure, expressed as a set of fields.",
+      "rdfs:label": "RecordSet",
+      "rdfs:subClassOf": {
+        "@id": "schema:Intangible"
+      }
+    },
+    {
+      "@id": "cr:regex",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Transform"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "A regular expression to apply to the data.",
+      "rdfs:label": "regex"
+    },
+    {
+      "@id": "cr:md5",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:FileObject"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "The MD5 hash of the file.",
+      "rdfs:label": "md5"
+    },
+    {
+      "@id": "cr:containedIn",
+      "@type": "rdf:Property",
+      "domainIncludes": [
+        {
+          "@id": "cr:FileObject"
+        },
+        {
+          "@id": "cr:FileSet"
+        }
+      ],
+      "rangeIncludes": [
+        {
+          "@id": "cr:FileObject"
+        },
+        {
+          "@id": "cr:FileSet"
+        },
+        {
+          "@id": "cr:DataSource"
+        }
+      ],
+      "rdfs:comment": "Another FileObject, FileSet or DataSource that this one is contained in, e.g., in the case of a file extracted from an archive. When this property is present, the contentUrl is evaluated as a relative path within the container object.",
+      "rdfs:label": "containedIn"
+    },
+    {
+      "@id": "cr:BoundingBox",
+      "@type": "rdf:class",
+      "rdfs:comment": "A data type representing a bounding box.",
+      "rdfs:label": "Label",
+      "rdfs:subClassOf": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "cr:recordSet",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:DataSource"
+      },
+      "rangeIncludes": {
+        "@id": "cr:RecordSet"
+      },
+      "rdfs:comment": "The id of a RecordSet that is the source of the data.",
+      "rdfs:label": "recordSet"
+    },
+    {
+      "@id": "cr:dataType",
+      "@type": "rdf:Property",
+      "domainIncludes": [
+        {
+          "@id": "cr:RecordSet"
+        },
+        {
+          "@id": "cr:Field"
+        }
+      ],
+      "rangeIncludes": {
+        "@id": "cr:DataType"
+      },
+      "rdfs:comment": "The data type of the field, identified by the URI of the corresponding class. It could be either an atomic type (e.g, sc:Integer) or a semantic type (e.g., sc:GeoLocation).",
+      "rdfs:label": "dataType"
+    },
+    {
+      "@id": "cr:Field",
+      "@type": "rdf:Class",
+      "rdfs:comment": "A component of the structure of a RecordSet, such as a column of a table.",
+      "rdfs:label": "Field",
+      "rdfs:subClassOf": {
+        "@id": "schema:Intangible"
+      }
+    },
+    {
+      "@id": "cr:TrainSplit",
+      "@type": "cr:Split",
+      "rdfs:comment": "Training split.",
+      "rdfs:label": "TrainSplit"
+    },
+    {
+      "@id": "cr:FileObject",
+      "@type": "rdf:Class",
+      "rdfs:comment": "An individual file that is part of a dataset.",
+      "rdfs:label": "FileObject",
+      "rdfs:subClassOf": {
+        "@id": "schema:DataDownload"
+      }
+    },
+    {
+      "@id": "cr:Split",
+      "@type": "rdf:class",
+      "rdfs:comment": "Splits for training a machine learning, typically test, train and validation.",
+      "rdfs:label": "Split",
+      "rdfs:subClassOf": {
+        "@id": "schema:Enumeration"
+      }
+    },
+    {
+      "@id": "cr:key",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:RecordSet"
+      },
+      "rangeIncludes": {
+        "@id": "cr:Field"
+      },
+      "rdfs:comment": "One or more fields whose values uniquely identify each record in the RecordSet. (See example below.)",
+      "rdfs:label": "key"
+    },
+    {
+      "@id": "cr:jsonPath",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Extract"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "In case the data source is JSON data, a path expression to extract a subset of the data.",
+      "rdfs:label": "jsonPath"
+    },
+    {
+      "@id": "cr:includes",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:FileSet"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "A glob pattern that specifies the files to include, e.g., \".jpg\", \"/foo/pic*.jpg\". The pattern is evaluated from the root of the containedIn contents.",
+      "rdfs:label": "includes"
+    },
+    {
+      "@id": "cr:isLiveDataset",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Boolean"
+      },
+      "rdfs:comment": "Indicates that the dataset is continuously updated instead of being versioned.",
+      "rdfs:label": "isLiveDataset"
+    },
+    {
+      "@id": "cr:equivalentProperty",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Field"
+      },
+      "rangeIncludes": {
+        "@id": "schema:URL"
+      },
+      "rdfs:comment": "A property that is equivalent to this Field. Used in the case a dataType is specified on the RecordSet to map specific fields to specific properties associated with that dataType.",
+      "rdfs:label": "equivalentProperty"
+    },
+    {
+      "@id": "cr:citeAs",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "How to cite this dataset. Ideally, citations should be expressed using the bibtex format. Note that this is different from schema.org/citation, which is used to make a citation to another publication from this dataset.",
+      "rdfs:label": "citeAs"
+    },
+    {
+      "@id": "cr:FilePropertyEnumeration",
+      "@type": "rdf:Class",
+      "rdfs:comment": "Specifies a property of a FileObject. One of \"fullPath\" or \"fileName\".",
+      "rdfs:label": "FilePropertyEnumeration",
+      "rdfs:subClassOf": {
+        "@id": "schema:Enumeration"
+      }
+    },
+    {
+      "@id": "cr:FileSet",
+      "@type": "rdf:Class",
+      "rdfs:comment": "A set of homogeneous files extracted from a container, optionally filtered by inclusion and/or exclusion filters.",
+      "rdfs:label": "FileSet",
+      "rdfs:subClassOf": {
+        "@id": "schema:DataDownload"
+      }
+    },
+    {
+      "@id": "cr:transform",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:DataSource"
+      },
+      "rangeIncludes": {
+        "@id": "cr:Transform"
+      },
+      "rdfs:comment": "A transformation to apply on source data on top of the extracted method as specified through extract, e.g., a regular expression or JSON query.",
+      "rdfs:label": "transform"
     },
     {
       "@id": "cr:source",
@@ -79,45 +541,16 @@
       "rdfs:label": "source"
     },
     {
-      "@id": "cr:dataType",
-      "@type": "rdf:Property",
-      "domainIncludes": [
-        {
-          "@id": "cr:RecordSet"
-        },
-        {
-          "@id": "cr:Field"
-        }
-      ],
-      "rangeIncludes": {
-        "@id": "cr:DataType"
-      },
-      "rdfs:comment": "The data type of the field, identified by the URI of the corresponding class. It could be either an atomic type (e.g, sc:Integer) or a semantic type (e.g., sc:GeoLocation).",
-      "rdfs:label": "dataType"
-    },
-    {
-      "@id": "cr:equivalentProperty",
+      "@id": "cr:subField",
       "@type": "rdf:Property",
       "domainIncludes": {
         "@id": "cr:Field"
       },
       "rangeIncludes": {
-        "@id": "schema:URL"
+        "@id": "cr:Field"
       },
-      "rdfs:comment": "A property that is equivalent to this Field. Used in the case a dataType is specified on the RecordSet to map specific fields to specific properties associated with that dataType.",
-      "rdfs:label": "equivalentProperty"
-    },
-    {
-      "@id": "cr:fileSet",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:DataSource"
-      },
-      "rangeIncludes": {
-        "@id": "cr:FileSet"
-      },
-      "rdfs:comment": "The id of a FileSet that is the source of the data.",
-      "rdfs:label": "fileSet"
+      "rdfs:comment": "Another Field that is nested inside this one.",
+      "rdfs:label": "subField"
     },
     {
       "@id": "cr:repeated",
@@ -132,67 +565,16 @@
       "rdfs:label": "repeated"
     },
     {
-      "@id": "cr:BoundingBox",
-      "@type": "rdf:class",
-      "rdfs:comment": "A data type representing a bounding box.",
-      "rdfs:label": "Label",
-      "rdfs:subClassOf": {
-        "@id": "schema:Text"
-      }
-    },
-    {
-      "@id": "cr:examples",
+      "@id": "cr:fileProperty",
       "@type": "rdf:Property",
       "domainIncludes": {
-        "@id": "cr:RecordSet"
+        "@id": "cr:Extract"
       },
       "rangeIncludes": {
-        "@id": "rdf:JSON"
+        "@id": "cr:FilePropertyEnumeration"
       },
-      "rdfs:comment": "One more inlined records provided as example content of the RecordSet.",
-      "rdfs:label": "examples"
-    },
-    {
-      "@id": "cr:format",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:DataSource"
-      },
-      "rangeIncludes": {
-        "@id": "cr:Format"
-      },
-      "rdfs:comment": "A format to parse the values of the data from text, e.g., a date format or number format.",
-      "rdfs:label": "format"
-    },
-    {
-      "@id": "cr:arrayShape",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:Field"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Text"
-      },
-      "rdfs:comment": "Shape of the data tensor/array associated with a field (e.g., [height, width, bands] for imagery).",
-      "rdfs:label": "arrayShape"
-    },
-    {
-      "@id": "cr:key",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:RecordSet"
-      },
-      "rangeIncludes": {
-        "@id": "cr:Field"
-      },
-      "rdfs:comment": "One or more fields whose values uniquely identify each record in the RecordSet. (See example below.)",
-      "rdfs:label": "key"
-    },
-    {
-      "@id": "cr:TestSplit",
-      "@type": "cr:Split",
-      "rdfs:comment": "Test split.",
-      "rdfs:label": "TestSplit"
+      "rdfs:comment": "The file property to extract from the data source metadata, e.g., the filename.",
+      "rdfs:label": "fileProperty"
     },
     {
       "@id": "cr:unArchive",
@@ -207,76 +589,13 @@
       "rdfs:label": "unArchive"
     },
     {
-      "@id": "cr:ValidationSplit",
-      "@type": "cr:Split",
-      "rdfs:comment": "Validation split.",
-      "rdfs:label": "ValidationSplit"
-    },
-    {
-      "@id": "cr:citeAs",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "schema:Dataset"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Text"
-      },
-      "rdfs:comment": "How to cite this dataset. Ideally, citations should be expressed using the bibtex format. Note that this is different from schema.org/citation, which is used to make a citation to another publication from this dataset.",
-      "rdfs:label": "citeAs"
-    },
-    {
-      "@id": "cr:Label",
-      "@type": "rdf:class",
-      "rdfs:comment": "A machine learning label.",
-      "rdfs:label": "Label",
-      "rdfs:subClassOf": {
-        "@id": "schema:Intangible"
-      }
-    },
-    {
-      "@id": "cr:jsonPath",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:Extract"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Text"
-      },
-      "rdfs:comment": "In case the data source is JSON data, a path expression to extract a subset of the data.",
-      "rdfs:label": "jsonPath"
-    },
-    {
-      "@id": "cr:FileObject",
+      "@id": "cr:ContentExtractionEnumeration",
       "@type": "rdf:Class",
-      "rdfs:comment": "An individual file that is part of a dataset.",
-      "rdfs:label": "FileObject",
+      "rdfs:comment": "Specifies which content to extract from a file. One of \"all\", \"lines\", or \"lineNumbers\".",
+      "rdfs:label": "ContentExtractionEnumeration",
       "rdfs:subClassOf": {
-        "@id": "schema:DataDownload"
+        "@id": "schema:Enumeration"
       }
-    },
-    {
-      "@id": "cr:extract",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:DataSource"
-      },
-      "rangeIncludes": {
-        "@id": "cr:Extract"
-      },
-      "rdfs:comment": "The extraction method from the provided source.",
-      "rdfs:label": "extract"
-    },
-    {
-      "@id": "cr:readLines",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:Transform"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Boolean"
-      },
-      "rdfs:comment": "Read the content of the file line by line.",
-      "rdfs:label": "readLines"
     },
     {
       "@id": "cr:Format",
@@ -288,100 +607,10 @@
       }
     },
     {
-      "@id": "cr:transform",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:DataSource"
-      },
-      "rangeIncludes": {
-        "@id": "cr:Transform"
-      },
-      "rdfs:comment": "A transformation to apply on source data on top of the extracted method as specified through extract, e.g., a regular expression or JSON query.",
-      "rdfs:label": "transform"
-    },
-    {
-      "@id": "cr:FilePropertyEnumeration",
+      "@id": "cr:DataSource",
       "@type": "rdf:Class",
-      "rdfs:comment": "Specifies a property of a FileObject. One of \"fullPath\" or \"fileName\".",
-      "rdfs:label": "FilePropertyEnumeration",
-      "rdfs:subClassOf": {
-        "@id": "schema:Enumeration"
-      }
-    },
-    {
-      "@id": "cr:field",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:RecordSet"
-      },
-      "rangeIncludes": {
-        "@id": "cr:Field"
-      },
-      "rdfs:comment": "A data element that appears in the records of the RecordSet (e.g., one column of a table).",
-      "rdfs:label": "field"
-    },
-    {
-      "@id": "cr:subField",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:Field"
-      },
-      "rangeIncludes": {
-        "@id": "cr:Field"
-      },
-      "rdfs:comment": "Another Field that is nested inside this one.",
-      "rdfs:label": "subField"
-    },
-    {
-      "@id": "cr:fileProperty",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:Extract"
-      },
-      "rangeIncludes": {
-        "@id": "cr:FilePropertyEnumeration"
-      },
-      "rdfs:comment": "The file property to extract from the data source metadata, e.g., the filename.",
-      "rdfs:label": "fileProperty"
-    },
-    {
-      "@id": "cr:column",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:Extract"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Text"
-      },
-      "rdfs:comment": "In case the data source is tabular, the id of a column to extract.",
-      "rdfs:label": "column"
-    },
-    {
-      "@id": "cr:Extract",
-      "@type": "rdf:Class",
-      "rdfs:comment": "Specifies how to extract data from a DataSource. The extraction mechanism depends on the type of content, e.g., a column name for tabular data, or a jsonPath for JSON data.",
-      "rdfs:label": "Extract",
-      "rdfs:subClassOf": {
-        "@id": "schema:Intangible"
-      }
-    },
-    {
-      "@id": "cr:isLiveDataset",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "schema:Dataset"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Boolean"
-      },
-      "rdfs:comment": "Indicates that the dataset is continuously updated instead of being versioned.",
-      "rdfs:label": "isLiveDataset"
-    },
-    {
-      "@id": "cr:Field",
-      "@type": "rdf:Class",
-      "rdfs:comment": "A component of the structure of a RecordSet, such as a column of a table.",
-      "rdfs:label": "Field",
+      "rdfs:comment": "A source of data, optionally transformed before being used.",
+      "rdfs:label": "DataSource",
       "rdfs:subClassOf": {
         "@id": "schema:Intangible"
       }
@@ -396,39 +625,6 @@
       }
     },
     {
-      "@id": "cr:recordSet",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:DataSource"
-      },
-      "rangeIncludes": {
-        "@id": "cr:RecordSet"
-      },
-      "rdfs:comment": "The id of a RecordSet that is the source of the data.",
-      "rdfs:label": "recordSet"
-    },
-    {
-      "@id": "cr:separator",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:Transform"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Text"
-      },
-      "rdfs:comment": "A separator to use parse the data into an array.",
-      "rdfs:label": "separator"
-    },
-    {
-      "@id": "cr:DataSource",
-      "@type": "rdf:Class",
-      "rdfs:comment": "A source of data, optionally transformed before being used.",
-      "rdfs:label": "DataSource",
-      "rdfs:subClassOf": {
-        "@id": "schema:Intangible"
-      }
-    },
-    {
       "@id": "cr:Transform",
       "@type": "rdf:Class",
       "rdfs:comment": "Specifies how to transform data extracted from a DataSource. The type of transformation depends on the type of content, e.g., a regular expression to appy on text, or a jsonQuery to transform JSON content.",
@@ -436,109 +632,6 @@
       "rdfs:subClassOf": {
         "@id": "schema:Intangible"
       }
-    },
-    {
-      "@id": "cr:ContentExtractionEnumeration",
-      "@type": "rdf:Class",
-      "rdfs:comment": "Specifies which content to extract from a file. One of \"all\", \"lines\", or \"lineNumbers\".",
-      "rdfs:label": "ContentExtractionEnumeration",
-      "rdfs:subClassOf": {
-        "@id": "schema:Enumeration"
-      }
-    },
-    {
-      "@id": "schema:distribution",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "schema:Dataset"
-      },
-      "rangeIncludes": [
-        {
-          "@id": "cr:FileObject"
-        },
-        {
-          "@id": "cr:FileSet"
-        }
-      ],
-      "rdfs:comment": "By contrast with schema.org/Dataset, Croissant requires the distribution property to have values of type FileObject or FileSet.",
-      "rdfs:label": "distribution"
-    },
-    {
-      "@id": "cr:md5",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:FileObject"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Text"
-      },
-      "rdfs:comment": "The MD5 hash of the file.",
-      "rdfs:label": "md5"
-    },
-    {
-      "@id": "cr:content",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:Extract"
-      },
-      "rangeIncludes": {
-        "@id": "cr:ContentExtractionEnumeration"
-      },
-      "rdfs:comment": "What to extract from the data source content, e.g., lines.",
-      "rdfs:label": "content"
-    },
-    {
-      "@id": "cr:annotation",
-      "@type": "rdf:Property",
-      "domainIncludes": [
-        {
-          "@id": "cr:RecordSet"
-        },
-        {
-          "@id": "cr:Field"
-        }
-      ],
-      "rangeIncludes": {
-        "@id": "cr:Field"
-      },
-      "rdfs:comment": "One or more data-level annotations that apply to the entire record or field.",
-      "rdfs:label": "annotation"
-    },
-    {
-      "@id": "cr:fileObject",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:DataSource"
-      },
-      "rangeIncludes": {
-        "@id": "cr:FileObject"
-      },
-      "rdfs:comment": "The id of a FileObject that is the source of the data.",
-      "rdfs:label": "fileObject"
-    },
-    {
-      "@id": "cr:excludes",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:FileSet"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Text"
-      },
-      "rdfs:comment": "A glob pattern that specifies the files to exclude. The pattern is evaluated from the root of the containedIn contents, after the includes patterns have been evaluated.",
-      "rdfs:label": "excludes"
-    },
-    {
-      "@id": "cr:regex",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:Transform"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Text"
-      },
-      "rdfs:comment": "A regular expression to apply to the data.",
-      "rdfs:label": "regex"
     },
     {
       "@id": "cr:value",
@@ -551,99 +644,6 @@
       },
       "rdfs:comment": "An optional constant value for the field.",
       "rdfs:label": "value"
-    },
-    {
-      "@id": "cr:sdVersion",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "schema:Dataset"
-      },
-      "rangeIncludes": [
-        {
-          "@id": "schema:Number"
-        },
-        {
-          "@id": "schema:Text"
-        }
-      ],
-      "rdfs:comment": "The version of the dataset metadata, which may be distinct from the version of the dataset content.",
-      "rdfs:label": "sdVersion"
-    },
-    {
-      "@id": "cr:DataType",
-      "@type": "rdf:Class",
-      "rdfs:comment": "The data type of values expected for a Field in a RecordSet. This class is inspired by the Datatype class in CSVW. In addition to simple atomic types, types can be semantic types, such as schema.org classes, as well types defined in other vocabularies.",
-      "rdfs:label": "DataType",
-      "rdfs:subClassOf": {
-        "@id": "schema:URL"
-      }
-    },
-    {
-      "@id": "cr:includes",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:FileSet"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Text"
-      },
-      "rdfs:comment": "A glob pattern that specifies the files to include, e.g., \".jpg\", \"/foo/pic*.jpg\". The pattern is evaluated from the root of the containedIn contents.",
-      "rdfs:label": "includes"
-    },
-    {
-      "@id": "cr:parentField",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "cr:Field"
-      },
-      "rangeIncludes": {
-        "@id": "cr:Field"
-      },
-      "rdfs:comment": "A special case of SubField that should be hidden because it references a Field that already appears in the RecordSet.",
-      "rdfs:label": "parentField"
-    },
-    {
-      "@id": "cr:containedIn",
-      "@type": "rdf:Property",
-      "domainIncludes": [
-        {
-          "@id": "cr:FileObject"
-        },
-        {
-          "@id": "cr:FileSet"
-        }
-      ],
-      "rangeIncludes": [
-        {
-          "@id": "cr:FileObject"
-        },
-        {
-          "@id": "cr:FileSet"
-        },
-        {
-          "@id": "cr:DataSource"
-        }
-      ],
-      "rdfs:comment": "Another FileObject, FileSet or DataSource that this one is contained in, e.g., in the case of a file extracted from an archive. When this property is present, the contentUrl is evaluated as a relative path within the container object.",
-      "rdfs:label": "containedIn"
-    },
-    {
-      "@id": "cr:FileSet",
-      "@type": "rdf:Class",
-      "rdfs:comment": "A set of homogeneous files extracted from a container, optionally filtered by inclusion and/or exclusion filters.",
-      "rdfs:label": "FileSet",
-      "rdfs:subClassOf": {
-        "@id": "schema:DataDownload"
-      }
-    },
-    {
-      "@id": "cr:RecordSet",
-      "@type": "rdf:Class",
-      "rdfs:comment": "A description of a set of structured records from one or more data sources and their structure, expressed as a set of fields.",
-      "rdfs:label": "RecordSet",
-      "rdfs:subClassOf": {
-        "@id": "schema:Intangible"
-      }
     }
   ]
 }

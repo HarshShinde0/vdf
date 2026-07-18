@@ -12,30 +12,6 @@
   },
   "@graph": [
     {
-      "@id": "rai:machineAnnotationTools",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "schema:Dataset"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Text"
-      },
-      "rdfs:comment": "List of software used for data annotation (e.g., concept extraction, NER, and additional characteristics of the tools used for annotation to allow for replication or extension).",
-      "rdfs:label": "machineAnnotationTools"
-    },
-    {
-      "@id": "rai:dataCollectionType",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "schema:Dataset"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Text"
-      },
-      "rdfs:comment": "Define the data collection type. Recommended values: Surveys, Secondary Data analysis, Physical data collection, Direct measurement, Document analysis, Manual Human Curator, Software Collection, Experiments, Web Scraping, Web API, Focus groups, Self-reporting, Customer feedback data, User-generated content data, Passive Data Collection, Others.",
-      "rdfs:label": "dataCollectionType"
-    },
-    {
       "@id": "rai:dataPreprocessingProtocol",
       "@type": "rdf:Property",
       "domainIncludes": {
@@ -48,7 +24,7 @@
       "rdfs:label": "dataPreprocessingProtocol"
     },
     {
-      "@id": "rai:dataAnnotationProtocol",
+      "@id": "rai:dataCollection",
       "@type": "rdf:Property",
       "domainIncludes": {
         "@id": "schema:Dataset"
@@ -56,8 +32,32 @@
       "rangeIncludes": {
         "@id": "schema:Text"
       },
-      "rdfs:comment": "Description of annotations (labels, ratings) produced, including how these were created or authored - Annotation Workforce Type, Annotation Characteristic(s), Annotation Description(s), Annotation Task(s), Annotation Distribution(s).",
-      "rdfs:label": "dataAnnotationProtocol"
+      "rdfs:comment": "Description of the data collection process.",
+      "rdfs:label": "dataCollection"
+    },
+    {
+      "@id": "rai:dataImputationProtocol",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Description of data imputation process, if applicable.",
+      "rdfs:label": "dataImputationProtocol"
+    },
+    {
+      "@id": "rai:dataBiases",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Description of biases in dataset, if applicable.",
+      "rdfs:label": "dataBiases"
     },
     {
       "@id": "rai:personalSensitiveInformation",
@@ -72,6 +72,30 @@
       "rdfs:label": "personalSensitiveInformation"
     },
     {
+      "@id": "rai:dataCollectionType",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Define the data collection type. Recommended values: Surveys, Secondary Data analysis, Physical data collection, Direct measurement, Document analysis, Manual Human Curator, Software Collection, Experiments, Web Scraping, Web API, Focus groups, Self-reporting, Customer feedback data, User-generated content data, Passive Data Collection, Others.",
+      "rdfs:label": "dataCollectionType"
+    },
+    {
+      "@id": "rai:dataLimitations",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Known limitations - Data generalization limits (e.g related to data distribution, data quality issues, or data sources) and on-recommended uses, if applicable.",
+      "rdfs:label": "dataLimitations"
+    },
+    {
       "@id": "rai:dataUseCases",
       "@type": "rdf:Property",
       "domainIncludes": {
@@ -82,54 +106,6 @@
       },
       "rdfs:comment": "Dataset Use(s) - Training, Testing, Validation, Development or Production Use, Fine Tuning, Others (please specify), Usage Guidelines. Recommended uses.",
       "rdfs:label": "dataUseCases"
-    },
-    {
-      "@id": "rai:dataCollectionRawData",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "schema:Dataset"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Text"
-      },
-      "rdfs:comment": "Description of the raw data i.e. source of the data.",
-      "rdfs:label": "dataCollectionRawData"
-    },
-    {
-      "@id": "rai:dataAnnotationPlatform",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "schema:Dataset"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Text"
-      },
-      "rdfs:comment": "Platform, tool, or library used to collect annotations by human annotators, if applicable.",
-      "rdfs:label": "dataAnnotationPlatform"
-    },
-    {
-      "@id": "rai:dataReleaseMaintenancePlan",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "schema:Dataset"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Text"
-      },
-      "rdfs:comment": "Versioning information in terms of the updating timeframe, the maintainers, and the deprecation policies.",
-      "rdfs:label": "dataReleaseMaintenancePlan"
-    },
-    {
-      "@id": "rai:dataSocialImpact",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "schema:Dataset"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Text"
-      },
-      "rdfs:comment": "Discussion of social impact, if applicable.",
-      "rdfs:label": "dataSocialImpact"
     },
     {
       "@id": "rai:dataCollectionTimeframe",
@@ -156,18 +132,6 @@
       "rdfs:label": "dataAnnotationAnalysis"
     },
     {
-      "@id": "rai:dataImputationProtocol",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "schema:Dataset"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Text"
-      },
-      "rdfs:comment": "Description of data imputation process, if applicable.",
-      "rdfs:label": "dataImputationProtocol"
-    },
-    {
       "@id": "rai:dataManipulationProtocol",
       "@type": "rdf:Property",
       "domainIncludes": {
@@ -180,7 +144,7 @@
       "rdfs:label": "dataManipulationProtocol"
     },
     {
-      "@id": "rai:dataCollection",
+      "@id": "rai:dataSocialImpact",
       "@type": "rdf:Property",
       "domainIncludes": {
         "@id": "schema:Dataset"
@@ -188,11 +152,11 @@
       "rangeIncludes": {
         "@id": "schema:Text"
       },
-      "rdfs:comment": "Description of the data collection process.",
-      "rdfs:label": "dataCollection"
+      "rdfs:comment": "Discussion of social impact, if applicable.",
+      "rdfs:label": "dataSocialImpact"
     },
     {
-      "@id": "rai:annotatorDemographics",
+      "@id": "rai:machineAnnotationTools",
       "@type": "rdf:Property",
       "domainIncludes": {
         "@id": "schema:Dataset"
@@ -200,32 +164,8 @@
       "rangeIncludes": {
         "@id": "schema:Text"
       },
-      "rdfs:comment": "List of demographics specifications about the annotators, if applicable.",
-      "rdfs:label": "annotatorDemographics"
-    },
-    {
-      "@id": "rai:annotationsPerItem",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "schema:Dataset"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Text"
-      },
-      "rdfs:comment": "Number of human labels per dataset item, if applicable.",
-      "rdfs:label": "annotationsPerItem"
-    },
-    {
-      "@id": "rai:dataLimitations",
-      "@type": "rdf:Property",
-      "domainIncludes": {
-        "@id": "schema:Dataset"
-      },
-      "rangeIncludes": {
-        "@id": "schema:Text"
-      },
-      "rdfs:comment": "Known limitations - Data generalization limits (e.g related to data distribution, data quality issues, or data sources) and on-recommended uses, if applicable.",
-      "rdfs:label": "dataLimitations"
+      "rdfs:comment": "List of software used for data annotation (e.g., concept extraction, NER, and additional characteristics of the tools used for annotation to allow for replication or extension).",
+      "rdfs:label": "machineAnnotationTools"
     },
     {
       "@id": "rai:dataCollectionMissingData",
@@ -240,7 +180,7 @@
       "rdfs:label": "dataCollectionMissingData"
     },
     {
-      "@id": "rai:dataBiases",
+      "@id": "rai:dataCollectionRawData",
       "@type": "rdf:Property",
       "domainIncludes": {
         "@id": "schema:Dataset"
@@ -248,8 +188,68 @@
       "rangeIncludes": {
         "@id": "schema:Text"
       },
-      "rdfs:comment": "Description of biases in dataset, if applicable.",
-      "rdfs:label": "dataBiases"
+      "rdfs:comment": "Description of the raw data i.e. source of the data.",
+      "rdfs:label": "dataCollectionRawData"
+    },
+    {
+      "@id": "rai:dataAnnotationProtocol",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Description of annotations (labels, ratings) produced, including how these were created or authored - Annotation Workforce Type, Annotation Characteristic(s), Annotation Description(s), Annotation Task(s), Annotation Distribution(s).",
+      "rdfs:label": "dataAnnotationProtocol"
+    },
+    {
+      "@id": "rai:dataAnnotationPlatform",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Platform, tool, or library used to collect annotations by human annotators, if applicable.",
+      "rdfs:label": "dataAnnotationPlatform"
+    },
+    {
+      "@id": "rai:annotationsPerItem",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Number of human labels per dataset item, if applicable.",
+      "rdfs:label": "annotationsPerItem"
+    },
+    {
+      "@id": "rai:annotatorDemographics",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "List of demographics specifications about the annotators, if applicable.",
+      "rdfs:label": "annotatorDemographics"
+    },
+    {
+      "@id": "rai:dataReleaseMaintenancePlan",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Versioning information in terms of the updating timeframe, the maintainers, and the deprecation policies.",
+      "rdfs:label": "dataReleaseMaintenancePlan"
     }
   ]
 }
