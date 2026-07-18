@@ -37,7 +37,7 @@ jobs:
 
       - name: Generate Vocabulary Portal
         run: |
-          python VDF/vocab.py
+          python vocab.py
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
