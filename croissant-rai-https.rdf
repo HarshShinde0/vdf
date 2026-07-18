@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:schema="https://schema.org/"
+>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/machineAnnotationTools">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>machineAnnotationTools</rdfs:label>
+    <rdfs:comment>List of software used for data annotation (e.g., concept extraction, NER, and additional characteristics of the tools used for annotation to allow for replication or extension).</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/dataUseCases">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>dataUseCases</rdfs:label>
+    <rdfs:comment>Dataset Use(s) - Training, Testing, Validation, Development or Production Use, Fine Tuning, Others (please specify), Usage Guidelines. Recommended uses.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/dataImputationProtocol">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>dataImputationProtocol</rdfs:label>
+    <rdfs:comment>Description of data imputation process, if applicable.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/annotationsPerItem">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>annotationsPerItem</rdfs:label>
+    <rdfs:comment>Number of human labels per dataset item, if applicable.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/dataCollectionMissingData">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>dataCollectionMissingData</rdfs:label>
+    <rdfs:comment>Description of missing data in structured/unstructured form.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/dataCollectionTimeframe">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>dataCollectionTimeframe</rdfs:label>
+    <rdfs:comment>Timeframe in terms of start and end date of the collection process, that it described as a DateTime indicating a time period in &lt;a href="https://en.wikipedia.org/wiki/ISO_8601#Time_intervals"&gt;ISO 8601 time interval format&lt;/a&gt;. For example, a collection time frame ranging from 2020 - 2022 can be indicated in ISO 8601 interval format via "2020/2022".</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/DateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>dataPreprocessingProtocol</rdfs:label>
+    <rdfs:comment>Description of the steps that were required to bring collected data to a state that can be processed by an ML model/algorithm, e.g. filtering out incomplete entries etc, if applicable.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/dataCollectionType">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>dataCollectionType</rdfs:label>
+    <rdfs:comment>Define the data collection type. Recommended values: Surveys, Secondary Data analysis, Physical data collection, Direct measurement, Document analysis, Manual Human Curator, Software Collection, Experiments, Web Scraping, Web API, Focus groups, Self-reporting, Customer feedback data, User-generated content data, Passive Data Collection, Others.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/dataAnnotationProtocol">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>dataAnnotationProtocol</rdfs:label>
+    <rdfs:comment>Description of annotations (labels, ratings) produced, including how these were created or authored - Annotation Workforce Type, Annotation Characteristic(s), Annotation Description(s), Annotation Task(s), Annotation Distribution(s).</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/dataCollectionRawData">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>dataCollectionRawData</rdfs:label>
+    <rdfs:comment>Description of the raw data i.e. source of the data.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/dataBiases">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>dataBiases</rdfs:label>
+    <rdfs:comment>Description of biases in dataset, if applicable.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/dataCollection">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>dataCollection</rdfs:label>
+    <rdfs:comment>Description of the data collection process.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>dataAnnotationAnalysis</rdfs:label>
+    <rdfs:comment>Considerations related to the process of converting the "raw" annotations into the labels that are ultimately packaged in a dataset - Uncertainty or disagreement between annotations on each instance as a signal in the dataset, analysis of systematic disagreements between annotators of different socio demographic group,  how the final dataset annotations will relate to individual annotator responses.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/personalSensitiveInformation">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>personalSensitiveInformation</rdfs:label>
+    <rdfs:comment>Sensitive Human Attribute(s)- Gender, Socio-economic status, Geography, Language, Age, Culture, Experience or Seniority, Others (please specify), if applicable.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/dataAnnotationPlatform">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>dataAnnotationPlatform</rdfs:label>
+    <rdfs:comment>Platform, tool, or library used to collect annotations by human annotators, if applicable.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/dataManipulationProtocol">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>dataManipulationProtocol</rdfs:label>
+    <rdfs:comment>Description of data manipulation process, if applicable.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>dataReleaseMaintenancePlan</rdfs:label>
+    <rdfs:comment>Versioning information in terms of the updating timeframe, the maintainers, and the deprecation policies.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/annotatorDemographics">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>annotatorDemographics</rdfs:label>
+    <rdfs:comment>List of demographics specifications about the annotators, if applicable.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/dataSocialImpact">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>dataSocialImpact</rdfs:label>
+    <rdfs:comment>Discussion of social impact, if applicable.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RAI/dataLimitations">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>dataLimitations</rdfs:label>
+    <rdfs:comment>Known limitations - Data generalization limits (e.g related to data distribution, data quality issues, or data sources) and on-recommended uses, if applicable.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+</rdf:RDF>

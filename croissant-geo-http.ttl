@@ -1,0 +1,153 @@
+@prefix cr: <http://mlcommons.org/croissant/> .
+@prefix geocr: <http://mlcommons.org/croissant/geo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+
+geocr:BandConfiguration a rdfs:Class ;
+    rdfs:label "BandConfiguration" ;
+    rdfs:comment "Structured description of raster band organization and semantics (e.g., band count and ordered band names). Intended to be used as the value of geocr:bandConfiguration." ;
+    rdfs:subClassOf schema1:StructuredValue .
+
+geocr:MultiWavelengthConfiguration a rdfs:Class ;
+    rdfs:label "MultiWavelengthConfiguration" ;
+    rdfs:comment "Structured description of multi-wavelength channel configuration for Space Weather / heliophysics datasets (e.g., a list of wavelength channels). Intended to be used as the value of geocr:multiWavelengthConfiguration." ;
+    rdfs:subClassOf schema1:StructuredValue .
+
+geocr:SolarInstrumentCharacteristics a rdfs:Class ;
+    rdfs:label "SolarInstrumentCharacteristics" ;
+    rdfs:comment "Structured description of solar/heliophysics instrument and observatory characteristics for Space Weather datasets (e.g., observatory/platform and instrument identifiers). Intended to be used as the value of geocr:solarInstrumentCharacteristics." ;
+    rdfs:subClassOf schema1:StructuredValue .
+
+geocr:SpectralBand a rdfs:Class ;
+    rdfs:label "SpectralBand" ;
+    rdfs:comment "Structured per-band spectral metadata entry (e.g., center wavelength and bandwidth). Intended to be used as items within geocr:spectralBandMetadata." ;
+    rdfs:subClassOf schema1:StructuredValue .
+
+geocr:bandConfiguration a rdf:Property ;
+    rdfs:label "bandConfiguration" ;
+    schema1:domainIncludes cr:Field,
+        schema1:Dataset ;
+    schema1:rangeIncludes geocr:BandConfiguration,
+        schema1:Text ;
+    rdfs:comment "Configuration describing raster band organization and semantics for a dataset or asset (e.g., band ordering and names)." .
+
+geocr:bandNamesList a rdf:Property ;
+    rdfs:label "bandNamesList" ;
+    schema1:domainIncludes geocr:BandConfiguration ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Ordered list of band names corresponding to the band stack described by geocr:bandConfiguration." .
+
+geocr:bandwidth a rdf:Property ;
+    rdfs:label "bandwidth" ;
+    schema1:domainIncludes geocr:SpectralBand ;
+    schema1:rangeIncludes schema1:QuantitativeValue ;
+    rdfs:comment "Spectral bandwidth for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue." .
+
+geocr:centerWavelength a rdf:Property ;
+    rdfs:label "centerWavelength" ;
+    schema1:domainIncludes geocr:SpectralBand ;
+    schema1:rangeIncludes schema1:QuantitativeValue ;
+    rdfs:comment "Center wavelength for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue." .
+
+geocr:channelList a rdf:Property ;
+    rdfs:label "channelList" ;
+    schema1:domainIncludes geocr:MultiWavelengthConfiguration ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "List of wavelength channels (e.g., 171Å, 193Å) used within geocr:MultiWavelengthConfiguration." .
+
+geocr:coordinateReferenceSystem a rdf:Property ;
+    rdfs:label "coordinateReferenceSystem" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Coordinate reference system (CRS) identifier (e.g., EPSG code) used to interpret spatial data in the dataset." .
+
+geocr:instrument a rdf:Property ;
+    rdfs:label "instrument" ;
+    schema1:domainIncludes geocr:SolarInstrumentCharacteristics ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Instrument identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE)." .
+
+geocr:multiWavelengthConfiguration a rdf:Property ;
+    rdfs:label "multiWavelengthConfiguration" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes geocr:MultiWavelengthConfiguration,
+        schema1:Text ;
+    rdfs:comment "Composite property to group multi-wavelength configuration information for Space Weather / heliophysics datasets; intended to map to SPASE constructs." .
+
+geocr:observatory a rdf:Property ;
+    rdfs:label "observatory" ;
+    schema1:domainIncludes geocr:SolarInstrumentCharacteristics ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Observatory/platform identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE)." .
+
+geocr:recordEndpoint a rdf:Property ;
+    rdfs:label "recordEndpoint" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text,
+        schema1:URL ;
+    rdfs:comment "A service endpoint that provides programmatic access to the dataset's metadata records (e.g., listing, paging, and filtering records)." .
+
+geocr:samplingStrategy a rdf:Property ;
+    rdfs:label "samplingStrategy" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Description of how samples were selected or constructed (e.g., chip/windowing strategy, filtering criteria) to support reproducibility and interpretation." .
+
+geocr:solarInstrumentCharacteristics a rdf:Property ;
+    rdfs:label "solarInstrumentCharacteristics" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes geocr:SolarInstrumentCharacteristics,
+        schema1:Text ;
+    rdfs:comment "Composite property to group solar/heliophysics instrument characteristics for Space Weather datasets; intended to map to SPASE constructs." .
+
+geocr:spatialBias a rdf:Property ;
+    rdfs:label "spatialBias" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Description of spatial representativeness limitations (e.g., geographic concentration, under-sampled regions/biomes) that may affect model generalization and evaluation." .
+
+geocr:spatialIndex a rdf:Property ;
+    rdfs:label "spatialIndex" ;
+    schema1:domainIncludes cr:RecordSet,
+        schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Precomputed spatial index token(s) (e.g., DGGS cell ID or geohash-like key) to accelerate coarse spatial filtering and discovery at scale." .
+
+geocr:spatialResolution a rdf:Property ;
+    rdfs:label "spatialResolution" ;
+    schema1:domainIncludes cr:RecordSet,
+        schema1:Dataset ;
+    schema1:rangeIncludes schema1:QuantitativeValue,
+        schema1:Text ;
+    rdfs:comment "Nominal spatial resolution for the dataset or collection (e.g., '30m' or a QuantitativeValue with units). May be provided at dataset level or at record/collection level when resolution varies." .
+
+geocr:spectralBandMetadata a rdf:Property ;
+    rdfs:label "spectralBandMetadata" ;
+    schema1:domainIncludes cr:Field,
+        schema1:Dataset ;
+    schema1:rangeIncludes geocr:SpectralBand,
+        schema1:Text ;
+    rdfs:comment "Per-band spectral metadata for EO imagery (e.g., center wavelength, bandwidth), represented as one or more geocr:SpectralBand entries." .
+
+geocr:temporalResolution a rdf:Property ;
+    rdfs:label "temporalResolution" ;
+    schema1:domainIncludes cr:RecordSet,
+        schema1:Dataset ;
+    schema1:rangeIncludes schema1:QuantitativeValue,
+        schema1:Text ;
+    rdfs:comment "Temporal cadence of the dataset or collection (e.g., 1 month), typically expressed as a QuantitativeValue (value + unit), or as text. May be provided at dataset level or at record/collection level when cadence varies." .
+
+geocr:timeSeriesIndex a rdf:Property ;
+    rdfs:label "timeSeriesIndex" ;
+    schema1:domainIncludes cr:RecordSet ;
+    schema1:rangeIncludes cr:Field,
+        schema1:Text ;
+    rdfs:comment "Identifies the record-level field used to order/index observations in a time series (e.g., a timestamp field in a RecordSet)." .
+
+geocr:totalBands a rdf:Property ;
+    rdfs:label "totalBands" ;
+    schema1:domainIncludes geocr:BandConfiguration ;
+    schema1:rangeIncludes schema1:Integer ;
+    rdfs:comment "Total number of bands for an asset or dataset described by geocr:bandConfiguration." .
+

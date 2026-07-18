@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:schema="https://schema.org/"
+>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/FilePropertyEnumeration">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+    <rdfs:label>FilePropertyEnumeration</rdfs:label>
+    <rdfs:comment>Specifies a property of a FileObject. One of "fullPath" or "fileName".</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Enumeration"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/citeAs">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>citeAs</rdfs:label>
+    <rdfs:comment>How to cite this dataset. Ideally, citations should be expressed using the bibtex format. Note that this is different from schema.org/citation, which is used to make a citation to another publication from this dataset.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/source">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>source</rdfs:label>
+    <rdfs:comment>The data source of the field. This will generally reference a FileObject or FileSet's contents (e.g., a specific column of a table).</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/RecordSet"/>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/DataSource"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/FileObject"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/FileSet"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/RecordSet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/FileObject">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+    <rdfs:label>FileObject</rdfs:label>
+    <rdfs:comment>An individual file that is part of a dataset.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/DataDownload"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/TestSplit">
+    <rdf:type rdf:resource="http://mlcommons.org/croissant/Split"/>
+    <rdfs:label>TestSplit</rdfs:label>
+    <rdfs:comment>Test split.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/ValidationSplit">
+    <rdf:type rdf:resource="http://mlcommons.org/croissant/Split"/>
+    <rdfs:label>ValidationSplit</rdfs:label>
+    <rdfs:comment>Validation split.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/Label">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#class"/>
+    <rdfs:label>Label</rdfs:label>
+    <rdfs:comment>A machine learning label.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/distribution">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>distribution</rdfs:label>
+    <rdfs:comment>By contrast with schema.org/Dataset, Croissant requires the distribution property to have values of type FileObject or FileSet.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/FileObject"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/FileSet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/Split">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#class"/>
+    <rdfs:label>Split</rdfs:label>
+    <rdfs:comment>Splits for training a machine learning, typically test, train and validation.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Enumeration"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/md5">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>md5</rdfs:label>
+    <rdfs:comment>The MD5 hash of the file.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/FileObject"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/fileObject">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>fileObject</rdfs:label>
+    <rdfs:comment>The id of a FileObject that is the source of the data.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/DataSource"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/FileObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/DataType">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+    <rdfs:label>DataType</rdfs:label>
+    <rdfs:comment>The data type of values expected for a Field in a RecordSet. This class is inspired by the Datatype class in CSVW. In addition to simple atomic types, types can be semantic types, such as schema.org classes, as well types defined in other vocabularies.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/URL"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/column">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>column</rdfs:label>
+    <rdfs:comment>In case the data source is tabular, the id of a column to extract.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/Extract"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/content">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>content</rdfs:label>
+    <rdfs:comment>What to extract from the data source content, e.g., lines.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/Extract"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/ContentExtractionEnumeration"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/isLiveDataset">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>isLiveDataset</rdfs:label>
+    <rdfs:comment>Indicates that the dataset is continuously updated instead of being versioned.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/Field">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+    <rdfs:label>Field</rdfs:label>
+    <rdfs:comment>A component of the structure of a RecordSet, such as a column of a table.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/annotation">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>annotation</rdfs:label>
+    <rdfs:comment>One or more data-level annotations that apply to the entire record or field.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/RecordSet"/>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/Extract">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+    <rdfs:label>Extract</rdfs:label>
+    <rdfs:comment>Specifies how to extract data from a DataSource. The extraction mechanism depends on the type of content, e.g., a column name for tabular data, or a jsonPath for JSON data.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/field">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>field</rdfs:label>
+    <rdfs:comment>A data element that appears in the records of the RecordSet (e.g., one column of a table).</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/RecordSet"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/excludes">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>excludes</rdfs:label>
+    <rdfs:comment>A glob pattern that specifies the files to exclude. The pattern is evaluated from the root of the containedIn contents, after the includes patterns have been evaluated.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/FileSet"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/dataType">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>dataType</rdfs:label>
+    <rdfs:comment>The data type of the field, identified by the URI of the corresponding class. It could be either an atomic type (e.g, sc:Integer) or a semantic type (e.g., sc:GeoLocation).</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/RecordSet"/>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/DataType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/value">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>value</rdfs:label>
+    <rdfs:comment>An optional constant value for the field.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+    <schema:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/readLines">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>readLines</rdfs:label>
+    <rdfs:comment>Read the content of the file line by line.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/Transform"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/parentField">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>parentField</rdfs:label>
+    <rdfs:comment>A special case of SubField that should be hidden because it references a Field that already appears in the RecordSet.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/includes">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>includes</rdfs:label>
+    <rdfs:comment>A glob pattern that specifies the files to include, e.g., ".jpg", "/foo/pic*.jpg". The pattern is evaluated from the root of the containedIn contents.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/FileSet"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/arrayShape">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>arrayShape</rdfs:label>
+    <rdfs:comment>Shape of the data tensor/array associated with a field (e.g., [height, width, bands] for imagery).</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/fileProperty">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>fileProperty</rdfs:label>
+    <rdfs:comment>The file property to extract from the data source metadata, e.g., the filename.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/Extract"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/FilePropertyEnumeration"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/sdVersion">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>sdVersion</rdfs:label>
+    <rdfs:comment>The version of the dataset metadata, which may be distinct from the version of the dataset content.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="https://schema.org/Dataset"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Number"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/fileSet">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>fileSet</rdfs:label>
+    <rdfs:comment>The id of a FileSet that is the source of the data.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/DataSource"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/FileSet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/transform">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>transform</rdfs:label>
+    <rdfs:comment>A transformation to apply on source data on top of the extracted method as specified through extract, e.g., a regular expression or JSON query.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/DataSource"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/Transform"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/ContentExtractionEnumeration">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+    <rdfs:label>ContentExtractionEnumeration</rdfs:label>
+    <rdfs:comment>Specifies which content to extract from a file. One of "all", "lines", or "lineNumbers".</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Enumeration"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/subField">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>subField</rdfs:label>
+    <rdfs:comment>Another Field that is nested inside this one.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/containedIn">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>containedIn</rdfs:label>
+    <rdfs:comment>Another FileObject, FileSet or DataSource that this one is contained in, e.g., in the case of a file extracted from an archive. When this property is present, the contentUrl is evaluated as a relative path within the container object.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/FileObject"/>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/FileSet"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/FileObject"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/FileSet"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/DataSource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/RecordSet">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+    <rdfs:label>RecordSet</rdfs:label>
+    <rdfs:comment>A description of a set of structured records from one or more data sources and their structure, expressed as a set of fields.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/data">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>data</rdfs:label>
+    <rdfs:comment>One or more inlined records that constitute the data of the RecordSet, typically used for small enumeration values.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/RecordSet"/>
+    <schema:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/repeated">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>repeated</rdfs:label>
+    <rdfs:comment>If true, then the Field is a list of values of type dataType.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/recordSet">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>recordSet</rdfs:label>
+    <rdfs:comment>The id of a RecordSet that is the source of the data.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/DataSource"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/RecordSet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/format">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>format</rdfs:label>
+    <rdfs:comment>A format to parse the values of the data from text, e.g., a date format or number format.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/DataSource"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/Format"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/examples">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>examples</rdfs:label>
+    <rdfs:comment>One more inlined records provided as example content of the RecordSet.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/RecordSet"/>
+    <schema:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/SegmentationMask">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#class"/>
+    <rdfs:label>SegmentationMask</rdfs:label>
+    <rdfs:comment>A data type representing a segmentation mask.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/StructuredValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/key">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>key</rdfs:label>
+    <rdfs:comment>One or more fields whose values uniquely identify each record in the RecordSet. (See example below.)</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/RecordSet"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/jsonPath">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>jsonPath</rdfs:label>
+    <rdfs:comment>In case the data source is JSON data, a path expression to extract a subset of the data.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/Extract"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/Transform">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+    <rdfs:label>Transform</rdfs:label>
+    <rdfs:comment>Specifies how to transform data extracted from a DataSource. The type of transformation depends on the type of content, e.g., a regular expression to appy on text, or a jsonQuery to transform JSON content.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/TrainSplit">
+    <rdf:type rdf:resource="http://mlcommons.org/croissant/Split"/>
+    <rdfs:label>TrainSplit</rdfs:label>
+    <rdfs:comment>Training split.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/regex">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>regex</rdfs:label>
+    <rdfs:comment>A regular expression to apply to the data.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/Transform"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/separator">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>separator</rdfs:label>
+    <rdfs:comment>A separator to use parse the data into an array.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/Transform"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/extract">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>extract</rdfs:label>
+    <rdfs:comment>The extraction method from the provided source.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/DataSource"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/Extract"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/DataSource">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+    <rdfs:label>DataSource</rdfs:label>
+    <rdfs:comment>A source of data, optionally transformed before being used.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Intangible"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/references">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>references</rdfs:label>
+    <rdfs:comment>Another Field of another RecordSet that this field references. This is the equivalent of a foreign key reference in a relational database.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+    <schema:rangeIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/FileSet">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+    <rdfs:label>FileSet</rdfs:label>
+    <rdfs:comment>A set of homogeneous files extracted from a container, optionally filtered by inclusion and/or exclusion filters.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/DataDownload"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/BoundingBox">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#class"/>
+    <rdfs:label>Label</rdfs:label>
+    <rdfs:comment>A data type representing a bounding box.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/Format">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+    <rdfs:label>Format</rdfs:label>
+    <rdfs:comment>Specifies how to parse the format of the data from a string representation. For example, format may hold a date format string, a number format, or a bounding box format.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/equivalentProperty">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>equivalentProperty</rdfs:label>
+    <rdfs:comment>A property that is equivalent to this Field. Used in the case a dataType is specified on the RecordSet to map specific fields to specific properties associated with that dataType.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/URL"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/unArchive">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>unArchive</rdfs:label>
+    <rdfs:comment>Extract the content of the archive.</rdfs:comment>
+    <schema:domainIncludes rdf:resource="http://mlcommons.org/croissant/Transform"/>
+    <schema:rangeIncludes rdf:resource="https://schema.org/Boolean"/>
+  </rdf:Description>
+</rdf:RDF>

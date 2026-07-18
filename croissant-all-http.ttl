@@ -1,0 +1,588 @@
+@prefix cr: <http://mlcommons.org/croissant/> .
+@prefix geocr: <http://mlcommons.org/croissant/geo/> .
+@prefix rai: <http://mlcommons.org/croissant/RAI/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+
+geocr:BandConfiguration a rdfs:Class ;
+    rdfs:label "BandConfiguration" ;
+    rdfs:comment "Structured description of raster band organization and semantics (e.g., band count and ordered band names). Intended to be used as the value of geocr:bandConfiguration." ;
+    rdfs:subClassOf schema1:StructuredValue .
+
+geocr:MultiWavelengthConfiguration a rdfs:Class ;
+    rdfs:label "MultiWavelengthConfiguration" ;
+    rdfs:comment "Structured description of multi-wavelength channel configuration for Space Weather / heliophysics datasets (e.g., a list of wavelength channels). Intended to be used as the value of geocr:multiWavelengthConfiguration." ;
+    rdfs:subClassOf schema1:StructuredValue .
+
+geocr:SolarInstrumentCharacteristics a rdfs:Class ;
+    rdfs:label "SolarInstrumentCharacteristics" ;
+    rdfs:comment "Structured description of solar/heliophysics instrument and observatory characteristics for Space Weather datasets (e.g., observatory/platform and instrument identifiers). Intended to be used as the value of geocr:solarInstrumentCharacteristics." ;
+    rdfs:subClassOf schema1:StructuredValue .
+
+geocr:SpectralBand a rdfs:Class ;
+    rdfs:label "SpectralBand" ;
+    rdfs:comment "Structured per-band spectral metadata entry (e.g., center wavelength and bandwidth). Intended to be used as items within geocr:spectralBandMetadata." ;
+    rdfs:subClassOf schema1:StructuredValue .
+
+cr:BoundingBox a rdf:class ;
+    rdfs:label "Label" ;
+    rdfs:comment "A data type representing a bounding box." ;
+    rdfs:subClassOf schema1:Text .
+
+cr:Label a rdf:class ;
+    rdfs:label "Label" ;
+    rdfs:comment "A machine learning label." ;
+    rdfs:subClassOf schema1:Intangible .
+
+rai:annotationsPerItem a rdf:Property ;
+    rdfs:label "annotationsPerItem" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Number of human labels per dataset item, if applicable." .
+
+rai:annotatorDemographics a rdf:Property ;
+    rdfs:label "annotatorDemographics" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "List of demographics specifications about the annotators, if applicable." .
+
+rai:dataAnnotationAnalysis a rdf:Property ;
+    rdfs:label "dataAnnotationAnalysis" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Considerations related to the process of converting the \"raw\" annotations into the labels that are ultimately packaged in a dataset - Uncertainty or disagreement between annotations on each instance as a signal in the dataset, analysis of systematic disagreements between annotators of different socio demographic group,  how the final dataset annotations will relate to individual annotator responses." .
+
+rai:dataAnnotationPlatform a rdf:Property ;
+    rdfs:label "dataAnnotationPlatform" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Platform, tool, or library used to collect annotations by human annotators, if applicable." .
+
+rai:dataAnnotationProtocol a rdf:Property ;
+    rdfs:label "dataAnnotationProtocol" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Description of annotations (labels, ratings) produced, including how these were created or authored - Annotation Workforce Type, Annotation Characteristic(s), Annotation Description(s), Annotation Task(s), Annotation Distribution(s)." .
+
+rai:dataBiases a rdf:Property ;
+    rdfs:label "dataBiases" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Description of biases in dataset, if applicable." .
+
+rai:dataCollection a rdf:Property ;
+    rdfs:label "dataCollection" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Description of the data collection process." .
+
+rai:dataCollectionMissingData a rdf:Property ;
+    rdfs:label "dataCollectionMissingData" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Description of missing data in structured/unstructured form." .
+
+rai:dataCollectionRawData a rdf:Property ;
+    rdfs:label "dataCollectionRawData" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Description of the raw data i.e. source of the data." .
+
+rai:dataCollectionTimeframe a rdf:Property ;
+    rdfs:label "dataCollectionTimeframe" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:DateTime ;
+    rdfs:comment "Timeframe in terms of start and end date of the collection process, that it described as a DateTime indicating a time period in <a href=\"https://en.wikipedia.org/wiki/ISO_8601#Time_intervals\">ISO 8601 time interval format</a>. For example, a collection time frame ranging from 2020 - 2022 can be indicated in ISO 8601 interval format via \"2020/2022\"." .
+
+rai:dataCollectionType a rdf:Property ;
+    rdfs:label "dataCollectionType" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Define the data collection type. Recommended values: Surveys, Secondary Data analysis, Physical data collection, Direct measurement, Document analysis, Manual Human Curator, Software Collection, Experiments, Web Scraping, Web API, Focus groups, Self-reporting, Customer feedback data, User-generated content data, Passive Data Collection, Others." .
+
+rai:dataImputationProtocol a rdf:Property ;
+    rdfs:label "dataImputationProtocol" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Description of data imputation process, if applicable." .
+
+rai:dataLimitations a rdf:Property ;
+    rdfs:label "dataLimitations" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Known limitations - Data generalization limits (e.g related to data distribution, data quality issues, or data sources) and on-recommended uses, if applicable." .
+
+rai:dataManipulationProtocol a rdf:Property ;
+    rdfs:label "dataManipulationProtocol" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Description of data manipulation process, if applicable." .
+
+rai:dataPreprocessingProtocol a rdf:Property ;
+    rdfs:label "dataPreprocessingProtocol" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Description of the steps that were required to bring collected data to a state that can be processed by an ML model/algorithm, e.g. filtering out incomplete entries etc, if applicable." .
+
+rai:dataReleaseMaintenancePlan a rdf:Property ;
+    rdfs:label "dataReleaseMaintenancePlan" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Versioning information in terms of the updating timeframe, the maintainers, and the deprecation policies." .
+
+rai:dataSocialImpact a rdf:Property ;
+    rdfs:label "dataSocialImpact" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Discussion of social impact, if applicable." .
+
+rai:dataUseCases a rdf:Property ;
+    rdfs:label "dataUseCases" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Dataset Use(s) - Training, Testing, Validation, Development or Production Use, Fine Tuning, Others (please specify), Usage Guidelines. Recommended uses." .
+
+rai:machineAnnotationTools a rdf:Property ;
+    rdfs:label "machineAnnotationTools" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "List of software used for data annotation (e.g., concept extraction, NER, and additional characteristics of the tools used for annotation to allow for replication or extension)." .
+
+rai:personalSensitiveInformation a rdf:Property ;
+    rdfs:label "personalSensitiveInformation" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Sensitive Human Attribute(s)- Gender, Socio-economic status, Geography, Language, Age, Culture, Experience or Seniority, Others (please specify), if applicable." .
+
+cr:SegmentationMask a rdf:class ;
+    rdfs:label "SegmentationMask" ;
+    rdfs:comment "A data type representing a segmentation mask." ;
+    rdfs:subClassOf schema1:StructuredValue .
+
+cr:TestSplit a cr:Split ;
+    rdfs:label "TestSplit" ;
+    rdfs:comment "Test split." .
+
+cr:TrainSplit a cr:Split ;
+    rdfs:label "TrainSplit" ;
+    rdfs:comment "Training split." .
+
+cr:ValidationSplit a cr:Split ;
+    rdfs:label "ValidationSplit" ;
+    rdfs:comment "Validation split." .
+
+cr:annotation a rdf:Property ;
+    rdfs:label "annotation" ;
+    schema1:domainIncludes cr:Field,
+        cr:RecordSet ;
+    schema1:rangeIncludes cr:Field ;
+    rdfs:comment "One or more data-level annotations that apply to the entire record or field." .
+
+cr:arrayShape a rdf:Property ;
+    rdfs:label "arrayShape" ;
+    schema1:domainIncludes cr:Field ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Shape of the data tensor/array associated with a field (e.g., [height, width, bands] for imagery)." .
+
+cr:citeAs a rdf:Property ;
+    rdfs:label "citeAs" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "How to cite this dataset. Ideally, citations should be expressed using the bibtex format. Note that this is different from schema.org/citation, which is used to make a citation to another publication from this dataset." .
+
+cr:column a rdf:Property ;
+    rdfs:label "column" ;
+    schema1:domainIncludes cr:Extract ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "In case the data source is tabular, the id of a column to extract." .
+
+cr:containedIn a rdf:Property ;
+    rdfs:label "containedIn" ;
+    schema1:domainIncludes cr:FileObject,
+        cr:FileSet ;
+    schema1:rangeIncludes cr:DataSource,
+        cr:FileObject,
+        cr:FileSet ;
+    rdfs:comment "Another FileObject, FileSet or DataSource that this one is contained in, e.g., in the case of a file extracted from an archive. When this property is present, the contentUrl is evaluated as a relative path within the container object." .
+
+cr:content a rdf:Property ;
+    rdfs:label "content" ;
+    schema1:domainIncludes cr:Extract ;
+    schema1:rangeIncludes cr:ContentExtractionEnumeration ;
+    rdfs:comment "What to extract from the data source content, e.g., lines." .
+
+cr:data a rdf:Property ;
+    rdfs:label "data" ;
+    schema1:domainIncludes cr:RecordSet ;
+    schema1:rangeIncludes rdf:JSON ;
+    rdfs:comment "One or more inlined records that constitute the data of the RecordSet, typically used for small enumeration values." .
+
+cr:dataType a rdf:Property ;
+    rdfs:label "dataType" ;
+    schema1:domainIncludes cr:Field,
+        cr:RecordSet ;
+    schema1:rangeIncludes cr:DataType ;
+    rdfs:comment "The data type of the field, identified by the URI of the corresponding class. It could be either an atomic type (e.g, sc:Integer) or a semantic type (e.g., sc:GeoLocation)." .
+
+cr:equivalentProperty a rdf:Property ;
+    rdfs:label "equivalentProperty" ;
+    schema1:domainIncludes cr:Field ;
+    schema1:rangeIncludes schema1:URL ;
+    rdfs:comment "A property that is equivalent to this Field. Used in the case a dataType is specified on the RecordSet to map specific fields to specific properties associated with that dataType." .
+
+cr:examples a rdf:Property ;
+    rdfs:label "examples" ;
+    schema1:domainIncludes cr:RecordSet ;
+    schema1:rangeIncludes rdf:JSON ;
+    rdfs:comment "One more inlined records provided as example content of the RecordSet." .
+
+cr:excludes a rdf:Property ;
+    rdfs:label "excludes" ;
+    schema1:domainIncludes cr:FileSet ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "A glob pattern that specifies the files to exclude. The pattern is evaluated from the root of the containedIn contents, after the includes patterns have been evaluated." .
+
+cr:extract a rdf:Property ;
+    rdfs:label "extract" ;
+    schema1:domainIncludes cr:DataSource ;
+    schema1:rangeIncludes cr:Extract ;
+    rdfs:comment "The extraction method from the provided source." .
+
+cr:field a rdf:Property ;
+    rdfs:label "field" ;
+    schema1:domainIncludes cr:RecordSet ;
+    schema1:rangeIncludes cr:Field ;
+    rdfs:comment "A data element that appears in the records of the RecordSet (e.g., one column of a table)." .
+
+cr:fileObject a rdf:Property ;
+    rdfs:label "fileObject" ;
+    schema1:domainIncludes cr:DataSource ;
+    schema1:rangeIncludes cr:FileObject ;
+    rdfs:comment "The id of a FileObject that is the source of the data." .
+
+cr:fileProperty a rdf:Property ;
+    rdfs:label "fileProperty" ;
+    schema1:domainIncludes cr:Extract ;
+    schema1:rangeIncludes cr:FilePropertyEnumeration ;
+    rdfs:comment "The file property to extract from the data source metadata, e.g., the filename." .
+
+cr:fileSet a rdf:Property ;
+    rdfs:label "fileSet" ;
+    schema1:domainIncludes cr:DataSource ;
+    schema1:rangeIncludes cr:FileSet ;
+    rdfs:comment "The id of a FileSet that is the source of the data." .
+
+cr:format a rdf:Property ;
+    rdfs:label "format" ;
+    schema1:domainIncludes cr:DataSource ;
+    schema1:rangeIncludes cr:Format ;
+    rdfs:comment "A format to parse the values of the data from text, e.g., a date format or number format." .
+
+geocr:bandConfiguration a rdf:Property ;
+    rdfs:label "bandConfiguration" ;
+    schema1:domainIncludes cr:Field,
+        schema1:Dataset ;
+    schema1:rangeIncludes geocr:BandConfiguration,
+        schema1:Text ;
+    rdfs:comment "Configuration describing raster band organization and semantics for a dataset or asset (e.g., band ordering and names)." .
+
+geocr:bandNamesList a rdf:Property ;
+    rdfs:label "bandNamesList" ;
+    schema1:domainIncludes geocr:BandConfiguration ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Ordered list of band names corresponding to the band stack described by geocr:bandConfiguration." .
+
+geocr:bandwidth a rdf:Property ;
+    rdfs:label "bandwidth" ;
+    schema1:domainIncludes geocr:SpectralBand ;
+    schema1:rangeIncludes schema1:QuantitativeValue ;
+    rdfs:comment "Spectral bandwidth for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue." .
+
+geocr:centerWavelength a rdf:Property ;
+    rdfs:label "centerWavelength" ;
+    schema1:domainIncludes geocr:SpectralBand ;
+    schema1:rangeIncludes schema1:QuantitativeValue ;
+    rdfs:comment "Center wavelength for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue." .
+
+geocr:channelList a rdf:Property ;
+    rdfs:label "channelList" ;
+    schema1:domainIncludes geocr:MultiWavelengthConfiguration ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "List of wavelength channels (e.g., 171Å, 193Å) used within geocr:MultiWavelengthConfiguration." .
+
+geocr:coordinateReferenceSystem a rdf:Property ;
+    rdfs:label "coordinateReferenceSystem" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Coordinate reference system (CRS) identifier (e.g., EPSG code) used to interpret spatial data in the dataset." .
+
+geocr:instrument a rdf:Property ;
+    rdfs:label "instrument" ;
+    schema1:domainIncludes geocr:SolarInstrumentCharacteristics ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Instrument identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE)." .
+
+geocr:multiWavelengthConfiguration a rdf:Property ;
+    rdfs:label "multiWavelengthConfiguration" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes geocr:MultiWavelengthConfiguration,
+        schema1:Text ;
+    rdfs:comment "Composite property to group multi-wavelength configuration information for Space Weather / heliophysics datasets; intended to map to SPASE constructs." .
+
+geocr:observatory a rdf:Property ;
+    rdfs:label "observatory" ;
+    schema1:domainIncludes geocr:SolarInstrumentCharacteristics ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Observatory/platform identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE)." .
+
+geocr:recordEndpoint a rdf:Property ;
+    rdfs:label "recordEndpoint" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text,
+        schema1:URL ;
+    rdfs:comment "A service endpoint that provides programmatic access to the dataset's metadata records (e.g., listing, paging, and filtering records)." .
+
+geocr:samplingStrategy a rdf:Property ;
+    rdfs:label "samplingStrategy" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Description of how samples were selected or constructed (e.g., chip/windowing strategy, filtering criteria) to support reproducibility and interpretation." .
+
+geocr:solarInstrumentCharacteristics a rdf:Property ;
+    rdfs:label "solarInstrumentCharacteristics" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes geocr:SolarInstrumentCharacteristics,
+        schema1:Text ;
+    rdfs:comment "Composite property to group solar/heliophysics instrument characteristics for Space Weather datasets; intended to map to SPASE constructs." .
+
+geocr:spatialBias a rdf:Property ;
+    rdfs:label "spatialBias" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Description of spatial representativeness limitations (e.g., geographic concentration, under-sampled regions/biomes) that may affect model generalization and evaluation." .
+
+geocr:spatialIndex a rdf:Property ;
+    rdfs:label "spatialIndex" ;
+    schema1:domainIncludes cr:RecordSet,
+        schema1:Dataset ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "Precomputed spatial index token(s) (e.g., DGGS cell ID or geohash-like key) to accelerate coarse spatial filtering and discovery at scale." .
+
+geocr:spatialResolution a rdf:Property ;
+    rdfs:label "spatialResolution" ;
+    schema1:domainIncludes cr:RecordSet,
+        schema1:Dataset ;
+    schema1:rangeIncludes schema1:QuantitativeValue,
+        schema1:Text ;
+    rdfs:comment "Nominal spatial resolution for the dataset or collection (e.g., '30m' or a QuantitativeValue with units). May be provided at dataset level or at record/collection level when resolution varies." .
+
+geocr:spectralBandMetadata a rdf:Property ;
+    rdfs:label "spectralBandMetadata" ;
+    schema1:domainIncludes cr:Field,
+        schema1:Dataset ;
+    schema1:rangeIncludes geocr:SpectralBand,
+        schema1:Text ;
+    rdfs:comment "Per-band spectral metadata for EO imagery (e.g., center wavelength, bandwidth), represented as one or more geocr:SpectralBand entries." .
+
+geocr:temporalResolution a rdf:Property ;
+    rdfs:label "temporalResolution" ;
+    schema1:domainIncludes cr:RecordSet,
+        schema1:Dataset ;
+    schema1:rangeIncludes schema1:QuantitativeValue,
+        schema1:Text ;
+    rdfs:comment "Temporal cadence of the dataset or collection (e.g., 1 month), typically expressed as a QuantitativeValue (value + unit), or as text. May be provided at dataset level or at record/collection level when cadence varies." .
+
+geocr:timeSeriesIndex a rdf:Property ;
+    rdfs:label "timeSeriesIndex" ;
+    schema1:domainIncludes cr:RecordSet ;
+    schema1:rangeIncludes cr:Field,
+        schema1:Text ;
+    rdfs:comment "Identifies the record-level field used to order/index observations in a time series (e.g., a timestamp field in a RecordSet)." .
+
+geocr:totalBands a rdf:Property ;
+    rdfs:label "totalBands" ;
+    schema1:domainIncludes geocr:BandConfiguration ;
+    schema1:rangeIncludes schema1:Integer ;
+    rdfs:comment "Total number of bands for an asset or dataset described by geocr:bandConfiguration." .
+
+cr:includes a rdf:Property ;
+    rdfs:label "includes" ;
+    schema1:domainIncludes cr:FileSet ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "A glob pattern that specifies the files to include, e.g., \".jpg\", \"/foo/pic*.jpg\". The pattern is evaluated from the root of the containedIn contents." .
+
+cr:isLiveDataset a rdf:Property ;
+    rdfs:label "isLiveDataset" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Boolean ;
+    rdfs:comment "Indicates that the dataset is continuously updated instead of being versioned." .
+
+cr:jsonPath a rdf:Property ;
+    rdfs:label "jsonPath" ;
+    schema1:domainIncludes cr:Extract ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "In case the data source is JSON data, a path expression to extract a subset of the data." .
+
+cr:key a rdf:Property ;
+    rdfs:label "key" ;
+    schema1:domainIncludes cr:RecordSet ;
+    schema1:rangeIncludes cr:Field ;
+    rdfs:comment "One or more fields whose values uniquely identify each record in the RecordSet. (See example below.)" .
+
+cr:md5 a rdf:Property ;
+    rdfs:label "md5" ;
+    schema1:domainIncludes cr:FileObject ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "The MD5 hash of the file." .
+
+cr:parentField a rdf:Property ;
+    rdfs:label "parentField" ;
+    schema1:domainIncludes cr:Field ;
+    schema1:rangeIncludes cr:Field ;
+    rdfs:comment "A special case of SubField that should be hidden because it references a Field that already appears in the RecordSet." .
+
+cr:readLines a rdf:Property ;
+    rdfs:label "readLines" ;
+    schema1:domainIncludes cr:Transform ;
+    schema1:rangeIncludes schema1:Boolean ;
+    rdfs:comment "Read the content of the file line by line." .
+
+cr:recordSet a rdf:Property ;
+    rdfs:label "recordSet" ;
+    schema1:domainIncludes cr:DataSource ;
+    schema1:rangeIncludes cr:RecordSet ;
+    rdfs:comment "The id of a RecordSet that is the source of the data." .
+
+cr:references a rdf:Property ;
+    rdfs:label "references" ;
+    schema1:domainIncludes cr:Field ;
+    schema1:rangeIncludes cr:Field ;
+    rdfs:comment "Another Field of another RecordSet that this field references. This is the equivalent of a foreign key reference in a relational database." .
+
+cr:regex a rdf:Property ;
+    rdfs:label "regex" ;
+    schema1:domainIncludes cr:Transform ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "A regular expression to apply to the data." .
+
+cr:repeated a rdf:Property ;
+    rdfs:label "repeated" ;
+    schema1:domainIncludes cr:Field ;
+    schema1:rangeIncludes schema1:Boolean ;
+    rdfs:comment "If true, then the Field is a list of values of type dataType." .
+
+cr:sdVersion a rdf:Property ;
+    rdfs:label "sdVersion" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes schema1:Number,
+        schema1:Text ;
+    rdfs:comment "The version of the dataset metadata, which may be distinct from the version of the dataset content." .
+
+cr:separator a rdf:Property ;
+    rdfs:label "separator" ;
+    schema1:domainIncludes cr:Transform ;
+    schema1:rangeIncludes schema1:Text ;
+    rdfs:comment "A separator to use parse the data into an array." .
+
+cr:source a rdf:Property ;
+    rdfs:label "source" ;
+    schema1:domainIncludes cr:Field,
+        cr:RecordSet ;
+    schema1:rangeIncludes cr:DataSource,
+        cr:FileObject,
+        cr:FileSet,
+        cr:RecordSet ;
+    rdfs:comment "The data source of the field. This will generally reference a FileObject or FileSet's contents (e.g., a specific column of a table)." .
+
+cr:subField a rdf:Property ;
+    rdfs:label "subField" ;
+    schema1:domainIncludes cr:Field ;
+    schema1:rangeIncludes cr:Field ;
+    rdfs:comment "Another Field that is nested inside this one." .
+
+cr:transform a rdf:Property ;
+    rdfs:label "transform" ;
+    schema1:domainIncludes cr:DataSource ;
+    schema1:rangeIncludes cr:Transform ;
+    rdfs:comment "A transformation to apply on source data on top of the extracted method as specified through extract, e.g., a regular expression or JSON query." .
+
+cr:unArchive a rdf:Property ;
+    rdfs:label "unArchive" ;
+    schema1:domainIncludes cr:Transform ;
+    schema1:rangeIncludes schema1:Boolean ;
+    rdfs:comment "Extract the content of the archive." .
+
+cr:value a rdf:Property ;
+    rdfs:label "value" ;
+    schema1:domainIncludes cr:Field ;
+    schema1:rangeIncludes rdf:JSON ;
+    rdfs:comment "An optional constant value for the field." .
+
+schema1:distribution a rdf:Property ;
+    rdfs:label "distribution" ;
+    schema1:domainIncludes schema1:Dataset ;
+    schema1:rangeIncludes cr:FileObject,
+        cr:FileSet ;
+    rdfs:comment "By contrast with schema.org/Dataset, Croissant requires the distribution property to have values of type FileObject or FileSet." .
+
+cr:ContentExtractionEnumeration a rdf:Class ;
+    rdfs:label "ContentExtractionEnumeration" ;
+    rdfs:comment "Specifies which content to extract from a file. One of \"all\", \"lines\", or \"lineNumbers\"." ;
+    rdfs:subClassOf schema1:Enumeration .
+
+cr:DataType a rdf:Class ;
+    rdfs:label "DataType" ;
+    rdfs:comment "The data type of values expected for a Field in a RecordSet. This class is inspired by the Datatype class in CSVW. In addition to simple atomic types, types can be semantic types, such as schema.org classes, as well types defined in other vocabularies." ;
+    rdfs:subClassOf schema1:URL .
+
+cr:FilePropertyEnumeration a rdf:Class ;
+    rdfs:label "FilePropertyEnumeration" ;
+    rdfs:comment "Specifies a property of a FileObject. One of \"fullPath\" or \"fileName\"." ;
+    rdfs:subClassOf schema1:Enumeration .
+
+cr:Format a rdf:Class ;
+    rdfs:label "Format" ;
+    rdfs:comment "Specifies how to parse the format of the data from a string representation. For example, format may hold a date format string, a number format, or a bounding box format." ;
+    rdfs:subClassOf schema1:Text .
+
+cr:Split a rdf:class ;
+    rdfs:label "Split" ;
+    rdfs:comment "Splits for training a machine learning, typically test, train and validation." ;
+    rdfs:subClassOf schema1:Enumeration .
+
+cr:Extract a rdf:Class ;
+    rdfs:label "Extract" ;
+    rdfs:comment "Specifies how to extract data from a DataSource. The extraction mechanism depends on the type of content, e.g., a column name for tabular data, or a jsonPath for JSON data." ;
+    rdfs:subClassOf schema1:Intangible .
+
+cr:Transform a rdf:Class ;
+    rdfs:label "Transform" ;
+    rdfs:comment "Specifies how to transform data extracted from a DataSource. The type of transformation depends on the type of content, e.g., a regular expression to appy on text, or a jsonQuery to transform JSON content." ;
+    rdfs:subClassOf schema1:Intangible .
+
+cr:FileObject a rdf:Class ;
+    rdfs:label "FileObject" ;
+    rdfs:comment "An individual file that is part of a dataset." ;
+    rdfs:subClassOf schema1:DataDownload .
+
+cr:FileSet a rdf:Class ;
+    rdfs:label "FileSet" ;
+    rdfs:comment "A set of homogeneous files extracted from a container, optionally filtered by inclusion and/or exclusion filters." ;
+    rdfs:subClassOf schema1:DataDownload .
+
+cr:DataSource a rdf:Class ;
+    rdfs:label "DataSource" ;
+    rdfs:comment "A source of data, optionally transformed before being used." ;
+    rdfs:subClassOf schema1:Intangible .
+
+cr:RecordSet a rdf:Class ;
+    rdfs:label "RecordSet" ;
+    rdfs:comment "A description of a set of structured records from one or more data sources and their structure, expressed as a set of fields." ;
+    rdfs:subClassOf schema1:Intangible .
+
+cr:Field a rdf:Class ;
+    rdfs:label "Field" ;
+    rdfs:comment "A component of the structure of a RecordSet, such as a column of a table." ;
+    rdfs:subClassOf schema1:Intangible .
+

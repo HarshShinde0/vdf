@@ -1,0 +1,344 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "dct": "http://purl.org/dc/terms/",
+    "geocr": "http://mlcommons.org/croissant/geo/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sc": "http://schema.org/",
+    "schema": "http://schema.org/"
+  },
+  "@graph": [
+    {
+      "@id": "geocr:bandwidth",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "geocr:SpectralBand"
+      },
+      "rangeIncludes": {
+        "@id": "schema:QuantitativeValue"
+      },
+      "rdfs:comment": "Spectral bandwidth for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue.",
+      "rdfs:label": "bandwidth"
+    },
+    {
+      "@id": "geocr:samplingStrategy",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Description of how samples were selected or constructed (e.g., chip/windowing strategy, filtering criteria) to support reproducibility and interpretation.",
+      "rdfs:label": "samplingStrategy"
+    },
+    {
+      "@id": "geocr:SpectralBand",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Structured per-band spectral metadata entry (e.g., center wavelength and bandwidth). Intended to be used as items within geocr:spectralBandMetadata.",
+      "rdfs:label": "SpectralBand",
+      "rdfs:subClassOf": {
+        "@id": "schema:StructuredValue"
+      }
+    },
+    {
+      "@id": "geocr:bandConfiguration",
+      "@type": "rdf:Property",
+      "domainIncludes": [
+        {
+          "@id": "schema:Dataset"
+        },
+        {
+          "@id": "cr:Field"
+        }
+      ],
+      "rangeIncludes": [
+        {
+          "@id": "geocr:BandConfiguration"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:comment": "Configuration describing raster band organization and semantics for a dataset or asset (e.g., band ordering and names).",
+      "rdfs:label": "bandConfiguration"
+    },
+    {
+      "@id": "geocr:timeSeriesIndex",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:RecordSet"
+      },
+      "rangeIncludes": [
+        {
+          "@id": "cr:Field"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:comment": "Identifies the record-level field used to order/index observations in a time series (e.g., a timestamp field in a RecordSet).",
+      "rdfs:label": "timeSeriesIndex"
+    },
+    {
+      "@id": "geocr:coordinateReferenceSystem",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Coordinate reference system (CRS) identifier (e.g., EPSG code) used to interpret spatial data in the dataset.",
+      "rdfs:label": "coordinateReferenceSystem"
+    },
+    {
+      "@id": "geocr:solarInstrumentCharacteristics",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": [
+        {
+          "@id": "geocr:SolarInstrumentCharacteristics"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:comment": "Composite property to group solar/heliophysics instrument characteristics for Space Weather datasets; intended to map to SPASE constructs.",
+      "rdfs:label": "solarInstrumentCharacteristics"
+    },
+    {
+      "@id": "geocr:spatialBias",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Description of spatial representativeness limitations (e.g., geographic concentration, under-sampled regions/biomes) that may affect model generalization and evaluation.",
+      "rdfs:label": "spatialBias"
+    },
+    {
+      "@id": "geocr:recordEndpoint",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": [
+        {
+          "@id": "schema:URL"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:comment": "A service endpoint that provides programmatic access to the dataset's metadata records (e.g., listing, paging, and filtering records).",
+      "rdfs:label": "recordEndpoint"
+    },
+    {
+      "@id": "geocr:centerWavelength",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "geocr:SpectralBand"
+      },
+      "rangeIncludes": {
+        "@id": "schema:QuantitativeValue"
+      },
+      "rdfs:comment": "Center wavelength for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue.",
+      "rdfs:label": "centerWavelength"
+    },
+    {
+      "@id": "geocr:spatialIndex",
+      "@type": "rdf:Property",
+      "domainIncludes": [
+        {
+          "@id": "schema:Dataset"
+        },
+        {
+          "@id": "cr:RecordSet"
+        }
+      ],
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Precomputed spatial index token(s) (e.g., DGGS cell ID or geohash-like key) to accelerate coarse spatial filtering and discovery at scale.",
+      "rdfs:label": "spatialIndex"
+    },
+    {
+      "@id": "geocr:bandNamesList",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "geocr:BandConfiguration"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Ordered list of band names corresponding to the band stack described by geocr:bandConfiguration.",
+      "rdfs:label": "bandNamesList"
+    },
+    {
+      "@id": "geocr:multiWavelengthConfiguration",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": [
+        {
+          "@id": "geocr:MultiWavelengthConfiguration"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:comment": "Composite property to group multi-wavelength configuration information for Space Weather / heliophysics datasets; intended to map to SPASE constructs.",
+      "rdfs:label": "multiWavelengthConfiguration"
+    },
+    {
+      "@id": "geocr:temporalResolution",
+      "@type": "rdf:Property",
+      "domainIncludes": [
+        {
+          "@id": "schema:Dataset"
+        },
+        {
+          "@id": "cr:RecordSet"
+        }
+      ],
+      "rangeIncludes": [
+        {
+          "@id": "schema:QuantitativeValue"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:comment": "Temporal cadence of the dataset or collection (e.g., 1 month), typically expressed as a QuantitativeValue (value + unit), or as text. May be provided at dataset level or at record/collection level when cadence varies.",
+      "rdfs:label": "temporalResolution"
+    },
+    {
+      "@id": "geocr:SolarInstrumentCharacteristics",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Structured description of solar/heliophysics instrument and observatory characteristics for Space Weather datasets (e.g., observatory/platform and instrument identifiers). Intended to be used as the value of geocr:solarInstrumentCharacteristics.",
+      "rdfs:label": "SolarInstrumentCharacteristics",
+      "rdfs:subClassOf": {
+        "@id": "schema:StructuredValue"
+      }
+    },
+    {
+      "@id": "geocr:spectralBandMetadata",
+      "@type": "rdf:Property",
+      "domainIncludes": [
+        {
+          "@id": "schema:Dataset"
+        },
+        {
+          "@id": "cr:Field"
+        }
+      ],
+      "rangeIncludes": [
+        {
+          "@id": "geocr:SpectralBand"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:comment": "Per-band spectral metadata for EO imagery (e.g., center wavelength, bandwidth), represented as one or more geocr:SpectralBand entries.",
+      "rdfs:label": "spectralBandMetadata"
+    },
+    {
+      "@id": "geocr:instrument",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "geocr:SolarInstrumentCharacteristics"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Instrument identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE).",
+      "rdfs:label": "instrument"
+    },
+    {
+      "@id": "geocr:BandConfiguration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Structured description of raster band organization and semantics (e.g., band count and ordered band names). Intended to be used as the value of geocr:bandConfiguration.",
+      "rdfs:label": "BandConfiguration",
+      "rdfs:subClassOf": {
+        "@id": "schema:StructuredValue"
+      }
+    },
+    {
+      "@id": "geocr:spatialResolution",
+      "@type": "rdf:Property",
+      "domainIncludes": [
+        {
+          "@id": "schema:Dataset"
+        },
+        {
+          "@id": "cr:RecordSet"
+        }
+      ],
+      "rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:QuantitativeValue"
+        }
+      ],
+      "rdfs:comment": "Nominal spatial resolution for the dataset or collection (e.g., '30m' or a QuantitativeValue with units). May be provided at dataset level or at record/collection level when resolution varies.",
+      "rdfs:label": "spatialResolution"
+    },
+    {
+      "@id": "geocr:observatory",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "geocr:SolarInstrumentCharacteristics"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Observatory/platform identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE).",
+      "rdfs:label": "observatory"
+    },
+    {
+      "@id": "geocr:channelList",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "geocr:MultiWavelengthConfiguration"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "List of wavelength channels (e.g., 171Å, 193Å) used within geocr:MultiWavelengthConfiguration.",
+      "rdfs:label": "channelList"
+    },
+    {
+      "@id": "geocr:totalBands",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "geocr:BandConfiguration"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Integer"
+      },
+      "rdfs:comment": "Total number of bands for an asset or dataset described by geocr:bandConfiguration.",
+      "rdfs:label": "totalBands"
+    },
+    {
+      "@id": "geocr:MultiWavelengthConfiguration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Structured description of multi-wavelength channel configuration for Space Weather / heliophysics datasets (e.g., a list of wavelength channels). Intended to be used as the value of geocr:multiWavelengthConfiguration.",
+      "rdfs:label": "MultiWavelengthConfiguration",
+      "rdfs:subClassOf": {
+        "@id": "schema:StructuredValue"
+      }
+    }
+  ]
+}

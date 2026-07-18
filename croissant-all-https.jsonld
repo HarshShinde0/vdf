@@ -1,0 +1,1218 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/",
+    "dct": "http://purl.org/dc/terms/",
+    "geocr": "http://mlcommons.org/croissant/geo/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sc": "https://schema.org/",
+    "schema": "https://schema.org/"
+  },
+  "@graph": [
+    {
+      "@id": "cr:unArchive",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Transform"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Boolean"
+      },
+      "rdfs:comment": "Extract the content of the archive.",
+      "rdfs:label": "unArchive"
+    },
+    {
+      "@id": "cr:FileObject",
+      "@type": "rdf:Class",
+      "rdfs:comment": "An individual file that is part of a dataset.",
+      "rdfs:label": "FileObject",
+      "rdfs:subClassOf": {
+        "@id": "schema:DataDownload"
+      }
+    },
+    {
+      "@id": "geocr:bandwidth",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "geocr:SpectralBand"
+      },
+      "rangeIncludes": {
+        "@id": "schema:QuantitativeValue"
+      },
+      "rdfs:comment": "Spectral bandwidth for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue.",
+      "rdfs:label": "bandwidth"
+    },
+    {
+      "@id": "cr:DataType",
+      "@type": "rdf:Class",
+      "rdfs:comment": "The data type of values expected for a Field in a RecordSet. This class is inspired by the Datatype class in CSVW. In addition to simple atomic types, types can be semantic types, such as schema.org classes, as well types defined in other vocabularies.",
+      "rdfs:label": "DataType",
+      "rdfs:subClassOf": {
+        "@id": "schema:URL"
+      }
+    },
+    {
+      "@id": "cr:dataType",
+      "@type": "rdf:Property",
+      "domainIncludes": [
+        {
+          "@id": "cr:Field"
+        },
+        {
+          "@id": "cr:RecordSet"
+        }
+      ],
+      "rangeIncludes": {
+        "@id": "cr:DataType"
+      },
+      "rdfs:comment": "The data type of the field, identified by the URI of the corresponding class. It could be either an atomic type (e.g, sc:Integer) or a semantic type (e.g., sc:GeoLocation).",
+      "rdfs:label": "dataType"
+    },
+    {
+      "@id": "geocr:SpectralBand",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Structured per-band spectral metadata entry (e.g., center wavelength and bandwidth). Intended to be used as items within geocr:spectralBandMetadata.",
+      "rdfs:label": "SpectralBand",
+      "rdfs:subClassOf": {
+        "@id": "schema:StructuredValue"
+      }
+    },
+    {
+      "@id": "schema:distribution",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": [
+        {
+          "@id": "cr:FileSet"
+        },
+        {
+          "@id": "cr:FileObject"
+        }
+      ],
+      "rdfs:comment": "By contrast with schema.org/Dataset, Croissant requires the distribution property to have values of type FileObject or FileSet.",
+      "rdfs:label": "distribution"
+    },
+    {
+      "@id": "geocr:timeSeriesIndex",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:RecordSet"
+      },
+      "rangeIncludes": [
+        {
+          "@id": "cr:Field"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:comment": "Identifies the record-level field used to order/index observations in a time series (e.g., a timestamp field in a RecordSet).",
+      "rdfs:label": "timeSeriesIndex"
+    },
+    {
+      "@id": "cr:SegmentationMask",
+      "@type": "rdf:class",
+      "rdfs:comment": "A data type representing a segmentation mask.",
+      "rdfs:label": "SegmentationMask",
+      "rdfs:subClassOf": {
+        "@id": "schema:StructuredValue"
+      }
+    },
+    {
+      "@id": "cr:content",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Extract"
+      },
+      "rangeIncludes": {
+        "@id": "cr:ContentExtractionEnumeration"
+      },
+      "rdfs:comment": "What to extract from the data source content, e.g., lines.",
+      "rdfs:label": "content"
+    },
+    {
+      "@id": "cr:excludes",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:FileSet"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "A glob pattern that specifies the files to exclude. The pattern is evaluated from the root of the containedIn contents, after the includes patterns have been evaluated.",
+      "rdfs:label": "excludes"
+    },
+    {
+      "@id": "cr:FileSet",
+      "@type": "rdf:Class",
+      "rdfs:comment": "A set of homogeneous files extracted from a container, optionally filtered by inclusion and/or exclusion filters.",
+      "rdfs:label": "FileSet",
+      "rdfs:subClassOf": {
+        "@id": "schema:DataDownload"
+      }
+    },
+    {
+      "@id": "cr:md5",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:FileObject"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "The MD5 hash of the file.",
+      "rdfs:label": "md5"
+    },
+    {
+      "@id": "geocr:recordEndpoint",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": [
+        {
+          "@id": "schema:URL"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:comment": "A service endpoint that provides programmatic access to the dataset's metadata records (e.g., listing, paging, and filtering records).",
+      "rdfs:label": "recordEndpoint"
+    },
+    {
+      "@id": "cr:examples",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:RecordSet"
+      },
+      "rangeIncludes": {
+        "@id": "rdf:JSON"
+      },
+      "rdfs:comment": "One more inlined records provided as example content of the RecordSet.",
+      "rdfs:label": "examples"
+    },
+    {
+      "@id": "cr:column",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Extract"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "In case the data source is tabular, the id of a column to extract.",
+      "rdfs:label": "column"
+    },
+    {
+      "@id": "cr:Format",
+      "@type": "rdf:Class",
+      "rdfs:comment": "Specifies how to parse the format of the data from a string representation. For example, format may hold a date format string, a number format, or a bounding box format.",
+      "rdfs:label": "Format",
+      "rdfs:subClassOf": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "rai:annotationsPerItem",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Number of human labels per dataset item, if applicable.",
+      "rdfs:label": "annotationsPerItem"
+    },
+    {
+      "@id": "cr:annotation",
+      "@type": "rdf:Property",
+      "domainIncludes": [
+        {
+          "@id": "cr:RecordSet"
+        },
+        {
+          "@id": "cr:Field"
+        }
+      ],
+      "rangeIncludes": {
+        "@id": "cr:Field"
+      },
+      "rdfs:comment": "One or more data-level annotations that apply to the entire record or field.",
+      "rdfs:label": "annotation"
+    },
+    {
+      "@id": "cr:Transform",
+      "@type": "rdf:Class",
+      "rdfs:comment": "Specifies how to transform data extracted from a DataSource. The type of transformation depends on the type of content, e.g., a regular expression to appy on text, or a jsonQuery to transform JSON content.",
+      "rdfs:label": "Transform",
+      "rdfs:subClassOf": {
+        "@id": "schema:Intangible"
+      }
+    },
+    {
+      "@id": "geocr:instrument",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "geocr:SolarInstrumentCharacteristics"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Instrument identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE).",
+      "rdfs:label": "instrument"
+    },
+    {
+      "@id": "geocr:observatory",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "geocr:SolarInstrumentCharacteristics"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Observatory/platform identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE).",
+      "rdfs:label": "observatory"
+    },
+    {
+      "@id": "cr:data",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:RecordSet"
+      },
+      "rangeIncludes": {
+        "@id": "rdf:JSON"
+      },
+      "rdfs:comment": "One or more inlined records that constitute the data of the RecordSet, typically used for small enumeration values.",
+      "rdfs:label": "data"
+    },
+    {
+      "@id": "cr:separator",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Transform"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "A separator to use parse the data into an array.",
+      "rdfs:label": "separator"
+    },
+    {
+      "@id": "geocr:totalBands",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "geocr:BandConfiguration"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Integer"
+      },
+      "rdfs:comment": "Total number of bands for an asset or dataset described by geocr:bandConfiguration.",
+      "rdfs:label": "totalBands"
+    },
+    {
+      "@id": "cr:recordSet",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:DataSource"
+      },
+      "rangeIncludes": {
+        "@id": "cr:RecordSet"
+      },
+      "rdfs:comment": "The id of a RecordSet that is the source of the data.",
+      "rdfs:label": "recordSet"
+    },
+    {
+      "@id": "cr:jsonPath",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Extract"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "In case the data source is JSON data, a path expression to extract a subset of the data.",
+      "rdfs:label": "jsonPath"
+    },
+    {
+      "@id": "cr:RecordSet",
+      "@type": "rdf:Class",
+      "rdfs:comment": "A description of a set of structured records from one or more data sources and their structure, expressed as a set of fields.",
+      "rdfs:label": "RecordSet",
+      "rdfs:subClassOf": {
+        "@id": "schema:Intangible"
+      }
+    },
+    {
+      "@id": "cr:isLiveDataset",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Boolean"
+      },
+      "rdfs:comment": "Indicates that the dataset is continuously updated instead of being versioned.",
+      "rdfs:label": "isLiveDataset"
+    },
+    {
+      "@id": "rai:dataManipulationProtocol",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Description of data manipulation process, if applicable.",
+      "rdfs:label": "dataManipulationProtocol"
+    },
+    {
+      "@id": "geocr:coordinateReferenceSystem",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Coordinate reference system (CRS) identifier (e.g., EPSG code) used to interpret spatial data in the dataset.",
+      "rdfs:label": "coordinateReferenceSystem"
+    },
+    {
+      "@id": "geocr:spatialBias",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Description of spatial representativeness limitations (e.g., geographic concentration, under-sampled regions/biomes) that may affect model generalization and evaluation.",
+      "rdfs:label": "spatialBias"
+    },
+    {
+      "@id": "rai:dataCollectionTimeframe",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:DateTime"
+      },
+      "rdfs:comment": "Timeframe in terms of start and end date of the collection process, that it described as a DateTime indicating a time period in <a href=\"https://en.wikipedia.org/wiki/ISO_8601#Time_intervals\">ISO 8601 time interval format</a>. For example, a collection time frame ranging from 2020 - 2022 can be indicated in ISO 8601 interval format via \"2020/2022\".",
+      "rdfs:label": "dataCollectionTimeframe"
+    },
+    {
+      "@id": "geocr:centerWavelength",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "geocr:SpectralBand"
+      },
+      "rangeIncludes": {
+        "@id": "schema:QuantitativeValue"
+      },
+      "rdfs:comment": "Center wavelength for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue.",
+      "rdfs:label": "centerWavelength"
+    },
+    {
+      "@id": "rai:dataPreprocessingProtocol",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Description of the steps that were required to bring collected data to a state that can be processed by an ML model/algorithm, e.g. filtering out incomplete entries etc, if applicable.",
+      "rdfs:label": "dataPreprocessingProtocol"
+    },
+    {
+      "@id": "rai:machineAnnotationTools",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "List of software used for data annotation (e.g., concept extraction, NER, and additional characteristics of the tools used for annotation to allow for replication or extension).",
+      "rdfs:label": "machineAnnotationTools"
+    },
+    {
+      "@id": "cr:Label",
+      "@type": "rdf:class",
+      "rdfs:comment": "A machine learning label.",
+      "rdfs:label": "Label",
+      "rdfs:subClassOf": {
+        "@id": "schema:Intangible"
+      }
+    },
+    {
+      "@id": "geocr:SolarInstrumentCharacteristics",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Structured description of solar/heliophysics instrument and observatory characteristics for Space Weather datasets (e.g., observatory/platform and instrument identifiers). Intended to be used as the value of geocr:solarInstrumentCharacteristics.",
+      "rdfs:label": "SolarInstrumentCharacteristics",
+      "rdfs:subClassOf": {
+        "@id": "schema:StructuredValue"
+      }
+    },
+    {
+      "@id": "geocr:spatialResolution",
+      "@type": "rdf:Property",
+      "domainIncludes": [
+        {
+          "@id": "schema:Dataset"
+        },
+        {
+          "@id": "cr:RecordSet"
+        }
+      ],
+      "rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:QuantitativeValue"
+        }
+      ],
+      "rdfs:comment": "Nominal spatial resolution for the dataset or collection (e.g., '30m' or a QuantitativeValue with units). May be provided at dataset level or at record/collection level when resolution varies.",
+      "rdfs:label": "spatialResolution"
+    },
+    {
+      "@id": "cr:fileProperty",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Extract"
+      },
+      "rangeIncludes": {
+        "@id": "cr:FilePropertyEnumeration"
+      },
+      "rdfs:comment": "The file property to extract from the data source metadata, e.g., the filename.",
+      "rdfs:label": "fileProperty"
+    },
+    {
+      "@id": "cr:equivalentProperty",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Field"
+      },
+      "rangeIncludes": {
+        "@id": "schema:URL"
+      },
+      "rdfs:comment": "A property that is equivalent to this Field. Used in the case a dataType is specified on the RecordSet to map specific fields to specific properties associated with that dataType.",
+      "rdfs:label": "equivalentProperty"
+    },
+    {
+      "@id": "cr:Field",
+      "@type": "rdf:Class",
+      "rdfs:comment": "A component of the structure of a RecordSet, such as a column of a table.",
+      "rdfs:label": "Field",
+      "rdfs:subClassOf": {
+        "@id": "schema:Intangible"
+      }
+    },
+    {
+      "@id": "cr:parentField",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Field"
+      },
+      "rangeIncludes": {
+        "@id": "cr:Field"
+      },
+      "rdfs:comment": "A special case of SubField that should be hidden because it references a Field that already appears in the RecordSet.",
+      "rdfs:label": "parentField"
+    },
+    {
+      "@id": "cr:sdVersion",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": [
+        {
+          "@id": "schema:Number"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:comment": "The version of the dataset metadata, which may be distinct from the version of the dataset content.",
+      "rdfs:label": "sdVersion"
+    },
+    {
+      "@id": "rai:dataCollection",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Description of the data collection process.",
+      "rdfs:label": "dataCollection"
+    },
+    {
+      "@id": "cr:regex",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Transform"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "A regular expression to apply to the data.",
+      "rdfs:label": "regex"
+    },
+    {
+      "@id": "rai:dataCollectionRawData",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Description of the raw data i.e. source of the data.",
+      "rdfs:label": "dataCollectionRawData"
+    },
+    {
+      "@id": "cr:repeated",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Field"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Boolean"
+      },
+      "rdfs:comment": "If true, then the Field is a list of values of type dataType.",
+      "rdfs:label": "repeated"
+    },
+    {
+      "@id": "geocr:samplingStrategy",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Description of how samples were selected or constructed (e.g., chip/windowing strategy, filtering criteria) to support reproducibility and interpretation.",
+      "rdfs:label": "samplingStrategy"
+    },
+    {
+      "@id": "geocr:bandConfiguration",
+      "@type": "rdf:Property",
+      "domainIncludes": [
+        {
+          "@id": "schema:Dataset"
+        },
+        {
+          "@id": "cr:Field"
+        }
+      ],
+      "rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "geocr:BandConfiguration"
+        }
+      ],
+      "rdfs:comment": "Configuration describing raster band organization and semantics for a dataset or asset (e.g., band ordering and names).",
+      "rdfs:label": "bandConfiguration"
+    },
+    {
+      "@id": "cr:references",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Field"
+      },
+      "rangeIncludes": {
+        "@id": "cr:Field"
+      },
+      "rdfs:comment": "Another Field of another RecordSet that this field references. This is the equivalent of a foreign key reference in a relational database.",
+      "rdfs:label": "references"
+    },
+    {
+      "@id": "rai:personalSensitiveInformation",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Sensitive Human Attribute(s)- Gender, Socio-economic status, Geography, Language, Age, Culture, Experience or Seniority, Others (please specify), if applicable.",
+      "rdfs:label": "personalSensitiveInformation"
+    },
+    {
+      "@id": "cr:FilePropertyEnumeration",
+      "@type": "rdf:Class",
+      "rdfs:comment": "Specifies a property of a FileObject. One of \"fullPath\" or \"fileName\".",
+      "rdfs:label": "FilePropertyEnumeration",
+      "rdfs:subClassOf": {
+        "@id": "schema:Enumeration"
+      }
+    },
+    {
+      "@id": "cr:readLines",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Transform"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Boolean"
+      },
+      "rdfs:comment": "Read the content of the file line by line.",
+      "rdfs:label": "readLines"
+    },
+    {
+      "@id": "cr:containedIn",
+      "@type": "rdf:Property",
+      "domainIncludes": [
+        {
+          "@id": "cr:FileSet"
+        },
+        {
+          "@id": "cr:FileObject"
+        }
+      ],
+      "rangeIncludes": [
+        {
+          "@id": "cr:FileSet"
+        },
+        {
+          "@id": "cr:FileObject"
+        },
+        {
+          "@id": "cr:DataSource"
+        }
+      ],
+      "rdfs:comment": "Another FileObject, FileSet or DataSource that this one is contained in, e.g., in the case of a file extracted from an archive. When this property is present, the contentUrl is evaluated as a relative path within the container object.",
+      "rdfs:label": "containedIn"
+    },
+    {
+      "@id": "cr:extract",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:DataSource"
+      },
+      "rangeIncludes": {
+        "@id": "cr:Extract"
+      },
+      "rdfs:comment": "The extraction method from the provided source.",
+      "rdfs:label": "extract"
+    },
+    {
+      "@id": "rai:dataAnnotationProtocol",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Description of annotations (labels, ratings) produced, including how these were created or authored - Annotation Workforce Type, Annotation Characteristic(s), Annotation Description(s), Annotation Task(s), Annotation Distribution(s).",
+      "rdfs:label": "dataAnnotationProtocol"
+    },
+    {
+      "@id": "geocr:spatialIndex",
+      "@type": "rdf:Property",
+      "domainIncludes": [
+        {
+          "@id": "schema:Dataset"
+        },
+        {
+          "@id": "cr:RecordSet"
+        }
+      ],
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Precomputed spatial index token(s) (e.g., DGGS cell ID or geohash-like key) to accelerate coarse spatial filtering and discovery at scale.",
+      "rdfs:label": "spatialIndex"
+    },
+    {
+      "@id": "rai:dataBiases",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Description of biases in dataset, if applicable.",
+      "rdfs:label": "dataBiases"
+    },
+    {
+      "@id": "rai:dataImputationProtocol",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Description of data imputation process, if applicable.",
+      "rdfs:label": "dataImputationProtocol"
+    },
+    {
+      "@id": "geocr:multiWavelengthConfiguration",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": [
+        {
+          "@id": "geocr:MultiWavelengthConfiguration"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:comment": "Composite property to group multi-wavelength configuration information for Space Weather / heliophysics datasets; intended to map to SPASE constructs.",
+      "rdfs:label": "multiWavelengthConfiguration"
+    },
+    {
+      "@id": "geocr:temporalResolution",
+      "@type": "rdf:Property",
+      "domainIncludes": [
+        {
+          "@id": "cr:RecordSet"
+        },
+        {
+          "@id": "schema:Dataset"
+        }
+      ],
+      "rangeIncludes": [
+        {
+          "@id": "schema:QuantitativeValue"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:comment": "Temporal cadence of the dataset or collection (e.g., 1 month), typically expressed as a QuantitativeValue (value + unit), or as text. May be provided at dataset level or at record/collection level when cadence varies.",
+      "rdfs:label": "temporalResolution"
+    },
+    {
+      "@id": "rai:dataCollectionMissingData",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Description of missing data in structured/unstructured form.",
+      "rdfs:label": "dataCollectionMissingData"
+    },
+    {
+      "@id": "cr:Extract",
+      "@type": "rdf:Class",
+      "rdfs:comment": "Specifies how to extract data from a DataSource. The extraction mechanism depends on the type of content, e.g., a column name for tabular data, or a jsonPath for JSON data.",
+      "rdfs:label": "Extract",
+      "rdfs:subClassOf": {
+        "@id": "schema:Intangible"
+      }
+    },
+    {
+      "@id": "cr:subField",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Field"
+      },
+      "rangeIncludes": {
+        "@id": "cr:Field"
+      },
+      "rdfs:comment": "Another Field that is nested inside this one.",
+      "rdfs:label": "subField"
+    },
+    {
+      "@id": "geocr:channelList",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "geocr:MultiWavelengthConfiguration"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "List of wavelength channels (e.g., 171Å, 193Å) used within geocr:MultiWavelengthConfiguration.",
+      "rdfs:label": "channelList"
+    },
+    {
+      "@id": "cr:value",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Field"
+      },
+      "rangeIncludes": {
+        "@id": "rdf:JSON"
+      },
+      "rdfs:comment": "An optional constant value for the field.",
+      "rdfs:label": "value"
+    },
+    {
+      "@id": "cr:citeAs",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "How to cite this dataset. Ideally, citations should be expressed using the bibtex format. Note that this is different from schema.org/citation, which is used to make a citation to another publication from this dataset.",
+      "rdfs:label": "citeAs"
+    },
+    {
+      "@id": "cr:Split",
+      "@type": "rdf:class",
+      "rdfs:comment": "Splits for training a machine learning, typically test, train and validation.",
+      "rdfs:label": "Split",
+      "rdfs:subClassOf": {
+        "@id": "schema:Enumeration"
+      }
+    },
+    {
+      "@id": "rai:dataLimitations",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Known limitations - Data generalization limits (e.g related to data distribution, data quality issues, or data sources) and on-recommended uses, if applicable.",
+      "rdfs:label": "dataLimitations"
+    },
+    {
+      "@id": "geocr:MultiWavelengthConfiguration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Structured description of multi-wavelength channel configuration for Space Weather / heliophysics datasets (e.g., a list of wavelength channels). Intended to be used as the value of geocr:multiWavelengthConfiguration.",
+      "rdfs:label": "MultiWavelengthConfiguration",
+      "rdfs:subClassOf": {
+        "@id": "schema:StructuredValue"
+      }
+    },
+    {
+      "@id": "cr:fileObject",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:DataSource"
+      },
+      "rangeIncludes": {
+        "@id": "cr:FileObject"
+      },
+      "rdfs:comment": "The id of a FileObject that is the source of the data.",
+      "rdfs:label": "fileObject"
+    },
+    {
+      "@id": "cr:includes",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:FileSet"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "A glob pattern that specifies the files to include, e.g., \".jpg\", \"/foo/pic*.jpg\". The pattern is evaluated from the root of the containedIn contents.",
+      "rdfs:label": "includes"
+    },
+    {
+      "@id": "rai:dataAnnotationAnalysis",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Considerations related to the process of converting the \"raw\" annotations into the labels that are ultimately packaged in a dataset - Uncertainty or disagreement between annotations on each instance as a signal in the dataset, analysis of systematic disagreements between annotators of different socio demographic group,  how the final dataset annotations will relate to individual annotator responses.",
+      "rdfs:label": "dataAnnotationAnalysis"
+    },
+    {
+      "@id": "cr:DataSource",
+      "@type": "rdf:Class",
+      "rdfs:comment": "A source of data, optionally transformed before being used.",
+      "rdfs:label": "DataSource",
+      "rdfs:subClassOf": {
+        "@id": "schema:Intangible"
+      }
+    },
+    {
+      "@id": "cr:ValidationSplit",
+      "@type": "cr:Split",
+      "rdfs:comment": "Validation split.",
+      "rdfs:label": "ValidationSplit"
+    },
+    {
+      "@id": "rai:dataSocialImpact",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Discussion of social impact, if applicable.",
+      "rdfs:label": "dataSocialImpact"
+    },
+    {
+      "@id": "geocr:solarInstrumentCharacteristics",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": [
+        {
+          "@id": "geocr:SolarInstrumentCharacteristics"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:comment": "Composite property to group solar/heliophysics instrument characteristics for Space Weather datasets; intended to map to SPASE constructs.",
+      "rdfs:label": "solarInstrumentCharacteristics"
+    },
+    {
+      "@id": "cr:source",
+      "@type": "rdf:Property",
+      "domainIncludes": [
+        {
+          "@id": "cr:Field"
+        },
+        {
+          "@id": "cr:RecordSet"
+        }
+      ],
+      "rangeIncludes": [
+        {
+          "@id": "cr:FileSet"
+        },
+        {
+          "@id": "cr:FileObject"
+        },
+        {
+          "@id": "cr:RecordSet"
+        },
+        {
+          "@id": "cr:DataSource"
+        }
+      ],
+      "rdfs:comment": "The data source of the field. This will generally reference a FileObject or FileSet's contents (e.g., a specific column of a table).",
+      "rdfs:label": "source"
+    },
+    {
+      "@id": "cr:fileSet",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:DataSource"
+      },
+      "rangeIncludes": {
+        "@id": "cr:FileSet"
+      },
+      "rdfs:comment": "The id of a FileSet that is the source of the data.",
+      "rdfs:label": "fileSet"
+    },
+    {
+      "@id": "cr:TestSplit",
+      "@type": "cr:Split",
+      "rdfs:comment": "Test split.",
+      "rdfs:label": "TestSplit"
+    },
+    {
+      "@id": "cr:arrayShape",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:Field"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Shape of the data tensor/array associated with a field (e.g., [height, width, bands] for imagery).",
+      "rdfs:label": "arrayShape"
+    },
+    {
+      "@id": "rai:annotatorDemographics",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "List of demographics specifications about the annotators, if applicable.",
+      "rdfs:label": "annotatorDemographics"
+    },
+    {
+      "@id": "rai:dataReleaseMaintenancePlan",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Versioning information in terms of the updating timeframe, the maintainers, and the deprecation policies.",
+      "rdfs:label": "dataReleaseMaintenancePlan"
+    },
+    {
+      "@id": "geocr:bandNamesList",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "geocr:BandConfiguration"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Ordered list of band names corresponding to the band stack described by geocr:bandConfiguration.",
+      "rdfs:label": "bandNamesList"
+    },
+    {
+      "@id": "cr:ContentExtractionEnumeration",
+      "@type": "rdf:Class",
+      "rdfs:comment": "Specifies which content to extract from a file. One of \"all\", \"lines\", or \"lineNumbers\".",
+      "rdfs:label": "ContentExtractionEnumeration",
+      "rdfs:subClassOf": {
+        "@id": "schema:Enumeration"
+      }
+    },
+    {
+      "@id": "rai:dataCollectionType",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Define the data collection type. Recommended values: Surveys, Secondary Data analysis, Physical data collection, Direct measurement, Document analysis, Manual Human Curator, Software Collection, Experiments, Web Scraping, Web API, Focus groups, Self-reporting, Customer feedback data, User-generated content data, Passive Data Collection, Others.",
+      "rdfs:label": "dataCollectionType"
+    },
+    {
+      "@id": "cr:key",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:RecordSet"
+      },
+      "rangeIncludes": {
+        "@id": "cr:Field"
+      },
+      "rdfs:comment": "One or more fields whose values uniquely identify each record in the RecordSet. (See example below.)",
+      "rdfs:label": "key"
+    },
+    {
+      "@id": "geocr:spectralBandMetadata",
+      "@type": "rdf:Property",
+      "domainIncludes": [
+        {
+          "@id": "cr:Field"
+        },
+        {
+          "@id": "schema:Dataset"
+        }
+      ],
+      "rangeIncludes": [
+        {
+          "@id": "geocr:SpectralBand"
+        },
+        {
+          "@id": "schema:Text"
+        }
+      ],
+      "rdfs:comment": "Per-band spectral metadata for EO imagery (e.g., center wavelength, bandwidth), represented as one or more geocr:SpectralBand entries.",
+      "rdfs:label": "spectralBandMetadata"
+    },
+    {
+      "@id": "cr:format",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:DataSource"
+      },
+      "rangeIncludes": {
+        "@id": "cr:Format"
+      },
+      "rdfs:comment": "A format to parse the values of the data from text, e.g., a date format or number format.",
+      "rdfs:label": "format"
+    },
+    {
+      "@id": "geocr:BandConfiguration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Structured description of raster band organization and semantics (e.g., band count and ordered band names). Intended to be used as the value of geocr:bandConfiguration.",
+      "rdfs:label": "BandConfiguration",
+      "rdfs:subClassOf": {
+        "@id": "schema:StructuredValue"
+      }
+    },
+    {
+      "@id": "cr:transform",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:DataSource"
+      },
+      "rangeIncludes": {
+        "@id": "cr:Transform"
+      },
+      "rdfs:comment": "A transformation to apply on source data on top of the extracted method as specified through extract, e.g., a regular expression or JSON query.",
+      "rdfs:label": "transform"
+    },
+    {
+      "@id": "cr:TrainSplit",
+      "@type": "cr:Split",
+      "rdfs:comment": "Training split.",
+      "rdfs:label": "TrainSplit"
+    },
+    {
+      "@id": "cr:field",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "cr:RecordSet"
+      },
+      "rangeIncludes": {
+        "@id": "cr:Field"
+      },
+      "rdfs:comment": "A data element that appears in the records of the RecordSet (e.g., one column of a table).",
+      "rdfs:label": "field"
+    },
+    {
+      "@id": "rai:dataUseCases",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Dataset Use(s) - Training, Testing, Validation, Development or Production Use, Fine Tuning, Others (please specify), Usage Guidelines. Recommended uses.",
+      "rdfs:label": "dataUseCases"
+    },
+    {
+      "@id": "cr:BoundingBox",
+      "@type": "rdf:class",
+      "rdfs:comment": "A data type representing a bounding box.",
+      "rdfs:label": "Label",
+      "rdfs:subClassOf": {
+        "@id": "schema:Text"
+      }
+    },
+    {
+      "@id": "rai:dataAnnotationPlatform",
+      "@type": "rdf:Property",
+      "domainIncludes": {
+        "@id": "schema:Dataset"
+      },
+      "rangeIncludes": {
+        "@id": "schema:Text"
+      },
+      "rdfs:comment": "Platform, tool, or library used to collect annotations by human annotators, if applicable.",
+      "rdfs:label": "dataAnnotationPlatform"
+    }
+  ]
+}

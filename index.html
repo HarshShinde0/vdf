@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<title>Croissant for Developers</title><style>body{font-family:Arial,sans-serif;margin:0;padding:0}
+#hdr{border-top:5px solid #990000;padding:10px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ddd}
+#hdr a{color:#990000;text-decoration:none;font-weight:bold}
+#logo{font-size:1.5em}
+#nav a{margin-left:20px;font-size:.95em}
+#nav a:hover{text-decoration:underline}
+#main{padding:40px;max-width:1000px;margin:0 auto}
+h1{font-weight:normal}
+h2{font-weight:normal;border-bottom:1px solid #ccc;padding-bottom:5px}
+a{color:#990000;text-decoration:none}
+a:hover{text-decoration:underline}
+table{width:100%;border-collapse:collapse;margin-top:20px;text-align:left}
+th{background:#f2f2f2;padding:10px;border-bottom:2px solid #ccc}
+td{padding:8px;border-bottom:1px solid #ddd}
+.mono{font-family:monospace}
+.search{padding:6px;width:300px;font-size:.95em;margin-bottom:15px}
+.box{background:#fcfcfc;border:1px solid #e0e0e0;padding:20px;margin:20px 0}
+.fg{display:inline-block;margin-right:20px}
+label{font-weight:bold;margin-right:10px}
+select{padding:4px;font-size:.95em}
+#url{color:#990000;font-family:monospace;font-size:1.05em;margin:15px 0;word-break:break-all}
+button{padding:4px 12px;font-size:.95em;cursor:pointer}
+#ft{border-top:1px solid #ccc;margin-top:50px;padding:15px 0;text-align:center;font-size:.85em;color:#666}</style></head>
+<body><div id="hdr"><div id="logo"><a href="index.html">Croissant</a></div>
+<div id="nav"><a href="index.html">Docs</a><a href="types.html">Classes (Types)</a><a href="properties.html">Properties</a></div></div><div id="main">
+<h1>Croissant for Developers</h1>
+<p>This page provides developer-oriented information about Croissant and access to machine-readable representations of the vocabulary.</p>
+
+<h2>Machine Readable Term Definitions</h2>
+<ul>
+<li>Source files are maintained in Turtle format in our <a href="https://github.com/mlcommons/croissant">Github repository</a>.</li>
+<li>Croissant builds on <a href="https://schema.org/">schema.org</a> and its Dataset vocabulary.</li>
+<li>Schema.org URIs are available in both <b>http</b> and <b>https</b> flavors. Croissant namespace URIs (<code>cr:</code>, <code>geocr:</code>, <code>rai:</code>) always use <code>http://</code>.</li>
+<li>The canonical JSON-LD Context files are available at <a href="context-http.json">context-http.json</a> and <a href="context-https.json">context-https.json</a>.</li>
+<li>View all terms on the <a href="types.html">Classes (Types)</a> and <a href="properties.html">Properties</a> pages.</li>
+</ul>
+
+<h2>Vocabulary Definition Files</h2>
+<p>Select a file and format, then click Download.</p>
+<div class="box">
+<div class="fg"><label for="fs">File:</label><select id="fs" onchange="upd()"><option value="croissant-all-http">croissant-all-http</option><option value="croissant-all-https">croissant-all-https</option><option value="croissant-current-http">croissant-current-http</option><option value="croissant-current-https">croissant-current-https</option><option value="croissant-geo-http">croissant-geo-http</option><option value="croissant-geo-https">croissant-geo-https</option><option value="croissant-rai-http">croissant-rai-http</option><option value="croissant-rai-https">croissant-rai-https</option></select></div>
+<div class="fg"><label for="ff">Format:</label><select id="ff" onchange="upd()">
+<option value=".jsonld">JSON-LD</option><option value=".ttl">Turtle</option>
+<option value=".nt">N-Triples</option><option value=".nq">N-Quads</option>
+<option value=".rdf">RDF/XML</option><option value="-types.csv">CSV (Types)</option>
+<option value="-properties.csv">CSV (Properties)</option></select></div>
+<div id="url"></div>
+<button onclick="dl()">Download</button>
+</div>
+<div id="ft">Croissant Vocabulary Definitions</div>
+</div>
+<script>
+function upd(){var f=document.getElementById("fs").value+document.getElementById("ff").value;
+var b=window.location.href.substring(0,window.location.href.lastIndexOf("/")+1);
+document.getElementById("url").innerText=b+f;}
+function dl(){var f=document.getElementById("fs").value+document.getElementById("ff").value;
+var a=document.createElement("a");a.href=f;a.download=f;document.body.appendChild(a);a.click();a.removeChild(a);}
+upd();
+</script></body></html>

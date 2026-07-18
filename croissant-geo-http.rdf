@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:schema1="http://schema.org/"
+>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/multiWavelengthConfiguration">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>multiWavelengthConfiguration</rdfs:label>
+    <rdfs:comment>Composite property to group multi-wavelength configuration information for Space Weather / heliophysics datasets; intended to map to SPASE constructs.</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://schema.org/Dataset"/>
+    <schema1:rangeIncludes rdf:resource="http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/samplingStrategy">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>samplingStrategy</rdfs:label>
+    <rdfs:comment>Description of how samples were selected or constructed (e.g., chip/windowing strategy, filtering criteria) to support reproducibility and interpretation.</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://schema.org/Dataset"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/BandConfiguration">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>BandConfiguration</rdfs:label>
+    <rdfs:comment>Structured description of raster band organization and semantics (e.g., band count and ordered band names). Intended to be used as the value of geocr:bandConfiguration.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://schema.org/StructuredValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/spectralBandMetadata">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>spectralBandMetadata</rdfs:label>
+    <rdfs:comment>Per-band spectral metadata for EO imagery (e.g., center wavelength, bandwidth), represented as one or more geocr:SpectralBand entries.</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://schema.org/Dataset"/>
+    <schema1:domainIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+    <schema1:rangeIncludes rdf:resource="http://mlcommons.org/croissant/geo/SpectralBand"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/spatialBias">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>spatialBias</rdfs:label>
+    <rdfs:comment>Description of spatial representativeness limitations (e.g., geographic concentration, under-sampled regions/biomes) that may affect model generalization and evaluation.</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://schema.org/Dataset"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/spatialIndex">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>spatialIndex</rdfs:label>
+    <rdfs:comment>Precomputed spatial index token(s) (e.g., DGGS cell ID or geohash-like key) to accelerate coarse spatial filtering and discovery at scale.</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://schema.org/Dataset"/>
+    <schema1:domainIncludes rdf:resource="http://mlcommons.org/croissant/RecordSet"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/bandwidth">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>bandwidth</rdfs:label>
+    <rdfs:comment>Spectral bandwidth for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue.</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://mlcommons.org/croissant/geo/SpectralBand"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/QuantitativeValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/centerWavelength">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>centerWavelength</rdfs:label>
+    <rdfs:comment>Center wavelength for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue.</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://mlcommons.org/croissant/geo/SpectralBand"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/QuantitativeValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/timeSeriesIndex">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>timeSeriesIndex</rdfs:label>
+    <rdfs:comment>Identifies the record-level field used to order/index observations in a time series (e.g., a timestamp field in a RecordSet).</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://mlcommons.org/croissant/RecordSet"/>
+    <schema1:rangeIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/SpectralBand">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>SpectralBand</rdfs:label>
+    <rdfs:comment>Structured per-band spectral metadata entry (e.g., center wavelength and bandwidth). Intended to be used as items within geocr:spectralBandMetadata.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://schema.org/StructuredValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/coordinateReferenceSystem">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>coordinateReferenceSystem</rdfs:label>
+    <rdfs:comment>Coordinate reference system (CRS) identifier (e.g., EPSG code) used to interpret spatial data in the dataset.</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://schema.org/Dataset"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/temporalResolution">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>temporalResolution</rdfs:label>
+    <rdfs:comment>Temporal cadence of the dataset or collection (e.g., 1 month), typically expressed as a QuantitativeValue (value + unit), or as text. May be provided at dataset level or at record/collection level when cadence varies.</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://schema.org/Dataset"/>
+    <schema1:domainIncludes rdf:resource="http://mlcommons.org/croissant/RecordSet"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/QuantitativeValue"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/recordEndpoint">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>recordEndpoint</rdfs:label>
+    <rdfs:comment>A service endpoint that provides programmatic access to the dataset's metadata records (e.g., listing, paging, and filtering records).</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://schema.org/Dataset"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/URL"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/observatory">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>observatory</rdfs:label>
+    <rdfs:comment>Observatory/platform identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE).</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>MultiWavelengthConfiguration</rdfs:label>
+    <rdfs:comment>Structured description of multi-wavelength channel configuration for Space Weather / heliophysics datasets (e.g., a list of wavelength channels). Intended to be used as the value of geocr:multiWavelengthConfiguration.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://schema.org/StructuredValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>solarInstrumentCharacteristics</rdfs:label>
+    <rdfs:comment>Composite property to group solar/heliophysics instrument characteristics for Space Weather datasets; intended to map to SPASE constructs.</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://schema.org/Dataset"/>
+    <schema1:rangeIncludes rdf:resource="http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/totalBands">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>totalBands</rdfs:label>
+    <rdfs:comment>Total number of bands for an asset or dataset described by geocr:bandConfiguration.</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://mlcommons.org/croissant/geo/BandConfiguration"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/Integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/bandConfiguration">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>bandConfiguration</rdfs:label>
+    <rdfs:comment>Configuration describing raster band organization and semantics for a dataset or asset (e.g., band ordering and names).</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://schema.org/Dataset"/>
+    <schema1:domainIncludes rdf:resource="http://mlcommons.org/croissant/Field"/>
+    <schema1:rangeIncludes rdf:resource="http://mlcommons.org/croissant/geo/BandConfiguration"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/spatialResolution">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>spatialResolution</rdfs:label>
+    <rdfs:comment>Nominal spatial resolution for the dataset or collection (e.g., '30m' or a QuantitativeValue with units). May be provided at dataset level or at record/collection level when resolution varies.</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://schema.org/Dataset"/>
+    <schema1:domainIncludes rdf:resource="http://mlcommons.org/croissant/RecordSet"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/Text"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/QuantitativeValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/instrument">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>instrument</rdfs:label>
+    <rdfs:comment>Instrument identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE).</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/channelList">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>channelList</rdfs:label>
+    <rdfs:comment>List of wavelength channels (e.g., 171Å, 193Å) used within geocr:MultiWavelengthConfiguration.</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/Text"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:label>SolarInstrumentCharacteristics</rdfs:label>
+    <rdfs:comment>Structured description of solar/heliophysics instrument and observatory characteristics for Space Weather datasets (e.g., observatory/platform and instrument identifiers). Intended to be used as the value of geocr:solarInstrumentCharacteristics.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://schema.org/StructuredValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://mlcommons.org/croissant/geo/bandNamesList">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>bandNamesList</rdfs:label>
+    <rdfs:comment>Ordered list of band names corresponding to the band stack described by geocr:bandConfiguration.</rdfs:comment>
+    <schema1:domainIncludes rdf:resource="http://mlcommons.org/croissant/geo/BandConfiguration"/>
+    <schema1:rangeIncludes rdf:resource="http://schema.org/Text"/>
+  </rdf:Description>
+</rdf:RDF>

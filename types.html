@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<title>Croissant Classes (Types)</title><style>body{font-family:Arial,sans-serif;margin:0;padding:0}
+#hdr{border-top:5px solid #990000;padding:10px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ddd}
+#hdr a{color:#990000;text-decoration:none;font-weight:bold}
+#logo{font-size:1.5em}
+#nav a{margin-left:20px;font-size:.95em}
+#nav a:hover{text-decoration:underline}
+#main{padding:40px;max-width:1000px;margin:0 auto}
+h1{font-weight:normal}
+h2{font-weight:normal;border-bottom:1px solid #ccc;padding-bottom:5px}
+a{color:#990000;text-decoration:none}
+a:hover{text-decoration:underline}
+table{width:100%;border-collapse:collapse;margin-top:20px;text-align:left}
+th{background:#f2f2f2;padding:10px;border-bottom:2px solid #ccc}
+td{padding:8px;border-bottom:1px solid #ddd}
+.mono{font-family:monospace}
+.search{padding:6px;width:300px;font-size:.95em;margin-bottom:15px}
+.box{background:#fcfcfc;border:1px solid #e0e0e0;padding:20px;margin:20px 0}
+.fg{display:inline-block;margin-right:20px}
+label{font-weight:bold;margin-right:10px}
+select{padding:4px;font-size:.95em}
+#url{color:#990000;font-family:monospace;font-size:1.05em;margin:15px 0;word-break:break-all}
+button{padding:4px 12px;font-size:.95em;cursor:pointer}
+#ft{border-top:1px solid #ccc;margin-top:50px;padding:15px 0;text-align:center;font-size:.85em;color:#666}</style><script>function filterTable(){var f=document.getElementById("search").value.toLowerCase();
+var rows=document.getElementById("tb").getElementsByTagName("tr");
+for(var i=0;i<rows.length;i++){var found=false;var cells=rows[i].getElementsByTagName("td");
+for(var j=0;j<cells.length;j++){if(cells[j].innerText.toLowerCase().indexOf(f)>-1){found=true;break;}}
+rows[i].style.display=found?"":"none";}}</script></head>
+<body><div id="hdr"><div id="logo"><a href="index.html">Croissant</a></div>
+<div id="nav"><a href="index.html">Docs</a><a href="types.html">Classes (Types)</a><a href="properties.html">Properties</a></div></div><div id="main"><h1>Croissant Vocabulary Classes (Types)</h1>
+<input type="text" id="search" class="search" placeholder="Search classes..." oninput="filterTable()">
+<table><thead><tr><th>URI</th><th>Label</th><th>Comment</th><th>Subclass Of</th><th>Vocabulary</th></tr></thead>
+<tbody id="tb"><tr><td class="mono"><a href="http://mlcommons.org/croissant/BoundingBox">http://mlcommons.org/croissant/BoundingBox</a></td><td><b>Label</b></td><td>A data type representing a bounding box.</td><td>http://schema.org/Text</td><td>Core</td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/ContentExtractionEnumeration">http://mlcommons.org/croissant/ContentExtractionEnumeration</a></td><td><b>ContentExtractionEnumeration</b></td><td>Specifies which content to extract from a file. One of "all", "lines", or "lineNumbers".</td><td>http://schema.org/Enumeration</td><td>Core</td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/DataSource">http://mlcommons.org/croissant/DataSource</a></td><td><b>DataSource</b></td><td>A source of data, optionally transformed before being used.</td><td>http://schema.org/Intangible</td><td>Core</td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/DataType">http://mlcommons.org/croissant/DataType</a></td><td><b>DataType</b></td><td>The data type of values expected for a Field in a RecordSet. This class is inspired by the Datatype class in CSVW. In addition to simple atomic types, types can be semantic types, such as schema.org classes, as well types defined in other vocabularies.</td><td>http://schema.org/URL</td><td>Core</td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/Extract">http://mlcommons.org/croissant/Extract</a></td><td><b>Extract</b></td><td>Specifies how to extract data from a DataSource. The extraction mechanism depends on the type of content, e.g., a column name for tabular data, or a jsonPath for JSON data.</td><td>http://schema.org/Intangible</td><td>Core</td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/Field">http://mlcommons.org/croissant/Field</a></td><td><b>Field</b></td><td>A component of the structure of a RecordSet, such as a column of a table.</td><td>http://schema.org/Intangible</td><td>Core</td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/FileObject">http://mlcommons.org/croissant/FileObject</a></td><td><b>FileObject</b></td><td>An individual file that is part of a dataset.</td><td>http://schema.org/DataDownload</td><td>Core</td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/FilePropertyEnumeration">http://mlcommons.org/croissant/FilePropertyEnumeration</a></td><td><b>FilePropertyEnumeration</b></td><td>Specifies a property of a FileObject. One of "fullPath" or "fileName".</td><td>http://schema.org/Enumeration</td><td>Core</td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/FileSet">http://mlcommons.org/croissant/FileSet</a></td><td><b>FileSet</b></td><td>A set of homogeneous files extracted from a container, optionally filtered by inclusion and/or exclusion filters.</td><td>http://schema.org/DataDownload</td><td>Core</td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/Format">http://mlcommons.org/croissant/Format</a></td><td><b>Format</b></td><td>Specifies how to parse the format of the data from a string representation. For example, format may hold a date format string, a number format, or a bounding box format.</td><td>http://schema.org/Text</td><td>Core</td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/Label">http://mlcommons.org/croissant/Label</a></td><td><b>Label</b></td><td>A machine learning label.</td><td>http://schema.org/Intangible</td><td>Core</td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RecordSet">http://mlcommons.org/croissant/RecordSet</a></td><td><b>RecordSet</b></td><td>A description of a set of structured records from one or more data sources and their structure, expressed as a set of fields.</td><td>http://schema.org/Intangible</td><td>Core</td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/SegmentationMask">http://mlcommons.org/croissant/SegmentationMask</a></td><td><b>SegmentationMask</b></td><td>A data type representing a segmentation mask.</td><td>http://schema.org/StructuredValue</td><td>Core</td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/Split">http://mlcommons.org/croissant/Split</a></td><td><b>Split</b></td><td>Splits for training a machine learning, typically test, train and validation.</td><td>http://schema.org/Enumeration</td><td>Core</td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/Transform">http://mlcommons.org/croissant/Transform</a></td><td><b>Transform</b></td><td>Specifies how to transform data extracted from a DataSource. The type of transformation depends on the type of content, e.g., a regular expression to appy on text, or a jsonQuery to transform JSON content.</td><td>http://schema.org/Intangible</td><td>Core</td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/BandConfiguration">http://mlcommons.org/croissant/geo/BandConfiguration</a></td><td><b>BandConfiguration</b></td><td>Structured description of raster band organization and semantics (e.g., band count and ordered band names). Intended to be used as the value of geocr:bandConfiguration.</td><td>http://schema.org/StructuredValue</td><td>Geo</td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration">http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration</a></td><td><b>MultiWavelengthConfiguration</b></td><td>Structured description of multi-wavelength channel configuration for Space Weather / heliophysics datasets (e.g., a list of wavelength channels). Intended to be used as the value of geocr:multiWavelengthConfiguration.</td><td>http://schema.org/StructuredValue</td><td>Geo</td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics">http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics</a></td><td><b>SolarInstrumentCharacteristics</b></td><td>Structured description of solar/heliophysics instrument and observatory characteristics for Space Weather datasets (e.g., observatory/platform and instrument identifiers). Intended to be used as the value of geocr:solarInstrumentCharacteristics.</td><td>http://schema.org/StructuredValue</td><td>Geo</td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/SpectralBand">http://mlcommons.org/croissant/geo/SpectralBand</a></td><td><b>SpectralBand</b></td><td>Structured per-band spectral metadata entry (e.g., center wavelength and bandwidth). Intended to be used as items within geocr:spectralBandMetadata.</td><td>http://schema.org/StructuredValue</td><td>Geo</td></tr></tbody></table></div></body></html>
