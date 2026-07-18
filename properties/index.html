@@ -1,0 +1,465 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<title>Croissant Properties</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #9c1a1c;
+  --primary-hover: #b31b1b;
+  --text-main: #1f2937;
+  --text-muted: #4b5563;
+  --bg-main: #ffffff;
+  --bg-alt: #f9fafb;
+  --border: #e5e7eb;
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --radius: 8px;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-main);
+  background-color: var(--bg-main);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+#header {
+  border-bottom: 3px solid var(--primary);
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+}
+
+.header-container {
+  max-width: 100%;
+  padding: 0.75rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+#logo a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  transition: opacity 0.2s;
+}
+
+#logo a:hover {
+  opacity: 0.85;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+  padding: 0.25rem 0;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.search-container {
+  position: relative;
+  width: 280px;
+}
+
+.search {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 2.25rem;
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  background-color: var(--bg-alt);
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.search:focus {
+  background-color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(156, 26, 28, 0.15);
+}
+
+.search-container::before {
+  content: "";
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' /%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+#main {
+  max-width: 100%;
+  padding: 3rem 4rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.025em;
+}
+
+.lead {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #111827;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--primary-hover);
+}
+
+ul {
+  padding-left: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+}
+
+.download-container {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.box-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.fg {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+select {
+  padding: 0.5rem 2rem 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%234b5563' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+}
+
+select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(156, 26, 28, 0.1);
+}
+
+#url {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--primary);
+  word-break: break-all;
+  margin: 0.25rem 0;
+}
+
+button {
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.625rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: var(--shadow);
+  align-self: flex-start;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.table-container {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-top: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.925rem;
+}
+
+th:nth-child(1), td:nth-child(1) {
+  width: 25%;
+  min-width: 280px;
+}
+
+th:nth-child(2), td:nth-child(2) {
+  width: 15%;
+  min-width: 180px;
+}
+
+th:nth-child(3), td:nth-child(3) {
+  width: 35%;
+}
+
+th {
+  background: var(--bg-alt);
+  color: #374151;
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  border-bottom: 2px solid var(--border);
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  word-break: break-word;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background-color: rgba(249, 250, 251, 0.7);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  word-break: break-all;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.badge-core {
+  background-color: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+.badge-geo {
+  background-color: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.badge-rai {
+  background-color: #faf5ff;
+  color: #6b21a8;
+  border: 1px solid #e9d5ff;
+}
+
+#ft {
+  border-top: 1px solid var(--border);
+  margin-top: 5rem;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+</style><script>
+function filterTable(){
+  var f=document.getElementById("search").value.toLowerCase();
+  var rows=document.getElementById("tb").getElementsByTagName("tr");
+  for(var i=0;i<rows.length;i++){
+    var found=false;
+    var cells=rows[i].getElementsByTagName("td");
+    for(var j=0;j<cells.length;j++){
+      if(cells[j].innerText.toLowerCase().indexOf(f)>-1){
+        found=true;
+        break;
+      }
+    }
+    rows[i].style.display=found?"":"none";
+  }
+}
+</script></head>
+<body><header id="header">
+  <div class="header-container">
+    <div class="header-left">
+      <div id="logo"><a href="../">Croissant</a></div>
+      <nav id="nav">
+        <a href="../" class="nav-link ">Docs</a>
+        <a href="../types/" class="nav-link ">Classes (Types)</a>
+        <a href="../properties/" class="nav-link active">Properties</a>
+      </nav>
+    </div>
+    <div class="header-right"><div class="search-container"><input type="text" id="search" class="search" placeholder="Search properties..." oninput="filterTable()"></div></div>
+  </div>
+</header><div id="main"><h1>Croissant Vocabulary Properties</h1>
+<div class="table-container">
+<table><thead><tr><th>URI</th><th>Label</th><th>Comment</th><th>Domain Includes</th><th>Range Includes</th><th>Vocabulary</th></tr></thead>
+<tbody id="tb"><tr><td class="mono"><a href="http://mlcommons.org/croissant/annotation">http://mlcommons.org/croissant/annotation</a></td><td>annotation</td><td>One or more data-level annotations that apply to the entire record or field.</td><td><a href="http://mlcommons.org/croissant/Field">Field</a>, <a href="http://mlcommons.org/croissant/RecordSet">RecordSet</a></td><td><a href="http://mlcommons.org/croissant/Field">Field</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/arrayShape">http://mlcommons.org/croissant/arrayShape</a></td><td>arrayShape</td><td>Shape of the data tensor/array associated with a field (e.g., [height, width, bands] for imagery).</td><td><a href="http://mlcommons.org/croissant/Field">Field</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/citeAs">http://mlcommons.org/croissant/citeAs</a></td><td>citeAs</td><td>How to cite this dataset. Ideally, citations should be expressed using the bibtex format. Note that this is different from schema.org/citation, which is used to make a citation to another publication from this dataset.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/column">http://mlcommons.org/croissant/column</a></td><td>column</td><td>In case the data source is tabular, the id of a column to extract.</td><td><a href="http://mlcommons.org/croissant/Extract">Extract</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/containedIn">http://mlcommons.org/croissant/containedIn</a></td><td>containedIn</td><td>Another FileObject, FileSet or DataSource that this one is contained in, e.g., in the case of a file extracted from an archive. When this property is present, the contentUrl is evaluated as a relative path within the container object.</td><td><a href="http://mlcommons.org/croissant/FileObject">FileObject</a>, <a href="http://mlcommons.org/croissant/FileSet">FileSet</a></td><td><a href="http://mlcommons.org/croissant/DataSource">DataSource</a>, <a href="http://mlcommons.org/croissant/FileObject">FileObject</a>, <a href="http://mlcommons.org/croissant/FileSet">FileSet</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/content">http://mlcommons.org/croissant/content</a></td><td>content</td><td>What to extract from the data source content, e.g., lines.</td><td><a href="http://mlcommons.org/croissant/Extract">Extract</a></td><td><a href="http://mlcommons.org/croissant/ContentExtractionEnumeration">ContentExtractionEnumeration</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/data">http://mlcommons.org/croissant/data</a></td><td>data</td><td>One or more inlined records that constitute the data of the RecordSet, typically used for small enumeration values.</td><td><a href="http://mlcommons.org/croissant/RecordSet">RecordSet</a></td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON">JSON</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/dataType">http://mlcommons.org/croissant/dataType</a></td><td>dataType</td><td>The data type of the field, identified by the URI of the corresponding class. It could be either an atomic type (e.g, sc:Integer) or a semantic type (e.g., sc:GeoLocation).</td><td><a href="http://mlcommons.org/croissant/Field">Field</a>, <a href="http://mlcommons.org/croissant/RecordSet">RecordSet</a></td><td><a href="http://mlcommons.org/croissant/DataType">DataType</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://schema.org/distribution">http://schema.org/distribution</a></td><td>distribution</td><td>By contrast with schema.org/Dataset, Croissant requires the distribution property to have values of type FileObject or FileSet.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://mlcommons.org/croissant/FileObject">FileObject</a>, <a href="http://mlcommons.org/croissant/FileSet">FileSet</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/equivalentProperty">http://mlcommons.org/croissant/equivalentProperty</a></td><td>equivalentProperty</td><td>A property that is equivalent to this Field. Used in the case a dataType is specified on the RecordSet to map specific fields to specific properties associated with that dataType.</td><td><a href="http://mlcommons.org/croissant/Field">Field</a></td><td><a href="http://schema.org/URL">URL</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/examples">http://mlcommons.org/croissant/examples</a></td><td>examples</td><td>One more inlined records provided as example content of the RecordSet.</td><td><a href="http://mlcommons.org/croissant/RecordSet">RecordSet</a></td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON">JSON</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/excludes">http://mlcommons.org/croissant/excludes</a></td><td>excludes</td><td>A glob pattern that specifies the files to exclude. The pattern is evaluated from the root of the containedIn contents, after the includes patterns have been evaluated.</td><td><a href="http://mlcommons.org/croissant/FileSet">FileSet</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/extract">http://mlcommons.org/croissant/extract</a></td><td>extract</td><td>The extraction method from the provided source.</td><td><a href="http://mlcommons.org/croissant/DataSource">DataSource</a></td><td><a href="http://mlcommons.org/croissant/Extract">Extract</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/field">http://mlcommons.org/croissant/field</a></td><td>field</td><td>A data element that appears in the records of the RecordSet (e.g., one column of a table).</td><td><a href="http://mlcommons.org/croissant/RecordSet">RecordSet</a></td><td><a href="http://mlcommons.org/croissant/Field">Field</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/fileObject">http://mlcommons.org/croissant/fileObject</a></td><td>fileObject</td><td>The id of a FileObject that is the source of the data.</td><td><a href="http://mlcommons.org/croissant/DataSource">DataSource</a></td><td><a href="http://mlcommons.org/croissant/FileObject">FileObject</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/fileProperty">http://mlcommons.org/croissant/fileProperty</a></td><td>fileProperty</td><td>The file property to extract from the data source metadata, e.g., the filename.</td><td><a href="http://mlcommons.org/croissant/Extract">Extract</a></td><td><a href="http://mlcommons.org/croissant/FilePropertyEnumeration">FilePropertyEnumeration</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/fileSet">http://mlcommons.org/croissant/fileSet</a></td><td>fileSet</td><td>The id of a FileSet that is the source of the data.</td><td><a href="http://mlcommons.org/croissant/DataSource">DataSource</a></td><td><a href="http://mlcommons.org/croissant/FileSet">FileSet</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/format">http://mlcommons.org/croissant/format</a></td><td>format</td><td>A format to parse the values of the data from text, e.g., a date format or number format.</td><td><a href="http://mlcommons.org/croissant/DataSource">DataSource</a></td><td><a href="http://mlcommons.org/croissant/Format">Format</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/includes">http://mlcommons.org/croissant/includes</a></td><td>includes</td><td>A glob pattern that specifies the files to include, e.g., ".jpg", "/foo/pic*.jpg". The pattern is evaluated from the root of the containedIn contents.</td><td><a href="http://mlcommons.org/croissant/FileSet">FileSet</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/isLiveDataset">http://mlcommons.org/croissant/isLiveDataset</a></td><td>isLiveDataset</td><td>Indicates that the dataset is continuously updated instead of being versioned.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Boolean">Boolean</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/jsonPath">http://mlcommons.org/croissant/jsonPath</a></td><td>jsonPath</td><td>In case the data source is JSON data, a path expression to extract a subset of the data.</td><td><a href="http://mlcommons.org/croissant/Extract">Extract</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/key">http://mlcommons.org/croissant/key</a></td><td>key</td><td>One or more fields whose values uniquely identify each record in the RecordSet. (See example below.)</td><td><a href="http://mlcommons.org/croissant/RecordSet">RecordSet</a></td><td><a href="http://mlcommons.org/croissant/Field">Field</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/md5">http://mlcommons.org/croissant/md5</a></td><td>md5</td><td>The MD5 hash of the file.</td><td><a href="http://mlcommons.org/croissant/FileObject">FileObject</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/parentField">http://mlcommons.org/croissant/parentField</a></td><td>parentField</td><td>A special case of SubField that should be hidden because it references a Field that already appears in the RecordSet.</td><td><a href="http://mlcommons.org/croissant/Field">Field</a></td><td><a href="http://mlcommons.org/croissant/Field">Field</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/readLines">http://mlcommons.org/croissant/readLines</a></td><td>readLines</td><td>Read the content of the file line by line.</td><td><a href="http://mlcommons.org/croissant/Transform">Transform</a></td><td><a href="http://schema.org/Boolean">Boolean</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/recordSet">http://mlcommons.org/croissant/recordSet</a></td><td>recordSet</td><td>The id of a RecordSet that is the source of the data.</td><td><a href="http://mlcommons.org/croissant/DataSource">DataSource</a></td><td><a href="http://mlcommons.org/croissant/RecordSet">RecordSet</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/references">http://mlcommons.org/croissant/references</a></td><td>references</td><td>Another Field of another RecordSet that this field references. This is the equivalent of a foreign key reference in a relational database.</td><td><a href="http://mlcommons.org/croissant/Field">Field</a></td><td><a href="http://mlcommons.org/croissant/Field">Field</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/regex">http://mlcommons.org/croissant/regex</a></td><td>regex</td><td>A regular expression to apply to the data.</td><td><a href="http://mlcommons.org/croissant/Transform">Transform</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/repeated">http://mlcommons.org/croissant/repeated</a></td><td>repeated</td><td>If true, then the Field is a list of values of type dataType.</td><td><a href="http://mlcommons.org/croissant/Field">Field</a></td><td><a href="http://schema.org/Boolean">Boolean</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/sdVersion">http://mlcommons.org/croissant/sdVersion</a></td><td>sdVersion</td><td>The version of the dataset metadata, which may be distinct from the version of the dataset content.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Number">Number</a>, <a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/separator">http://mlcommons.org/croissant/separator</a></td><td>separator</td><td>A separator to use parse the data into an array.</td><td><a href="http://mlcommons.org/croissant/Transform">Transform</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/source">http://mlcommons.org/croissant/source</a></td><td>source</td><td>The data source of the field. This will generally reference a FileObject or FileSet's contents (e.g., a specific column of a table).</td><td><a href="http://mlcommons.org/croissant/Field">Field</a>, <a href="http://mlcommons.org/croissant/RecordSet">RecordSet</a></td><td><a href="http://mlcommons.org/croissant/DataSource">DataSource</a>, <a href="http://mlcommons.org/croissant/FileObject">FileObject</a>, <a href="http://mlcommons.org/croissant/FileSet">FileSet</a>, <a href="http://mlcommons.org/croissant/RecordSet">RecordSet</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/subField">http://mlcommons.org/croissant/subField</a></td><td>subField</td><td>Another Field that is nested inside this one.</td><td><a href="http://mlcommons.org/croissant/Field">Field</a></td><td><a href="http://mlcommons.org/croissant/Field">Field</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/transform">http://mlcommons.org/croissant/transform</a></td><td>transform</td><td>A transformation to apply on source data on top of the extracted method as specified through extract, e.g., a regular expression or JSON query.</td><td><a href="http://mlcommons.org/croissant/DataSource">DataSource</a></td><td><a href="http://mlcommons.org/croissant/Transform">Transform</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/unArchive">http://mlcommons.org/croissant/unArchive</a></td><td>unArchive</td><td>Extract the content of the archive.</td><td><a href="http://mlcommons.org/croissant/Transform">Transform</a></td><td><a href="http://schema.org/Boolean">Boolean</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/value">http://mlcommons.org/croissant/value</a></td><td>value</td><td>An optional constant value for the field.</td><td><a href="http://mlcommons.org/croissant/Field">Field</a></td><td><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#JSON">JSON</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/bandConfiguration">http://mlcommons.org/croissant/geo/bandConfiguration</a></td><td>bandConfiguration</td><td>Configuration describing raster band organization and semantics for a dataset or asset (e.g., band ordering and names).</td><td><a href="http://mlcommons.org/croissant/Field">Field</a>, <a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://mlcommons.org/croissant/geo/BandConfiguration">BandConfiguration</a>, <a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/bandNamesList">http://mlcommons.org/croissant/geo/bandNamesList</a></td><td>bandNamesList</td><td>Ordered list of band names corresponding to the band stack described by geocr:bandConfiguration.</td><td><a href="http://mlcommons.org/croissant/geo/BandConfiguration">BandConfiguration</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/bandwidth">http://mlcommons.org/croissant/geo/bandwidth</a></td><td>bandwidth</td><td>Spectral bandwidth for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue.</td><td><a href="http://mlcommons.org/croissant/geo/SpectralBand">SpectralBand</a></td><td><a href="http://schema.org/QuantitativeValue">QuantitativeValue</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/centerWavelength">http://mlcommons.org/croissant/geo/centerWavelength</a></td><td>centerWavelength</td><td>Center wavelength for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue.</td><td><a href="http://mlcommons.org/croissant/geo/SpectralBand">SpectralBand</a></td><td><a href="http://schema.org/QuantitativeValue">QuantitativeValue</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/channelList">http://mlcommons.org/croissant/geo/channelList</a></td><td>channelList</td><td>List of wavelength channels (e.g., 171Å, 193Å) used within geocr:MultiWavelengthConfiguration.</td><td><a href="http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration">MultiWavelengthConfiguration</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/coordinateReferenceSystem">http://mlcommons.org/croissant/geo/coordinateReferenceSystem</a></td><td>coordinateReferenceSystem</td><td>Coordinate reference system (CRS) identifier (e.g., EPSG code) used to interpret spatial data in the dataset.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/instrument">http://mlcommons.org/croissant/geo/instrument</a></td><td>instrument</td><td>Instrument identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE).</td><td><a href="http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics">SolarInstrumentCharacteristics</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/multiWavelengthConfiguration">http://mlcommons.org/croissant/geo/multiWavelengthConfiguration</a></td><td>multiWavelengthConfiguration</td><td>Composite property to group multi-wavelength configuration information for Space Weather / heliophysics datasets; intended to map to SPASE constructs.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration">MultiWavelengthConfiguration</a>, <a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/observatory">http://mlcommons.org/croissant/geo/observatory</a></td><td>observatory</td><td>Observatory/platform identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE).</td><td><a href="http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics">SolarInstrumentCharacteristics</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/recordEndpoint">http://mlcommons.org/croissant/geo/recordEndpoint</a></td><td>recordEndpoint</td><td>A service endpoint that provides programmatic access to the dataset's metadata records (e.g., listing, paging, and filtering records).</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a>, <a href="http://schema.org/URL">URL</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/samplingStrategy">http://mlcommons.org/croissant/geo/samplingStrategy</a></td><td>samplingStrategy</td><td>Description of how samples were selected or constructed (e.g., chip/windowing strategy, filtering criteria) to support reproducibility and interpretation.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics">http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics</a></td><td>solarInstrumentCharacteristics</td><td>Composite property to group solar/heliophysics instrument characteristics for Space Weather datasets; intended to map to SPASE constructs.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics">SolarInstrumentCharacteristics</a>, <a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/spatialBias">http://mlcommons.org/croissant/geo/spatialBias</a></td><td>spatialBias</td><td>Description of spatial representativeness limitations (e.g., geographic concentration, under-sampled regions/biomes) that may affect model generalization and evaluation.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/spatialIndex">http://mlcommons.org/croissant/geo/spatialIndex</a></td><td>spatialIndex</td><td>Precomputed spatial index token(s) (e.g., DGGS cell ID or geohash-like key) to accelerate coarse spatial filtering and discovery at scale.</td><td><a href="http://mlcommons.org/croissant/RecordSet">RecordSet</a>, <a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/spatialResolution">http://mlcommons.org/croissant/geo/spatialResolution</a></td><td>spatialResolution</td><td>Nominal spatial resolution for the dataset or collection (e.g., '30m' or a QuantitativeValue with units). May be provided at dataset level or at record/collection level when resolution varies.</td><td><a href="http://mlcommons.org/croissant/RecordSet">RecordSet</a>, <a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/QuantitativeValue">QuantitativeValue</a>, <a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/spectralBandMetadata">http://mlcommons.org/croissant/geo/spectralBandMetadata</a></td><td>spectralBandMetadata</td><td>Per-band spectral metadata for EO imagery (e.g., center wavelength, bandwidth), represented as one or more geocr:SpectralBand entries.</td><td><a href="http://mlcommons.org/croissant/Field">Field</a>, <a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://mlcommons.org/croissant/geo/SpectralBand">SpectralBand</a>, <a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/temporalResolution">http://mlcommons.org/croissant/geo/temporalResolution</a></td><td>temporalResolution</td><td>Temporal cadence of the dataset or collection (e.g., 1 month), typically expressed as a QuantitativeValue (value + unit), or as text. May be provided at dataset level or at record/collection level when cadence varies.</td><td><a href="http://mlcommons.org/croissant/RecordSet">RecordSet</a>, <a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/QuantitativeValue">QuantitativeValue</a>, <a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/timeSeriesIndex">http://mlcommons.org/croissant/geo/timeSeriesIndex</a></td><td>timeSeriesIndex</td><td>Identifies the record-level field used to order/index observations in a time series (e.g., a timestamp field in a RecordSet).</td><td><a href="http://mlcommons.org/croissant/RecordSet">RecordSet</a></td><td><a href="http://mlcommons.org/croissant/Field">Field</a>, <a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/totalBands">http://mlcommons.org/croissant/geo/totalBands</a></td><td>totalBands</td><td>Total number of bands for an asset or dataset described by geocr:bandConfiguration.</td><td><a href="http://mlcommons.org/croissant/geo/BandConfiguration">BandConfiguration</a></td><td><a href="http://schema.org/Integer">Integer</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/annotationsPerItem">http://mlcommons.org/croissant/RAI/annotationsPerItem</a></td><td>annotationsPerItem</td><td>Number of human labels per dataset item, if applicable.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/annotatorDemographics">http://mlcommons.org/croissant/RAI/annotatorDemographics</a></td><td>annotatorDemographics</td><td>List of demographics specifications about the annotators, if applicable.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis">http://mlcommons.org/croissant/RAI/dataAnnotationAnalysis</a></td><td>dataAnnotationAnalysis</td><td>Considerations related to the process of converting the "raw" annotations into the labels that are ultimately packaged in a dataset - Uncertainty or disagreement between annotations on each instance as a signal in the dataset, analysis of systematic disagreements between annotators of different socio demographic group,  how the final dataset annotations will relate to individual annotator responses.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/dataAnnotationPlatform">http://mlcommons.org/croissant/RAI/dataAnnotationPlatform</a></td><td>dataAnnotationPlatform</td><td>Platform, tool, or library used to collect annotations by human annotators, if applicable.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/dataAnnotationProtocol">http://mlcommons.org/croissant/RAI/dataAnnotationProtocol</a></td><td>dataAnnotationProtocol</td><td>Description of annotations (labels, ratings) produced, including how these were created or authored - Annotation Workforce Type, Annotation Characteristic(s), Annotation Description(s), Annotation Task(s), Annotation Distribution(s).</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/dataBiases">http://mlcommons.org/croissant/RAI/dataBiases</a></td><td>dataBiases</td><td>Description of biases in dataset, if applicable.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/dataCollection">http://mlcommons.org/croissant/RAI/dataCollection</a></td><td>dataCollection</td><td>Description of the data collection process.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/dataCollectionMissingData">http://mlcommons.org/croissant/RAI/dataCollectionMissingData</a></td><td>dataCollectionMissingData</td><td>Description of missing data in structured/unstructured form.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/dataCollectionRawData">http://mlcommons.org/croissant/RAI/dataCollectionRawData</a></td><td>dataCollectionRawData</td><td>Description of the raw data i.e. source of the data.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/dataCollectionTimeframe">http://mlcommons.org/croissant/RAI/dataCollectionTimeframe</a></td><td>dataCollectionTimeframe</td><td>Timeframe in terms of start and end date of the collection process, that it described as a DateTime indicating a time period in <a href="https://en.wikipedia.org/wiki/ISO_8601#Time_intervals">ISO 8601 time interval format</a>. For example, a collection time frame ranging from 2020 - 2022 can be indicated in ISO 8601 interval format via "2020/2022".</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/DateTime">DateTime</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/dataCollectionType">http://mlcommons.org/croissant/RAI/dataCollectionType</a></td><td>dataCollectionType</td><td>Define the data collection type. Recommended values: Surveys, Secondary Data analysis, Physical data collection, Direct measurement, Document analysis, Manual Human Curator, Software Collection, Experiments, Web Scraping, Web API, Focus groups, Self-reporting, Customer feedback data, User-generated content data, Passive Data Collection, Others.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/dataImputationProtocol">http://mlcommons.org/croissant/RAI/dataImputationProtocol</a></td><td>dataImputationProtocol</td><td>Description of data imputation process, if applicable.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/dataLimitations">http://mlcommons.org/croissant/RAI/dataLimitations</a></td><td>dataLimitations</td><td>Known limitations - Data generalization limits (e.g related to data distribution, data quality issues, or data sources) and on-recommended uses, if applicable.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/dataManipulationProtocol">http://mlcommons.org/croissant/RAI/dataManipulationProtocol</a></td><td>dataManipulationProtocol</td><td>Description of data manipulation process, if applicable.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol">http://mlcommons.org/croissant/RAI/dataPreprocessingProtocol</a></td><td>dataPreprocessingProtocol</td><td>Description of the steps that were required to bring collected data to a state that can be processed by an ML model/algorithm, e.g. filtering out incomplete entries etc, if applicable.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan">http://mlcommons.org/croissant/RAI/dataReleaseMaintenancePlan</a></td><td>dataReleaseMaintenancePlan</td><td>Versioning information in terms of the updating timeframe, the maintainers, and the deprecation policies.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/dataSocialImpact">http://mlcommons.org/croissant/RAI/dataSocialImpact</a></td><td>dataSocialImpact</td><td>Discussion of social impact, if applicable.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/dataUseCases">http://mlcommons.org/croissant/RAI/dataUseCases</a></td><td>dataUseCases</td><td>Dataset Use(s) - Training, Testing, Validation, Development or Production Use, Fine Tuning, Others (please specify), Usage Guidelines. Recommended uses.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/machineAnnotationTools">http://mlcommons.org/croissant/RAI/machineAnnotationTools</a></td><td>machineAnnotationTools</td><td>List of software used for data annotation (e.g., concept extraction, NER, and additional characteristics of the tools used for annotation to allow for replication or extension).</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RAI/personalSensitiveInformation">http://mlcommons.org/croissant/RAI/personalSensitiveInformation</a></td><td>personalSensitiveInformation</td><td>Sensitive Human Attribute(s)- Gender, Socio-economic status, Geography, Language, Age, Culture, Experience or Seniority, Others (please specify), if applicable.</td><td><a href="http://schema.org/Dataset">Dataset</a></td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-rai">RAI</span></td></tr></tbody></table>
+</div>
+</div></body></html>

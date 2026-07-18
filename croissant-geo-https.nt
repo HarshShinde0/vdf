@@ -1,124 +1,124 @@
+<http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://mlcommons.org/croissant/geo/spatialIndex> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/geo/channelList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/recordEndpoint> <https://schema.org/rangeIncludes> <https://schema.org/URL> .
+<http://mlcommons.org/croissant/geo/spatialResolution> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/geo/bandConfiguration> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/geo/instrument> <http://www.w3.org/2000/01/rdf-schema#label> "instrument" .
+<http://mlcommons.org/croissant/geo/bandNamesList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/SpectralBand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/StructuredValue> .
+<http://mlcommons.org/croissant/geo/instrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/instrument> <http://www.w3.org/2000/01/rdf-schema#comment> "Instrument identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE)." .
+<http://mlcommons.org/croissant/geo/bandConfiguration> <https://schema.org/rangeIncludes> <http://mlcommons.org/croissant/geo/BandConfiguration> .
+<http://mlcommons.org/croissant/geo/totalBands> <http://www.w3.org/2000/01/rdf-schema#label> "totalBands" .
+<http://mlcommons.org/croissant/geo/observatory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Coordinate reference system (CRS) identifier (e.g., EPSG code) used to interpret spatial data in the dataset." .
+<http://mlcommons.org/croissant/geo/spatialBias> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of spatial representativeness limitations (e.g., geographic concentration, under-sampled regions/biomes) that may affect model generalization and evaluation." .
+<http://mlcommons.org/croissant/geo/bandConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/recordEndpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/bandwidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/samplingStrategy> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of how samples were selected or constructed (e.g., chip/windowing strategy, filtering criteria) to support reproducibility and interpretation." .
+<http://mlcommons.org/croissant/geo/bandNamesList> <http://www.w3.org/2000/01/rdf-schema#comment> "Ordered list of band names corresponding to the band stack described by geocr:bandConfiguration." .
+<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/geo/spectralBandMetadata> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/geo/spatialIndex> <http://www.w3.org/2000/01/rdf-schema#label> "spatialIndex" .
+<http://mlcommons.org/croissant/geo/recordEndpoint> <http://www.w3.org/2000/01/rdf-schema#label> "recordEndpoint" .
+<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <https://schema.org/rangeIncludes> <http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> .
+<http://mlcommons.org/croissant/geo/temporalResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/SpectralBand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#label> "SolarInstrumentCharacteristics" .
+<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "spectralBandMetadata" .
+<http://mlcommons.org/croissant/geo/bandwidth> <https://schema.org/rangeIncludes> <https://schema.org/QuantitativeValue> .
+<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/geo/timeSeriesIndex> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> .
+<http://mlcommons.org/croissant/geo/timeSeriesIndex> <https://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Field> .
+<http://mlcommons.org/croissant/geo/bandwidth> <http://www.w3.org/2000/01/rdf-schema#label> "bandwidth" .
+<http://mlcommons.org/croissant/geo/centerWavelength> <http://www.w3.org/2000/01/rdf-schema#label> "centerWavelength" .
+<http://mlcommons.org/croissant/geo/observatory> <http://www.w3.org/2000/01/rdf-schema#label> "observatory" .
+<http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured description of solar/heliophysics instrument and observatory characteristics for Space Weather datasets (e.g., observatory/platform and instrument identifiers). Intended to be used as the value of geocr:solarInstrumentCharacteristics." .
+<http://mlcommons.org/croissant/geo/instrument> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/geo/timeSeriesIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies the record-level field used to order/index observations in a time series (e.g., a timestamp field in a RecordSet)." .
+<http://mlcommons.org/croissant/geo/spatialResolution> <http://www.w3.org/2000/01/rdf-schema#label> "spatialResolution" .
+<http://mlcommons.org/croissant/geo/timeSeriesIndex> <http://www.w3.org/2000/01/rdf-schema#label> "timeSeriesIndex" .
+<http://mlcommons.org/croissant/geo/instrument> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> .
+<http://mlcommons.org/croissant/geo/totalBands> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/BandConfiguration> .
+<http://mlcommons.org/croissant/geo/totalBands> <http://www.w3.org/2000/01/rdf-schema#comment> "Total number of bands for an asset or dataset described by geocr:bandConfiguration." .
+<http://mlcommons.org/croissant/geo/temporalResolution> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> .
+<http://mlcommons.org/croissant/geo/samplingStrategy> <http://www.w3.org/2000/01/rdf-schema#label> "samplingStrategy" .
+<http://mlcommons.org/croissant/geo/recordEndpoint> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/geo/observatory> <http://www.w3.org/2000/01/rdf-schema#comment> "Observatory/platform identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE)." .
+<http://mlcommons.org/croissant/geo/bandNamesList> <http://www.w3.org/2000/01/rdf-schema#label> "bandNamesList" .
+<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "multiWavelengthConfiguration" .
+<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/temporalResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Temporal cadence of the dataset or collection (e.g., 1 month), typically expressed as a QuantitativeValue (value + unit), or as text. May be provided at dataset level or at record/collection level when cadence varies." .
+<http://mlcommons.org/croissant/geo/channelList> <http://www.w3.org/2000/01/rdf-schema#label> "channelList" .
+<http://mlcommons.org/croissant/geo/spatialBias> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/geo/timeSeriesIndex> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured description of multi-wavelength channel configuration for Space Weather / heliophysics datasets (e.g., a list of wavelength channels). Intended to be used as the value of geocr:multiWavelengthConfiguration." .
+<http://mlcommons.org/croissant/geo/spatialResolution> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/geo/channelList> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> .
 <http://mlcommons.org/croissant/geo/BandConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "BandConfiguration" .
 <http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <https://schema.org/rangeIncludes> <http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> .
-<http://mlcommons.org/croissant/geo/recordEndpoint> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/geo/spatialBias> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of spatial representativeness limitations (e.g., geographic concentration, under-sampled regions/biomes) that may affect model generalization and evaluation." .
-<http://mlcommons.org/croissant/geo/bandwidth> <https://schema.org/rangeIncludes> <https://schema.org/QuantitativeValue> .
-<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <https://schema.org/rangeIncludes> <http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> .
-<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "multiWavelengthConfiguration" .
-<http://mlcommons.org/croissant/geo/centerWavelength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/geo/samplingStrategy> <http://www.w3.org/2000/01/rdf-schema#label> "samplingStrategy" .
-<http://mlcommons.org/croissant/geo/temporalResolution> <https://schema.org/rangeIncludes> <https://schema.org/QuantitativeValue> .
-<http://mlcommons.org/croissant/geo/samplingStrategy> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/geo/spatialResolution> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/geo/SpectralBand> <http://www.w3.org/2000/01/rdf-schema#label> "SpectralBand" .
-<http://mlcommons.org/croissant/geo/spatialIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/geo/centerWavelength> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/SpectralBand> .
-<http://mlcommons.org/croissant/geo/bandwidth> <http://www.w3.org/2000/01/rdf-schema#label> "bandwidth" .
-<http://mlcommons.org/croissant/geo/BandConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured description of raster band organization and semantics (e.g., band count and ordered band names). Intended to be used as the value of geocr:bandConfiguration." .
-<http://mlcommons.org/croissant/geo/recordEndpoint> <http://www.w3.org/2000/01/rdf-schema#label> "recordEndpoint" .
-<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Composite property to group multi-wavelength configuration information for Space Weather / heliophysics datasets; intended to map to SPASE constructs." .
-<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/geo/spatialBias> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "spectralBandMetadata" .
-<http://mlcommons.org/croissant/geo/spatialIndex> <http://www.w3.org/2000/01/rdf-schema#label> "spatialIndex" .
-<http://mlcommons.org/croissant/geo/observatory> <http://www.w3.org/2000/01/rdf-schema#comment> "Observatory/platform identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE)." .
-<http://mlcommons.org/croissant/geo/timeSeriesIndex> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> .
-<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/geo/timeSeriesIndex> <http://www.w3.org/2000/01/rdf-schema#label> "timeSeriesIndex" .
-<http://mlcommons.org/croissant/geo/observatory> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> .
-<http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/StructuredValue> .
-<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/geo/temporalResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Temporal cadence of the dataset or collection (e.g., 1 month), typically expressed as a QuantitativeValue (value + unit), or as text. May be provided at dataset level or at record/collection level when cadence varies." .
-<http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "MultiWavelengthConfiguration" .
-<http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
-<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#label> "solarInstrumentCharacteristics" .
-<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://www.w3.org/2000/01/rdf-schema#comment> "Per-band spectral metadata for EO imagery (e.g., center wavelength, bandwidth), represented as one or more geocr:SpectralBand entries." .
-<http://mlcommons.org/croissant/geo/totalBands> <https://schema.org/rangeIncludes> <https://schema.org/Integer> .
-<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#label> "coordinateReferenceSystem" .
-<http://mlcommons.org/croissant/geo/instrument> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/StructuredValue> .
-<http://mlcommons.org/croissant/geo/spatialBias> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/geo/spatialResolution> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/geo/spatialResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Nominal spatial resolution for the dataset or collection (e.g., '30m' or a QuantitativeValue with units). May be provided at dataset level or at record/collection level when resolution varies." .
-<http://mlcommons.org/croissant/geo/samplingStrategy> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/geo/BandConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
-<http://mlcommons.org/croissant/geo/bandNamesList> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/geo/spatialIndex> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/geo/observatory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/geo/observatory> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/geo/spatialBias> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/geo/spatialResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/geo/channelList> <http://www.w3.org/2000/01/rdf-schema#comment> "List of wavelength channels (e.g., 171Å, 193Å) used within geocr:MultiWavelengthConfiguration." .
-<http://mlcommons.org/croissant/geo/bandConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Coordinate reference system (CRS) identifier (e.g., EPSG code) used to interpret spatial data in the dataset." .
-<http://mlcommons.org/croissant/geo/timeSeriesIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/geo/SpectralBand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
-<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/geo/spatialResolution> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> .
-<http://mlcommons.org/croissant/geo/bandNamesList> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/BandConfiguration> .
-<http://mlcommons.org/croissant/geo/channelList> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> .
-<http://mlcommons.org/croissant/geo/spatialIndex> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/geo/timeSeriesIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies the record-level field used to order/index observations in a time series (e.g., a timestamp field in a RecordSet)." .
-<http://mlcommons.org/croissant/geo/bandNamesList> <http://www.w3.org/2000/01/rdf-schema#label> "bandNamesList" .
-<http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured description of multi-wavelength channel configuration for Space Weather / heliophysics datasets (e.g., a list of wavelength channels). Intended to be used as the value of geocr:multiWavelengthConfiguration." .
-<http://mlcommons.org/croissant/geo/bandNamesList> <http://www.w3.org/2000/01/rdf-schema#comment> "Ordered list of band names corresponding to the band stack described by geocr:bandConfiguration." .
-<http://mlcommons.org/croissant/geo/bandConfiguration> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/geo/samplingStrategy> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of how samples were selected or constructed (e.g., chip/windowing strategy, filtering criteria) to support reproducibility and interpretation." .
-<http://mlcommons.org/croissant/geo/totalBands> <http://www.w3.org/2000/01/rdf-schema#comment> "Total number of bands for an asset or dataset described by geocr:bandConfiguration." .
-<http://mlcommons.org/croissant/geo/bandConfiguration> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field> .
-<http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured description of solar/heliophysics instrument and observatory characteristics for Space Weather datasets (e.g., observatory/platform and instrument identifiers). Intended to be used as the value of geocr:solarInstrumentCharacteristics." .
-<http://mlcommons.org/croissant/geo/observatory> <http://www.w3.org/2000/01/rdf-schema#label> "observatory" .
-<http://mlcommons.org/croissant/geo/timeSeriesIndex> <https://schema.org/rangeIncludes> <http://mlcommons.org/croissant/Field> .
-<http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#label> "SolarInstrumentCharacteristics" .
-<http://mlcommons.org/croissant/geo/centerWavelength> <http://www.w3.org/2000/01/rdf-schema#comment> "Center wavelength for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue." .
-<http://mlcommons.org/croissant/geo/instrument> <http://www.w3.org/2000/01/rdf-schema#label> "instrument" .
-<http://mlcommons.org/croissant/geo/spectralBandMetadata> <https://schema.org/rangeIncludes> <http://mlcommons.org/croissant/geo/SpectralBand> .
-<http://mlcommons.org/croissant/geo/bandConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Configuration describing raster band organization and semantics for a dataset or asset (e.g., band ordering and names)." .
-<http://mlcommons.org/croissant/geo/temporalResolution> <http://www.w3.org/2000/01/rdf-schema#label> "temporalResolution" .
 <http://mlcommons.org/croissant/geo/temporalResolution> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/geo/samplingStrategy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/geo/spatialBias> <http://www.w3.org/2000/01/rdf-schema#label> "spatialBias" .
-<http://mlcommons.org/croissant/geo/channelList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/geo/channelList> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/geo/bandwidth> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/SpectralBand> .
-<http://mlcommons.org/croissant/geo/spectralBandMetadata> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/geo/recordEndpoint> <https://schema.org/rangeIncludes> <https://schema.org/URL> .
-<http://mlcommons.org/croissant/geo/bandwidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Spectral bandwidth for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue." .
-<http://mlcommons.org/croissant/geo/instrument> <http://www.w3.org/2000/01/rdf-schema#comment> "Instrument identifier used within geocr:SolarInstrumentCharacteristics (for later mapping to SPASE)." .
-<http://mlcommons.org/croissant/geo/bandwidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/geo/instrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/geo/totalBands> <http://www.w3.org/2000/01/rdf-schema#label> "totalBands" .
-<http://mlcommons.org/croissant/geo/spatialResolution> <https://schema.org/rangeIncludes> <https://schema.org/QuantitativeValue> .
-<http://mlcommons.org/croissant/geo/bandConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "bandConfiguration" .
-<http://mlcommons.org/croissant/geo/recordEndpoint> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/geo/recordEndpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A service endpoint that provides programmatic access to the dataset's metadata records (e.g., listing, paging, and filtering records)." .
-<http://mlcommons.org/croissant/geo/spatialIndex> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> .
-<http://mlcommons.org/croissant/geo/temporalResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/geo/recordEndpoint> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
 <http://mlcommons.org/croissant/geo/BandConfiguration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/StructuredValue> .
-<http://mlcommons.org/croissant/geo/centerWavelength> <http://www.w3.org/2000/01/rdf-schema#label> "centerWavelength" .
-<http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/StructuredValue> .
 <http://mlcommons.org/croissant/geo/totalBands> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/geo/SpectralBand> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured per-band spectral metadata entry (e.g., center wavelength and bandwidth). Intended to be used as items within geocr:spectralBandMetadata." .
-<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#comment> "Composite property to group solar/heliophysics instrument characteristics for Space Weather datasets; intended to map to SPASE constructs." .
-<http://mlcommons.org/croissant/geo/temporalResolution> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> .
-<http://mlcommons.org/croissant/geo/recordEndpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/geo/bandNamesList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/geo/bandConfiguration> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/geo/totalBands> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/BandConfiguration> .
-<http://mlcommons.org/croissant/geo/spectralBandMetadata> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field> .
-<http://mlcommons.org/croissant/geo/temporalResolution> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/geo/channelList> <http://www.w3.org/2000/01/rdf-schema#label> "channelList" .
+<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://www.w3.org/2000/01/rdf-schema#comment> "Per-band spectral metadata for EO imagery (e.g., center wavelength, bandwidth), represented as one or more geocr:SpectralBand entries." .
+<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Composite property to group multi-wavelength configuration information for Space Weather / heliophysics datasets; intended to map to SPASE constructs." .
+<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#label> "solarInstrumentCharacteristics" .
+<http://mlcommons.org/croissant/geo/centerWavelength> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/SpectralBand> .
+<http://mlcommons.org/croissant/geo/samplingStrategy> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/geo/spatialBias> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
 <http://mlcommons.org/croissant/geo/spatialIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "Precomputed spatial index token(s) (e.g., DGGS cell ID or geohash-like key) to accelerate coarse spatial filtering and discovery at scale." .
-<http://mlcommons.org/croissant/geo/spectralBandMetadata> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
-<http://mlcommons.org/croissant/geo/bandConfiguration> <https://schema.org/rangeIncludes> <http://mlcommons.org/croissant/geo/BandConfiguration> .
+<http://mlcommons.org/croissant/geo/bandConfiguration> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field> .
+<http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "MultiWavelengthConfiguration" .
+<http://mlcommons.org/croissant/geo/temporalResolution> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/geo/BandConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured description of raster band organization and semantics (e.g., band count and ordered band names). Intended to be used as the value of geocr:bandConfiguration." .
+<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <https://schema.org/domainIncludes> <https://schema.org/Dataset> .
+<http://mlcommons.org/croissant/geo/recordEndpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A service endpoint that provides programmatic access to the dataset's metadata records (e.g., listing, paging, and filtering records)." .
+<http://mlcommons.org/croissant/geo/spatialBias> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/spectralBandMetadata> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/geo/samplingStrategy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/timeSeriesIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://mlcommons.org/croissant/geo/spatialIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/bandConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Configuration describing raster band organization and semantics for a dataset or asset (e.g., band ordering and names)." .
+<http://mlcommons.org/croissant/geo/spatialResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <http://www.w3.org/2000/01/rdf-schema#label> "coordinateReferenceSystem" .
+<http://mlcommons.org/croissant/geo/spectralBandMetadata> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/Field> .
+<http://mlcommons.org/croissant/geo/channelList> <http://www.w3.org/2000/01/rdf-schema#comment> "List of wavelength channels (e.g., 171Å, 193Å) used within geocr:MultiWavelengthConfiguration." .
+<http://mlcommons.org/croissant/geo/multiWavelengthConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/spatialBias> <http://www.w3.org/2000/01/rdf-schema#label> "spatialBias" .
+<http://mlcommons.org/croissant/geo/BandConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://mlcommons.org/croissant/geo/spatialIndex> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> .
+<http://mlcommons.org/croissant/geo/spatialResolution> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/RecordSet> .
+<http://mlcommons.org/croissant/geo/channelList> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/geo/spectralBandMetadata> <https://schema.org/rangeIncludes> <http://mlcommons.org/croissant/geo/SpectralBand> .
+<http://mlcommons.org/croissant/geo/spatialResolution> <https://schema.org/rangeIncludes> <https://schema.org/QuantitativeValue> .
+<http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/StructuredValue> .
+<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <http://www.w3.org/2000/01/rdf-schema#comment> "Composite property to group solar/heliophysics instrument characteristics for Space Weather datasets; intended to map to SPASE constructs." .
+<http://mlcommons.org/croissant/geo/SpectralBand> <http://www.w3.org/2000/01/rdf-schema#comment> "Structured per-band spectral metadata entry (e.g., center wavelength and bandwidth). Intended to be used as items within geocr:spectralBandMetadata." .
+<http://mlcommons.org/croissant/geo/bandConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "bandConfiguration" .
+<http://mlcommons.org/croissant/geo/bandwidth> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/SpectralBand> .
+<http://mlcommons.org/croissant/geo/bandNamesList> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/BandConfiguration> .
+<http://mlcommons.org/croissant/geo/temporalResolution> <https://schema.org/rangeIncludes> <https://schema.org/QuantitativeValue> .
+<http://mlcommons.org/croissant/geo/bandwidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Spectral bandwidth for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue." .
+<http://mlcommons.org/croissant/geo/centerWavelength> <http://www.w3.org/2000/01/rdf-schema#comment> "Center wavelength for a geocr:SpectralBand entry (typically in geocr:spectralBandMetadata), expressed as a QuantitativeValue." .
+<http://mlcommons.org/croissant/geo/observatory> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/geo/totalBands> <https://schema.org/rangeIncludes> <https://schema.org/Integer> .
+<http://mlcommons.org/croissant/geo/bandNamesList> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/geo/centerWavelength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/spectralBandMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://mlcommons.org/croissant/geo/observatory> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> .
+<http://mlcommons.org/croissant/geo/spatialIndex> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/geo/SpectralBand> <http://www.w3.org/2000/01/rdf-schema#label> "SpectralBand" .
+<http://mlcommons.org/croissant/geo/temporalResolution> <http://www.w3.org/2000/01/rdf-schema#label> "temporalResolution" .
+<http://mlcommons.org/croissant/geo/bandConfiguration> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
+<http://mlcommons.org/croissant/geo/samplingStrategy> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
 <http://mlcommons.org/croissant/geo/centerWavelength> <https://schema.org/rangeIncludes> <https://schema.org/QuantitativeValue> .
-<http://mlcommons.org/croissant/geo/timeSeriesIndex> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/geo/coordinateReferenceSystem> <https://schema.org/rangeIncludes> <https://schema.org/Text> .
-<http://mlcommons.org/croissant/geo/instrument> <https://schema.org/domainIncludes> <http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics> .
-<http://mlcommons.org/croissant/geo/SpectralBand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/StructuredValue> .
-<http://mlcommons.org/croissant/geo/solarInstrumentCharacteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://mlcommons.org/croissant/geo/spatialResolution> <http://www.w3.org/2000/01/rdf-schema#label> "spatialResolution" .
+<http://mlcommons.org/croissant/geo/spatialResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Nominal spatial resolution for the dataset or collection (e.g., '30m' or a QuantitativeValue with units). May be provided at dataset level or at record/collection level when resolution varies." .

@@ -1,0 +1,409 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<title>Croissant Classes (Types)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #9c1a1c;
+  --primary-hover: #b31b1b;
+  --text-main: #1f2937;
+  --text-muted: #4b5563;
+  --bg-main: #ffffff;
+  --bg-alt: #f9fafb;
+  --border: #e5e7eb;
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --radius: 8px;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-main);
+  background-color: var(--bg-main);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+#header {
+  border-bottom: 3px solid var(--primary);
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+}
+
+.header-container {
+  max-width: 100%;
+  padding: 0.75rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+#logo a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  transition: opacity 0.2s;
+}
+
+#logo a:hover {
+  opacity: 0.85;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+  padding: 0.25rem 0;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.search-container {
+  position: relative;
+  width: 280px;
+}
+
+.search {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 2.25rem;
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  background-color: var(--bg-alt);
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.search:focus {
+  background-color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(156, 26, 28, 0.15);
+}
+
+.search-container::before {
+  content: "";
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' /%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+#main {
+  max-width: 100%;
+  padding: 3rem 4rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.025em;
+}
+
+.lead {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #111827;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--primary-hover);
+}
+
+ul {
+  padding-left: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+}
+
+.download-container {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.box-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.fg {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+select {
+  padding: 0.5rem 2rem 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%234b5563' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+}
+
+select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(156, 26, 28, 0.1);
+}
+
+#url {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--primary);
+  word-break: break-all;
+  margin: 0.25rem 0;
+}
+
+button {
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.625rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: var(--shadow);
+  align-self: flex-start;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.table-container {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-top: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.925rem;
+}
+
+th:nth-child(1), td:nth-child(1) {
+  width: 25%;
+  min-width: 280px;
+}
+
+th:nth-child(2), td:nth-child(2) {
+  width: 15%;
+  min-width: 180px;
+}
+
+th:nth-child(3), td:nth-child(3) {
+  width: 35%;
+}
+
+th {
+  background: var(--bg-alt);
+  color: #374151;
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  border-bottom: 2px solid var(--border);
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  word-break: break-word;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background-color: rgba(249, 250, 251, 0.7);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  word-break: break-all;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.badge-core {
+  background-color: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+.badge-geo {
+  background-color: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.badge-rai {
+  background-color: #faf5ff;
+  color: #6b21a8;
+  border: 1px solid #e9d5ff;
+}
+
+#ft {
+  border-top: 1px solid var(--border);
+  margin-top: 5rem;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+</style><script>
+function filterTable(){
+  var f=document.getElementById("search").value.toLowerCase();
+  var rows=document.getElementById("tb").getElementsByTagName("tr");
+  for(var i=0;i<rows.length;i++){
+    var found=false;
+    var cells=rows[i].getElementsByTagName("td");
+    for(var j=0;j<cells.length;j++){
+      if(cells[j].innerText.toLowerCase().indexOf(f)>-1){
+        found=true;
+        break;
+      }
+    }
+    rows[i].style.display=found?"":"none";
+  }
+}
+</script></head>
+<body><header id="header">
+  <div class="header-container">
+    <div class="header-left">
+      <div id="logo"><a href="../">Croissant</a></div>
+      <nav id="nav">
+        <a href="../" class="nav-link ">Docs</a>
+        <a href="../types/" class="nav-link active">Classes (Types)</a>
+        <a href="../properties/" class="nav-link ">Properties</a>
+      </nav>
+    </div>
+    <div class="header-right"><div class="search-container"><input type="text" id="search" class="search" placeholder="Search classes..." oninput="filterTable()"></div></div>
+  </div>
+</header><div id="main"><h1>Croissant Vocabulary Classes (Types)</h1>
+<div class="table-container">
+<table><thead><tr><th>URI</th><th>Label</th><th>Comment</th><th>Subclass Of</th><th>Vocabulary</th></tr></thead>
+<tbody id="tb"><tr><td class="mono"><a href="http://mlcommons.org/croissant/ContentExtractionEnumeration">http://mlcommons.org/croissant/ContentExtractionEnumeration</a></td><td>ContentExtractionEnumeration</td><td>Specifies which content to extract from a file. One of "all", "lines", or "lineNumbers".</td><td><a href="http://schema.org/Enumeration">Enumeration</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/DataSource">http://mlcommons.org/croissant/DataSource</a></td><td>DataSource</td><td>A source of data, optionally transformed before being used.</td><td><a href="http://schema.org/Intangible">Intangible</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/DataType">http://mlcommons.org/croissant/DataType</a></td><td>DataType</td><td>The data type of values expected for a Field in a RecordSet. This class is inspired by the Datatype class in CSVW. In addition to simple atomic types, types can be semantic types, such as schema.org classes, as well types defined in other vocabularies.</td><td><a href="http://schema.org/URL">URL</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/Extract">http://mlcommons.org/croissant/Extract</a></td><td>Extract</td><td>Specifies how to extract data from a DataSource. The extraction mechanism depends on the type of content, e.g., a column name for tabular data, or a jsonPath for JSON data.</td><td><a href="http://schema.org/Intangible">Intangible</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/Field">http://mlcommons.org/croissant/Field</a></td><td>Field</td><td>A component of the structure of a RecordSet, such as a column of a table.</td><td><a href="http://schema.org/Intangible">Intangible</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/FileObject">http://mlcommons.org/croissant/FileObject</a></td><td>FileObject</td><td>An individual file that is part of a dataset.</td><td><a href="http://schema.org/DataDownload">DataDownload</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/FilePropertyEnumeration">http://mlcommons.org/croissant/FilePropertyEnumeration</a></td><td>FilePropertyEnumeration</td><td>Specifies a property of a FileObject. One of "fullPath" or "fileName".</td><td><a href="http://schema.org/Enumeration">Enumeration</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/FileSet">http://mlcommons.org/croissant/FileSet</a></td><td>FileSet</td><td>A set of homogeneous files extracted from a container, optionally filtered by inclusion and/or exclusion filters.</td><td><a href="http://schema.org/DataDownload">DataDownload</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/Format">http://mlcommons.org/croissant/Format</a></td><td>Format</td><td>Specifies how to parse the format of the data from a string representation. For example, format may hold a date format string, a number format, or a bounding box format.</td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/BoundingBox">http://mlcommons.org/croissant/BoundingBox</a></td><td>Label</td><td>A data type representing a bounding box.</td><td><a href="http://schema.org/Text">Text</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/Label">http://mlcommons.org/croissant/Label</a></td><td>Label</td><td>A machine learning label.</td><td><a href="http://schema.org/Intangible">Intangible</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/RecordSet">http://mlcommons.org/croissant/RecordSet</a></td><td>RecordSet</td><td>A description of a set of structured records from one or more data sources and their structure, expressed as a set of fields.</td><td><a href="http://schema.org/Intangible">Intangible</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/SegmentationMask">http://mlcommons.org/croissant/SegmentationMask</a></td><td>SegmentationMask</td><td>A data type representing a segmentation mask.</td><td><a href="http://schema.org/StructuredValue">StructuredValue</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/Split">http://mlcommons.org/croissant/Split</a></td><td>Split</td><td>Splits for training a machine learning, typically test, train and validation.</td><td><a href="http://schema.org/Enumeration">Enumeration</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/Transform">http://mlcommons.org/croissant/Transform</a></td><td>Transform</td><td>Specifies how to transform data extracted from a DataSource. The type of transformation depends on the type of content, e.g., a regular expression to appy on text, or a jsonQuery to transform JSON content.</td><td><a href="http://schema.org/Intangible">Intangible</a></td><td><span class="badge badge-core">Core</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/BandConfiguration">http://mlcommons.org/croissant/geo/BandConfiguration</a></td><td>BandConfiguration</td><td>Structured description of raster band organization and semantics (e.g., band count and ordered band names). Intended to be used as the value of geocr:bandConfiguration.</td><td><a href="http://schema.org/StructuredValue">StructuredValue</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration">http://mlcommons.org/croissant/geo/MultiWavelengthConfiguration</a></td><td>MultiWavelengthConfiguration</td><td>Structured description of multi-wavelength channel configuration for Space Weather / heliophysics datasets (e.g., a list of wavelength channels). Intended to be used as the value of geocr:multiWavelengthConfiguration.</td><td><a href="http://schema.org/StructuredValue">StructuredValue</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics">http://mlcommons.org/croissant/geo/SolarInstrumentCharacteristics</a></td><td>SolarInstrumentCharacteristics</td><td>Structured description of solar/heliophysics instrument and observatory characteristics for Space Weather datasets (e.g., observatory/platform and instrument identifiers). Intended to be used as the value of geocr:solarInstrumentCharacteristics.</td><td><a href="http://schema.org/StructuredValue">StructuredValue</a></td><td><span class="badge badge-geo">Geo</span></td></tr>
+<tr><td class="mono"><a href="http://mlcommons.org/croissant/geo/SpectralBand">http://mlcommons.org/croissant/geo/SpectralBand</a></td><td>SpectralBand</td><td>Structured per-band spectral metadata entry (e.g., center wavelength and bandwidth). Intended to be used as items within geocr:spectralBandMetadata.</td><td><a href="http://schema.org/StructuredValue">StructuredValue</a></td><td><span class="badge badge-geo">Geo</span></td></tr></tbody></table>
+</div>
+</div></body></html>

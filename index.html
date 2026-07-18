@@ -1,60 +1,422 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<title>Croissant for Developers</title><style>body{font-family:Arial,sans-serif;margin:0;padding:0}
-#hdr{border-top:5px solid #990000;padding:10px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ddd}
-#hdr a{color:#990000;text-decoration:none;font-weight:bold}
-#logo{font-size:1.5em}
-#nav a{margin-left:20px;font-size:.95em}
-#nav a:hover{text-decoration:underline}
-#main{padding:40px;max-width:1000px;margin:0 auto}
-h1{font-weight:normal}
-h2{font-weight:normal;border-bottom:1px solid #ccc;padding-bottom:5px}
-a{color:#990000;text-decoration:none}
-a:hover{text-decoration:underline}
-table{width:100%;border-collapse:collapse;margin-top:20px;text-align:left}
-th{background:#f2f2f2;padding:10px;border-bottom:2px solid #ccc}
-td{padding:8px;border-bottom:1px solid #ddd}
-.mono{font-family:monospace}
-.search{padding:6px;width:300px;font-size:.95em;margin-bottom:15px}
-.box{background:#fcfcfc;border:1px solid #e0e0e0;padding:20px;margin:20px 0}
-.fg{display:inline-block;margin-right:20px}
-label{font-weight:bold;margin-right:10px}
-select{padding:4px;font-size:.95em}
-#url{color:#990000;font-family:monospace;font-size:1.05em;margin:15px 0;word-break:break-all}
-button{padding:4px 12px;font-size:.95em;cursor:pointer}
-#ft{border-top:1px solid #ccc;margin-top:50px;padding:15px 0;text-align:center;font-size:.85em;color:#666}</style></head>
-<body><div id="hdr"><div id="logo"><a href="index.html">Croissant</a></div>
-<div id="nav"><a href="index.html">Docs</a><a href="types.html">Classes (Types)</a><a href="properties.html">Properties</a></div></div><div id="main">
+<title>Croissant for Developers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #9c1a1c;
+  --primary-hover: #b31b1b;
+  --text-main: #1f2937;
+  --text-muted: #4b5563;
+  --bg-main: #ffffff;
+  --bg-alt: #f9fafb;
+  --border: #e5e7eb;
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --radius: 8px;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-main);
+  background-color: var(--bg-main);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+#header {
+  border-bottom: 3px solid var(--primary);
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+}
+
+.header-container {
+  max-width: 100%;
+  padding: 0.75rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+#logo a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  transition: opacity 0.2s;
+}
+
+#logo a:hover {
+  opacity: 0.85;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+  padding: 0.25rem 0;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.search-container {
+  position: relative;
+  width: 280px;
+}
+
+.search {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 2.25rem;
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  background-color: var(--bg-alt);
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.search:focus {
+  background-color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(156, 26, 28, 0.15);
+}
+
+.search-container::before {
+  content: "";
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' /%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+#main {
+  max-width: 100%;
+  padding: 3rem 4rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.025em;
+}
+
+.lead {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #111827;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--primary-hover);
+}
+
+ul {
+  padding-left: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+}
+
+.download-container {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.box-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.fg {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+select {
+  padding: 0.5rem 2rem 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%234b5563' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+}
+
+select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(156, 26, 28, 0.1);
+}
+
+#url {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--primary);
+  word-break: break-all;
+  margin: 0.25rem 0;
+}
+
+button {
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.625rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: var(--shadow);
+  align-self: flex-start;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.table-container {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-top: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.925rem;
+}
+
+th:nth-child(1), td:nth-child(1) {
+  width: 25%;
+  min-width: 280px;
+}
+
+th:nth-child(2), td:nth-child(2) {
+  width: 15%;
+  min-width: 180px;
+}
+
+th:nth-child(3), td:nth-child(3) {
+  width: 35%;
+}
+
+th {
+  background: var(--bg-alt);
+  color: #374151;
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  border-bottom: 2px solid var(--border);
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  word-break: break-word;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background-color: rgba(249, 250, 251, 0.7);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  word-break: break-all;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.badge-core {
+  background-color: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+.badge-geo {
+  background-color: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.badge-rai {
+  background-color: #faf5ff;
+  color: #6b21a8;
+  border: 1px solid #e9d5ff;
+}
+
+#ft {
+  border-top: 1px solid var(--border);
+  margin-top: 5rem;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+</style></head>
+<body><header id="header">
+  <div class="header-container">
+    <div class="header-left">
+      <div id="logo"><a href="./">Croissant</a></div>
+      <nav id="nav">
+        <a href="./" class="nav-link active">Docs</a>
+        <a href="types/" class="nav-link ">Classes (Types)</a>
+        <a href="properties/" class="nav-link ">Properties</a>
+      </nav>
+    </div>
+    <div class="header-right"></div>
+  </div>
+</header><div id="main">
 <h1>Croissant for Developers</h1>
-<p>This page provides developer-oriented information about Croissant and access to machine-readable representations of the vocabulary.</p>
+<p class="lead">This page provides developer-oriented information about Croissant and access to machine-readable representations of the vocabulary.</p>
 
 <h2>Machine Readable Term Definitions</h2>
 <ul>
 <li>Source files are maintained in Turtle format in our <a href="https://github.com/mlcommons/croissant">Github repository</a>.</li>
 <li>Croissant builds on <a href="https://schema.org/">schema.org</a> and its Dataset vocabulary.</li>
-<li>Schema.org URIs are available in both <b>http</b> and <b>https</b> flavors. Croissant namespace URIs (<code>cr:</code>, <code>geocr:</code>, <code>rai:</code>) always use <code>http://</code>.</li>
+<li>Schema.org URIs are available in both <b>http</b> and <b>https</b>. Croissant namespace URIs (<a href="http://mlcommons.org/croissant/1.0"><code>cr:</code></a>, <a href="http://mlcommons.org/croissant/geo/1.0"><code>geo:</code></a>, <a href="https://mlcommons.org/croissant/RAI/1.0"><code>rai:</code></a>) always use <code>http://</code>.</li>
 <li>The canonical JSON-LD Context files are available at <a href="context-http.json">context-http.json</a> and <a href="context-https.json">context-https.json</a>.</li>
-<li>View all terms on the <a href="types.html">Classes (Types)</a> and <a href="properties.html">Properties</a> pages.</li>
+<li>View all terms on the <a href="types/">Classes (Types)</a> and <a href="properties/">Properties</a> pages.</li>
 </ul>
 
 <h2>Vocabulary Definition Files</h2>
 <p>Select a file and format, then click Download.</p>
-<div class="box">
+<div class="download-container">
+<div class="box-row">
 <div class="fg"><label for="fs">File:</label><select id="fs" onchange="upd()"><option value="croissant-all-http">croissant-all-http</option><option value="croissant-all-https">croissant-all-https</option><option value="croissant-current-http">croissant-current-http</option><option value="croissant-current-https">croissant-current-https</option><option value="croissant-geo-http">croissant-geo-http</option><option value="croissant-geo-https">croissant-geo-https</option><option value="croissant-rai-http">croissant-rai-http</option><option value="croissant-rai-https">croissant-rai-https</option></select></div>
 <div class="fg"><label for="ff">Format:</label><select id="ff" onchange="upd()">
 <option value=".jsonld">JSON-LD</option><option value=".ttl">Turtle</option>
 <option value=".nt">N-Triples</option><option value=".nq">N-Quads</option>
 <option value=".rdf">RDF/XML</option><option value="-types.csv">CSV (Types)</option>
 <option value="-properties.csv">CSV (Properties)</option></select></div>
+</div>
 <div id="url"></div>
 <button onclick="dl()">Download</button>
 </div>
 <div id="ft">Croissant Vocabulary Definitions</div>
 </div>
 <script>
-function upd(){var f=document.getElementById("fs").value+document.getElementById("ff").value;
-var b=window.location.href.substring(0,window.location.href.lastIndexOf("/")+1);
-document.getElementById("url").innerText=b+f;}
-function dl(){var f=document.getElementById("fs").value+document.getElementById("ff").value;
-var a=document.createElement("a");a.href=f;a.download=f;document.body.appendChild(a);a.click();a.removeChild(a);}
+function upd() {
+  var f=document.getElementById("fs").value+document.getElementById("ff").value;
+  var b=window.location.href.substring(0,window.location.href.lastIndexOf("/")+1);
+  var url = b+f;
+  var container = document.getElementById("url");
+  container.textContent = '';
+  var a = document.createElement("a");
+  a.href = url;
+  a.target = "_blank";
+  a.textContent = url;
+  container.appendChild(a);
+}
+function dl() {
+  var f=document.getElementById("fs").value+document.getElementById("ff").value;
+  var a=document.createElement("a");
+  a.href=f;
+  a.download=f;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
 upd();
 </script></body></html>

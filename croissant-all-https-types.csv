@@ -1,5 +1,4 @@
 URI,Label,Comment,SubClassOf,Vocabulary
-http://mlcommons.org/croissant/BoundingBox,Label,A data type representing a bounding box.,https://schema.org/Text,Core
 http://mlcommons.org/croissant/ContentExtractionEnumeration,ContentExtractionEnumeration,"Specifies which content to extract from a file. One of ""all"", ""lines"", or ""lineNumbers"".",https://schema.org/Enumeration,Core
 http://mlcommons.org/croissant/DataSource,DataSource,"A source of data, optionally transformed before being used.",https://schema.org/Intangible,Core
 http://mlcommons.org/croissant/DataType,DataType,"The data type of values expected for a Field in a RecordSet. This class is inspired by the Datatype class in CSVW. In addition to simple atomic types, types can be semantic types, such as schema.org classes, as well types defined in other vocabularies.",https://schema.org/URL,Core
@@ -9,6 +8,7 @@ http://mlcommons.org/croissant/FileObject,FileObject,An individual file that is 
 http://mlcommons.org/croissant/FilePropertyEnumeration,FilePropertyEnumeration,"Specifies a property of a FileObject. One of ""fullPath"" or ""fileName"".",https://schema.org/Enumeration,Core
 http://mlcommons.org/croissant/FileSet,FileSet,"A set of homogeneous files extracted from a container, optionally filtered by inclusion and/or exclusion filters.",https://schema.org/DataDownload,Core
 http://mlcommons.org/croissant/Format,Format,"Specifies how to parse the format of the data from a string representation. For example, format may hold a date format string, a number format, or a bounding box format.",https://schema.org/Text,Core
+http://mlcommons.org/croissant/BoundingBox,Label,A data type representing a bounding box.,https://schema.org/Text,Core
 http://mlcommons.org/croissant/Label,Label,A machine learning label.,https://schema.org/Intangible,Core
 http://mlcommons.org/croissant/RecordSet,RecordSet,"A description of a set of structured records from one or more data sources and their structure, expressed as a set of fields.",https://schema.org/Intangible,Core
 http://mlcommons.org/croissant/SegmentationMask,SegmentationMask,A data type representing a segmentation mask.,https://schema.org/StructuredValue,Core
