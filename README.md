@@ -4,7 +4,7 @@ This directory hosts the compiled machine-readable vocabulary definitions and de
 
 ## Directory Structure
 
-- **`developers.html`**: Main Schema.org-styled landing page for developers.
+- **`index.html`**: Main Schema.org-styled landing page for developers.
 - **`types.html`**: Term reference page listing Class (Type) definitions.
 - **`properties.html`**: Term reference page listing Property definitions.
 - **`context-http.json` / `context-https.json`**: Canonical JSON-LD contexts matching the `mlcroissant` specifications.

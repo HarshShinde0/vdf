@@ -167,8 +167,8 @@ select{padding:4px;font-size:.95em}
 button{padding:4px 12px;font-size:.95em;cursor:pointer}
 #ft{border-top:1px solid #ccc;margin-top:50px;padding:15px 0;text-align:center;font-size:.85em;color:#666}"""
 
-HEADER = """<div id="hdr"><div id="logo"><a href="developers.html">Croissant</a></div>
-<div id="nav"><a href="developers.html">Docs</a><a href="types.html">Classes (Types)</a><a href="properties.html">Properties</a></div></div>"""
+HEADER = """<div id="hdr"><div id="logo"><a href="index.html">Croissant</a></div>
+<div id="nav"><a href="index.html">Docs</a><a href="types.html">Classes (Types)</a><a href="properties.html">Properties</a></div></div>"""
 
 FILTER_JS = """<script>function filterTable(){var f=document.getElementById("search").value.toLowerCase();
 var rows=document.getElementById("tb").getElementsByTagName("tr");
@@ -212,7 +212,7 @@ def generate_props_html(props):
     print(f"Generated {os.path.join(OUT_DIR, 'properties.html')}")
 
 
-def generate_developers_html():
+def generate_index_html():
     # Build option tags for the file selector
     files = ["croissant-all-http", "croissant-all-https",
              "croissant-current-http", "croissant-current-https",
@@ -249,6 +249,7 @@ def generate_developers_html():
 </div>
 <div id="ft">Croissant Vocabulary Definitions</div>
 </div>
+<script>
 function upd(){{var f=document.getElementById("fs").value+document.getElementById("ff").value;
 var b=window.location.href.substring(0,window.location.href.lastIndexOf("/")+1);
 document.getElementById("url").innerText=b+f;}}
@@ -256,9 +257,9 @@ function dl(){{var f=document.getElementById("fs").value+document.getElementById
 var a=document.createElement("a");a.href=f;a.download=f;document.body.appendChild(a);a.click();a.removeChild(a);}}
 upd();
 </script></body></html>"""
-    with open(os.path.join(OUT_DIR, "developers.html"), "w", encoding="utf-8") as f:
+    with open(os.path.join(OUT_DIR, "index.html"), "w", encoding="utf-8") as f:
         f.write(html)
-    print(f"Generated {os.path.join(OUT_DIR, 'developers.html')}")
+    print(f"Generated {os.path.join(OUT_DIR, 'index.html')}")
 
 def generate_context_files():
     """Generates the canonical JSON-LD context files for Croissant."""
@@ -362,7 +363,7 @@ def main():
     generate_types_html(all_types)
     generate_props_html(all_props)
     generate_context_files()
-    generate_developers_html()
+    generate_index_html()
 
 if __name__ == "__main__":
     main()
