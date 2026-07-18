@@ -84,8 +84,8 @@ def serialize_all(g, base, use_https):
     g.serialize(destination=f"{base}.ttl", format="turtle")
     g.serialize(destination=f"{base}.jsonld", format="json-ld", context=jsonld_context(use_https))
     g.serialize(destination=f"{base}.rdf", format="xml")
-    g.serialize(destination=f"{base}.nt", format="nt")
-    cg = rdflib.ConjunctiveGraph()
+    g.serialize(destination=f"{base}.nt", format="nt", encoding="utf-8")
+    cg = rdflib.Dataset()
     for s, p, o in g:
         cg.add((s, p, o))
     cg.serialize(destination=f"{base}.nq", format="nquads")
@@ -279,8 +279,6 @@ body {
 
 .search:focus {
   background-color: #ffffff;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(156, 26, 28, 0.15);
 }
 
 .search-container::before {
@@ -390,10 +388,6 @@ select {
   background-size: 1rem;
 }
 
-select:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(156, 26, 28, 0.1);
-}
 
 #url {
   font-family: var(--font-mono);
@@ -413,18 +407,14 @@ button {
   font-weight: 500;
   cursor: pointer;
   transition: all 0.15s ease;
-  box-shadow: var(--shadow);
   align-self: flex-start;
 }
 
 button:hover {
   background-color: var(--primary-hover);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-lg);
 }
 
 button:active {
-  transform: translateY(0);
 }
 
 .table-container {
